@@ -1,0 +1,68 @@
+@import "../../App.scss";
+
+.whitebutton{
+    padding: 1.5% 10%;
+    background-color: white;
+    outline: none;
+    border: 1.5px solid black;
+    font-family: $secondaryfont;
+}
+.whitebutton:hover{
+    background-color: black;
+    color: white;
+}
+.whitebutton:focus{
+    outline: none;
+}
+
+.blackbutton{
+    padding: 1.5% 10%;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: 1.5px solid black;
+    font-family: $secondaryfont;
+}
+.blackbutton:hover{
+ cursor: pointer;
+}
+.blackbutton:focus{
+    outline: none;
+}
+
+.signupdiv{
+    h1{
+        text-align: center;
+        font-size: 4em;
+        font-weight: bold;
+        margin-top: 3%;
+    }
+
+    .signupcontent{
+        margin: 1% 20%;
+        padding:4% 5%;
+        text-align: center;
+        input{
+            width: 100%;
+            padding: 2% 2%;
+            font-family: $secondaryfont;
+        }
+        label{
+            font-family: $secondaryfont;
+            font-size: 1.2em;
+            font-weight: lighter;
+        }
+        ::placeholder { 
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #cccf;
+            opacity: 1; /* Firefox */
+          }
+        .col-xl-6{
+            margin:2% auto;
+            text-align: left;
+        }
+        .col-12{
+            margin:2% auto;
+        }
+    }
+}

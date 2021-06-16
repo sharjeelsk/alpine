@@ -1,0 +1,13 @@
+$primaryfont:'Amatic SC', cursive;
+$secondaryfont:'Open Sans', sans-serif;
+$primary-color:#fff;
+$secondary-color:#000;
+$tertiary-color:#ccc;
+
+
+h1,h2,h3{
+    font-family: $primaryfont;
+}
+p,span{
+    font-family: $secondaryfont;
+}

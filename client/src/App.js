@@ -1,0 +1,30 @@
+import './App.scss';
+import {Route,Switch} from 'react-router-dom' 
+import Home from './components/Home'
+import SignUp from './components/SignUp/SignUp'
+import LogIn from './components/LogIn/LogIn'
+import Stationaries from './components/Stationaries/Stationaries'
+import Books from './components/Books/Books'
+import SectionDetail from './components/UiKits/SectionDetail'
+import Cart from './components/cart/Cart'
+import ContactUs from './components/ContactUs/ContactUs'
+import Test from './components/UiKits/Test'
+import User from './components/User/User'
+function App() {
+  return (
+    <Switch>
+      <Route exact path="/" component={Home}/>
+      <Route path="/signup" component={SignUp} />
+      <Route path="/login" component={LogIn} />
+      <Route path="/stationaries" component={Stationaries} />
+      <Route path="/books" component={Books} />
+      <Route path="/sectiondetail" component={SectionDetail} />
+      <Route path="/cart" component={Cart} />
+      <Route path="/contactus" component={ContactUs} />
+      <Route path="/test" component={Test} />
+      <Route path="/userdetails" component={User} />
+    </Switch>
+  );
+}
+
+export default App;

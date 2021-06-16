@@ -1,0 +1,71 @@
+@import "../../App.scss";
+.sectioncard{
+.row{
+    margin: 0 10%;
+    transition: 1s;
+    .shadow-lg{
+        margin: 3% 1%;
+        padding: 2% 0;
+        border-radius: 5%;
+        text-align: center;
+        h3{
+            font-size: 2.5em;
+            margin-top: 2%;
+            text-align: center;
+        }
+        img{
+            width: 20%;
+            }
+    }
+    .shadow-lg:hover{
+        img{
+            transition: 1s;
+            transform: scale(1.2);
+        }
+     
+      
+    }
+}
+}
+
+.cardDetail{
+    h1{
+        text-align: center;
+        font-size: 6em;
+    }
+    text-align: center;
+    .carddiv{
+        img{
+            width: 50%;
+        }
+        margin: 3% 3%;
+        padding: 2% 2%;
+        h4{
+            font-family: $primaryfont;
+            font-size: 3em;
+            font-weight: bold;
+        }
+      
+        .price{
+            font-size: 1.3em;
+            font-weight: bold;
+            color:#333333
+        }
+        .discount{
+            font-family: $secondaryfont;
+            text-decoration: line-through;
+            color: #aaaa;
+            margin-bottom: 0;
+        }
+        .blackbutton{
+            padding:3% 20%;
+        }
+        border:1px solid #ccca
+    }
+    .displaycount{
+        font-size: 1.2em;
+        font-weight: bold;
+        padding: 2% 0;
+        color: green;
+    }
+}

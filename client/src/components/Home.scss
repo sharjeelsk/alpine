@@ -1,0 +1,109 @@
+@import "../App.scss";
+
+.homeonediv{
+   h1{
+    text-align: center;
+    font-family: $primaryfont;
+    font-size: 6em;
+    font-weight: bold;
+   }
+   .headingpara{
+       font-size: 2em;
+       font-weight: lighter;
+       text-align: center;
+   }
+   .shopnowdiv{
+       text-align: center;
+        img{
+        width: 20%;
+        }
+        h2{
+            margin: 3% 0 2% 0;
+            font-size: 3em;
+        }
+        .row{
+            margin: 0 10%;
+            transition: 1s;
+
+            .shadow-lg{
+                margin: 0 auto;
+                padding: 5% 0;
+                border-radius: 5%;
+                h3{
+                    font-size: 2.5em;
+                    margin-top: 2%;
+                }
+            }
+            .shadow-lg:hover{
+                img{
+                    transition: 1s;
+                    transform: scale(1.2);
+                }
+             
+              
+            }
+        }
+    }
+
+    .trendingitemsdiv{
+        h2{
+            text-align: center;
+            font-size: 4em;
+            margin: 10% 0 4% 0;
+        }
+        .row{
+            background-color: $secondary-color;
+            padding: 3%;
+            .col-2{
+                background-color: $primary-color;
+                padding: 3% 0;
+                margin: 0 1%;
+                text-align: center;
+                border-radius: 1%;
+            }
+        }
+    }
+
+    .brief{
+        h2{
+            text-align: center;
+            font-size: 4em;
+            margin: 10% 0 2% 0;
+        }
+        p{
+            font-weight: 100;
+            margin: 0 30%;
+            text-align: center;
+        }
+    }
+
+    .customers{
+        h2{
+            text-align: center;
+            font-size: 4em;
+            margin: 10% 0 2% 0;
+        }
+        .row{
+            margin: 3% 5%;
+            .col-xl-3{
+                margin: 0 auto;
+                text-align: center;
+                padding: 3%;
+                h4{
+                    font-size: 2em;
+                }
+                h6{
+                    color: $tertiary-color;
+                }
+                p{
+                    font-weight: 100;
+                    text-align: justify;
+                    margin-top: 2%;
+                }
+               
+            }
+        }
+        
+    }
+
+}
