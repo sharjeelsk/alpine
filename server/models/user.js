@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { ObjectId } = mongoose.Schema.Types;
 
 const userSchema = new mongoose.Schema(
   {
@@ -31,10 +32,9 @@ const userSchema = new mongoose.Schema(
       required: true,
       index: { unique: true },
     },
-    history: {
-      type: Array,
-      default: [],
-    },
+    history: [{
+         type: ObjectId, ref: "orders"
+      }],
   },
   { timestamps: true }
 );

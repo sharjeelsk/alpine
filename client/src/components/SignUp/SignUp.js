@@ -101,8 +101,8 @@ const SignUp = ({history}) => {
                 </div>:null}
                 {loading===false?<div className="col-12">
                     <button className="blackbutton">SignUp</button>
-                </div>: <div class="ui active dimmer">
-    <div class="ui medium text loader">Loading</div>
+                </div>: <div className="ui active dimmer">
+    <div className="ui medium text loader">Loading</div>
   </div> }
                 {loading===false?<div className="col-12" style={{margin:0}}>
                     <Link style={{color:"black"}} to="/login">Already a user? LogIn instead</Link>

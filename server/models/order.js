@@ -15,7 +15,6 @@ const orderSchema = new mongoose.Schema(
     },
     transactionId: {
       type: String,
-      required: true,
     },
     paymentMode: {
       type: String,
@@ -23,6 +22,11 @@ const orderSchema = new mongoose.Schema(
         "Card",
         "COD",
       ],
+      require: true,
+    },
+    paymentStatus: {
+      type: Boolean,
+      default: 0,
       require: true,
     },
     address: {

@@ -1,4 +1,5 @@
 const orderModel = require("../models/order");
+const userModel = require("../models/user")
 const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = require("../config/keys");
 
@@ -7,7 +8,7 @@ class Order {
     try {
       let Orders = await orderModel
         .find({})
-        // .populate("allProduct.id", "pName pImages pPrice")
+        // .populate("history")
         .populate("user", "name email")
         .sort({ _id: -1 });
       if (Orders) {
@@ -66,10 +67,14 @@ class Order {
         });
         let save = await newOrder.save();
         if (save) {
+          let orderId = await userModel.updateOne({_id: decoded._id},{$push: {history:save._id}})
+          if(orderId){
+            console.log(orderId)
+          }
           return res.json({ success: "Order created successfully" });
         }
       } catch (err) {
-        return res.json({ error: err, s: "sd" });
+        return res.json({ error: err });
       }
     }
   }
@@ -79,7 +84,7 @@ class Order {
     if (!oId || !status) {
       return res.json({ message: "All filled must be required" });
     } else {
-      let currentOrder = orderModel.findByIdAndUpdate(oId, {
+      let currentOrder = await orderModel.findByIdAndUpdate(oId, {
         status: status,
         updatedAt: Date.now(),
       });

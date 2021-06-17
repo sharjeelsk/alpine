@@ -11,7 +11,7 @@ const Home = ({history}) => {
         <p className="headingpara">Bright up Your future in one day</p>
 
         <div className="shopnowdiv">
-        <h2 className="heading">Shop Now <i class=" fa fa-shopping-bag" aria-hidden="true"></i></h2>
+        <h2 className="heading">Shop Now <i className=" fa fa-shopping-bag" aria-hidden="true"></i></h2>
         <div className="row ">
             <div onClick={()=>history.push("/stationaries")} className="shadow-lg col-xs-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
                 <img src={stationaries} alt="stationaries" />
@@ -133,19 +133,19 @@ const Home = ({history}) => {
                     <h4>Daniel</h4>
                     <h6>CEO at tenors</h6>
                     <span style={{color:"#ffc93c"}}>
-                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <span style={{color:"#ffc93c"}}>
-                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <span style={{color:"#ffc93c"}}>
-                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <span style={{color:"#ffc93c"}}>
-                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <span style={{color:"#ffc93c"}}>
-                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <p>
                     Real-time feedback about drivers means Uber can correct for issues big and small – while ensuring that only the best drivers stay on the road. We take this feedback seriously – depending on the circumstances, rider feedback may lead to deactivating a partner from the system or serve as validation that the driver is providing great service.
@@ -155,19 +155,19 @@ const Home = ({history}) => {
                     <h4>Ryan</h4>
                     <h6>Social Worker</h6>
                     <span style={{color:"#ffc93c"}}>
-                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <span style={{color:"#ffc93c"}}>
-                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <span style={{color:"#ffc93c"}}>
-                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <span style={{color:"#ffc93c"}}>
-                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <span style={{color:"#ffc93c"}}>
-                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <p>
                     Real-time feedback about drivers means Uber can correct for issues big and small – while ensuring that only the best drivers stay on the road. We take this feedback seriously – depending on the circumstances, rider feedback may lead to deactivating a partner from the system or serve as validation that the driver is providing great service.
@@ -177,19 +177,19 @@ const Home = ({history}) => {
                     <h4>Sudhir</h4>
                     <h6>Politician</h6>
                     <span style={{color:"#ffc93c"}}>
-                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <span style={{color:"#ffc93c"}}>
-                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <span style={{color:"#ffc93c"}}>
-                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <span style={{color:"#ffc93c"}}>
-                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <span style={{color:"#ffc93c"}}>
-                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <p>
                     Real-time feedback about drivers means Uber can correct for issues big and small – while ensuring that only the best drivers stay on the road. We take this feedback seriously – depending on the circumstances, rider feedback may lead to deactivating a partner from the system or serve as validation that the driver is providing great service.

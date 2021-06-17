@@ -63,8 +63,7 @@ const Cart = (props) => {
     const buyNow = ()=>{
         console.log(props.user);
         if(props.user.user!==null){
-                    axios.post(`/payment`,{email:"sharjeelarts@gmail.com",name:"sharjeelsk"}).then(response=>{
-                        console.log(response);
+                    axios.post(`/payment`,{token:props.user.user,description:props.cart.items}).then(response=>{
                 let information={
                     action:'https://securegw-stage.paytm.in/order/process', //remove -stage for live
                     params:response.data
@@ -88,7 +87,7 @@ const Cart = (props) => {
             {
                props.cart.items.length===0?(
                <h3 className="sorrymessage">
-                   <span style={{display:"block",marginBottom:10}} ><i class="far fa-frown fa-3x"></i></span>
+                   <span style={{display:"block",marginBottom:10}} ><i className="far fa-frown fa-3x"></i></span>
                    Sorry You have Nothing in your cart please buy</h3>):(
                <div>
                       <div className="cartitemsdiv">
@@ -118,16 +117,16 @@ const Cart = (props) => {
                                         <span 
                                         onClick={()=>item.quantity===1?null:props.decrementItem(item)} 
                                         className="arrows" 
-                                        style={{color:"#ccc",fontSize:".8em",margin:"0 3%"}}><i class="fa fa-angle-left" aria-hidden="true"></i></span> {item.quantity} 
+                                        style={{color:"#ccc",fontSize:".8em",margin:"0 3%"}}><i className="fa fa-angle-left" aria-hidden="true"></i></span> {item.quantity} 
                                         <span className="arrows" 
                                         onClick={()=>props.incrementItem(item)} 
-                                        style={{color:"#ccc",fontSize:".8em",margin:"0 3%"}}><i class="fa fa-angle-right" aria-hidden="true"></i></span></h2>
+                                        style={{color:"#ccc",fontSize:".8em",margin:"0 3%"}}><i className="fa fa-angle-right" aria-hidden="true"></i></span></h2>
                                     </div>
                                     <div className="col-2">
                                         <h2>${item.price*item.quantity}</h2>
                                     </div>
                                     <div  className="col-2">
-                                    <span className="trashcan" onClick={()=>props.deleteItem(item)}><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                    <span className="trashcan" onClick={()=>props.deleteItem(item)}><i className="fa fa-trash" aria-hidden="true"></i></span>
                                     </div>
                                             </div>
                                         ))
