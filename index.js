@@ -7,6 +7,7 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const jwt = require('jsonwebtoken');
 const { JWT_SECRET } = require("./server/config/keys");
+const path = require('path')
 // http://localhost:3002/api/user/all-user
 const app = express()
 
@@ -26,6 +27,13 @@ let userModel = require("./server/models/user");
 // Middleware
 //app.use(cookieParser());
 app.use(cors());
+if(process.env.NODE_ENV==='production'){
+  app.use(express.static('client/build'));
+  app.get('*',(req,res)=>{
+      res.sendFile(path.resolve(__dirname,'client','build','index.html'))
+
+  })
+}
 //app.use(express.static("public"));
 //app.use(express.urlencoded({ extended: false }));
 //app.use(express.json());
