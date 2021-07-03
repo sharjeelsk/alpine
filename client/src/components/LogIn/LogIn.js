@@ -11,7 +11,7 @@ const LogIn = (props) => {
     const {register, handleSubmit, formState:{errors}} = useForm()
     const onSubmit = (data)=>{
         console.log(data)
-        axios.post(`${process.env.REACT_APP_DEV_LINK}/signin`,{
+        axios.post(`/signin`,{
             phoneNumber:data.mobileno,
             password:data.password
         }).then(res=>{

@@ -23,6 +23,7 @@ const usersRouter = require("./server/routes/user");
 
 // Model
 let userModel = require("./server/models/user");
+let orderModel = require("./server/models/order")
 
 // Middleware
 //app.use(cookieParser());
@@ -53,10 +54,10 @@ app.get("/test", (req,res) => {
 app.post("/callback",(req,res)=>{
   console.log("in callback");
     const form = new formidable.IncomingForm()
-    console.log(form)
+    // console.log(form)
     form.parse(req,async (err,fields,file)=>{
       console.log("in form.parse");
-      console.log(fields)
+      // console.log(fields)
       if(err){
           console.log(err)
       }
@@ -66,18 +67,25 @@ app.post("/callback",(req,res)=>{
       //merchant key KcD6HXTx4gx%r4hl
       //test key Xd&_NRTpc1aDkAJ6
       var isVerifySignature = PaytmChecksum.verifySignature(fields,process.env.MERCHENT_KEY , paytmChecksum);
-      console.log(fields)
+      //console.log(fields)
       if (isVerifySignature) {
-        console.log(fields)
+      //  console.log(fields)
           if(fields.STATUS==='TXN_SUCCESS'){
             //once payment is verified then set the flag as verfied and push the description i.e cart items to history array of user
-            // let updateStatus = User.fin
-            console.log(fields);
-            res.redirect("http://localhost:3000/")
+            // console.log(fields.ORDERID)
+            let updatedOrder = await orderModel.updateOne({_id: fields.ORDERID},{$set: {paymentStatus: true, transactionId: fields.TXNID}})
+            if(updatedOrder){
+              console.log(updatedOrder)
+            }
+            res.redirect("http://localhost:3000/orderplaced")
             
         }else {
           //once payment is failed then delete the current assigned object whose flag was set as not verfied
-          res.send("payment was unsuccessful please contact earnwithfriendofficial@gmail.com and explain the event in detail with the registered email don't try to signup because you will not be able to")
+          let updatedOrder = await orderModel.deleteOne({_id: fields.ORDERID})
+          if(updatedOrder){
+            console.log(updatedOrder)
+          }
+          res.send("Payment Failed")
           }
         //push the payment json to transaction details
       } 
@@ -85,14 +93,13 @@ app.post("/callback",(req,res)=>{
 })
 
 app.post("/payment",async (req,res)=>{ //you get array buffer when you use wrong credentials
-
   var params = {};
   //decode token
   
     //  req.body.token
-    console.log(req.body.token)
+    // console.log(req.body.token)
     let decoded = jwt.verify(req.body.token, JWT_SECRET);
-    console.log(decoded)
+    // console.log(decoded)
     const email = await userModel.findById(decoded._id);
 
     /* initialize an array */
@@ -100,7 +107,7 @@ app.post("/payment",async (req,res)=>{ //you get array buffer when you use wrong
     params['WEBSITE'] = process.env.PAYTM_WEBSITE;
     params['CHANNEL_ID'] = process.env.PAYTM_CHANNEL_ID;
     params['INDUSTRY_TYPE_ID'] = 'Retail';
-    params['ORDER_ID'] = 'EWF_'  + new Date().getTime();
+    params['ORDER_ID'] = req.body.orderId
     params['CUST_ID'] = `EWF_10${email.email.replace("@gmail.com","")}`;
     params['TXN_AMOUNT'] = '1360';
     params['CALLBACK_URL'] = `http://localhost:3002/callback`;

@@ -1,5 +1,7 @@
 const userModel = require("../models/user");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const { JWT_SECRET } = require("../config/keys");
 
 class User {
   async getAllUser(req, res) {
@@ -18,14 +20,16 @@ class User {
   }
 
   async getSingleUser(req, res) {
-    let { uId } = req.body;
-    if (!uId) {
+    let { token } = req.body;
+    if (!token) {
       return res.json({ error: "All filled must be required" });
     } else {
       try {
+        let decoded = jwt.verify(token, JWT_SECRET);
         let User = await userModel
-          .findById(uId)
-          .select("name email phoneNumber updatedAt createdAt");
+          .findById(decoded._id)
+          .select("name email phoneNumber address pin history")
+          .populate("history");
         if (User) {
           return res.json({ User });
         }
@@ -67,20 +71,22 @@ class User {
   }
 
   async postEditUser(req, res) {
-    let { uId, name, phoneNumber } = req.body;
-    if (!uId || !name || !phoneNumber) {
-      return res.json({ message: "All filled must be required" });
-    } else {
-      let currentUser = userModel.findByIdAndUpdate(uId, {
-        name: name,
-        phoneNumber: phoneNumber,
-        updatedAt: Date.now(),
-      });
-      currentUser.exec((err, result) => {
-        if (err) console.log(err);
-        return res.json({ success: "User updated successfully" });
-      });
+
+    let decoded = jwt.verify(req.headers.token, JWT_SECRET);
+    const updateOps = {};
+    for(const ops of req.body){
+        updateOps[ops.propName] = ops.value;
     }
+    console.log(updateOps)
+
+    let currentUser = userModel.findByIdAndUpdate(decoded._id, {
+      $set: updateOps
+    });
+    currentUser.exec((err, result) => {
+      if (err) console.log(err);
+      return res.json({ success: "User updated successfully" });
+    });
+
   }
 
   async getDeleteUser(req, res) {

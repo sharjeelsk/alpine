@@ -5,8 +5,22 @@ import {connect} from 'react-redux'
 import {incrementItem,deleteItem} from '../redux/cart/CartActions'
 import {decrementItem} from '../redux/cart/CartActions'
 import axios from 'axios'
+import {useForm} from 'react-hook-form'
+import Footer from '../Footer/Footer'
+
 const Cart = (props) => {
-    const [option,setOption] = React.useState("")
+    console.log("------------------------start--------------------")
+    const [option,setOption] = React.useState("COD")
+    const [address,setAddress] = React.useState(null)
+    const [addressvalue,setAddressValue] = React.useState("")
+    const [number,setNumber] = React.useState("")
+    const [error,setError] = React.useState("")
+    const [message,setMessage]=React.useState("")
+    console.log(addressvalue,number);
+    const {register,handleSubmit,formState:{errors}}=useForm()
+    const onSubmit = (data)=>{
+        console.log(data);
+    }
     const total=()=>{
         let totalam=0;
         props.cart.items.forEach(item=>{
@@ -60,16 +74,77 @@ const Cart = (props) => {
         form.submit()
         form.remove()
       }
+      const cod="ONLINE"
     const buyNow = ()=>{
         console.log(props.user);
         if(props.user.user!==null){
-                    axios.post(`/payment`,{token:props.user.user,description:props.cart.items}).then(response=>{
-                let information={
-                    action:'https://securegw-stage.paytm.in/order/process', //remove -stage for live
-                    params:response.data
+            if(address==="default"||address===null){
+                console.log("defaultaddress",address,option);
+                axios.post(`/order/create-order`,{token:props.user.user,allProduct:props.cart.items,address:"",phone:"",paymentMode:option,amount:total()})
+                .then(res=>{
+                    if(option==="ONLINE"){
+                        axios.post(`${process.env.REACT_APP_NONAPI_LINK}/payment`,{token:props.user.user,description:props.cart.items,orderId:res.data.orderId}).then(responsepayment=>{
+                            let information={
+                                action:'https://securegw-stage.paytm.in/order/process', //remove -stage for live
+                                params:responsepayment.data
+                            }
+                            post(information)
+                                }).catch(err=>console.log(err))
+                    }else{
+                        setMessage("Order Placed Successfully")
+                    }
+                    
+                })
+            }else if(address==="newaddress"){
+                console.log("newaddress",address);
+                if(addressvalue.length>0 && number.length>0){
+                    //sendreq
+                    axios.post(`/order/create-order`,{token:props.user.user,allProduct:props.cart.items,address:addressvalue,phone:number,paymentMode:option,amount:total()})
+                .then(res=>{
+                    if(option==="ONLINE"){
+                        axios.post(`${process.env.REACT_APP_NONAPI_LINK}/payment`,{token:props.user.user,description:props.cart.items,orderId:res.data.orderId}).then(responsepayment=>{
+                            let information={
+                                action:'https://securegw-stage.paytm.in/order/process', //remove -stage for live
+                                params:responsepayment.data
+                            }
+                            post(information)
+                                }).catch(err=>console.log(err))
+                    }else{
+                    console.log("inside new address and cod payment mehtod",option,addressvalue,number);
+                        setError("")
+                        setMessage("Order Placed Successfully")
+                    }
+                    
+                })
+                }else{
+                    setError("Fill Up the Details")
+                    console.log("fill up the details");
                 }
-                post(information)
-                    }).catch(err=>console.log(err))
+            }
+            //ONLINE or COD
+            //add address and phone form
+            // axios.post("/order/create-order",{token:props.user.user,allProduct:props.cart.items,address:"sadat nagar",phone:"9665276786",paymentMode:cod,amount:total()})
+            // .then(response=>{
+            //     console.log(response.data);
+            //     if(response.data.success==="Order created successfully"){
+            //         //console.log(response.data.orderId)
+            //         if(cod==="COD"){
+            //             props.history.push("/")
+            //         }else if(cod==="ONLINE"){
+                        // axios.post(`${process.env.REACT_APP_NONAPI_LINK}/payment`,{token:props.user.user,description:props.cart.items,orderId:response.data.orderId}).then(responsepayment=>{
+                        //     let information={
+                        //         action:'https://securegw-stage.paytm.in/order/process', //remove -stage for live
+                        //         params:responsepayment.data
+                        //     }
+                        //     post(information)
+                        //         }).catch(err=>console.log(err))
+                    // }
+                   
+            //     }else{
+            //         //response.data.error
+            //     }
+            // }).catch(err=>console.log(err))
+                  
         }
         else{
             props.history.push("/signup")
@@ -141,14 +216,71 @@ const Cart = (props) => {
                             <h1>MRP : <span>₹{mrp()}</span></h1>
                             <h1 className="discount">Discount : <span>₹{mrp()-total()}</span></h1>
                             <h1 className="total">Total : <span>₹{total()}</span></h1>
-                            <p onClick={()=>setOption("online")}>
-                            <input type="radio" id="test1" name="radio-group"  />
+                            <form>
+                            <p className="heading1">Choose Address</p>
+                            <p onClick={()=>setAddress("default")}>
+                            <input type="radio" id="test3" name="radio-group" checked={true} />
+                            <label htmlFor="test3">Default</label>
+                            </p>
+                            <p onClick={()=>setAddress("newaddress")}>
+                            <input type="radio" id="test4" name="radio-group" checked={address==="newaddress"?true:false}/>
+                            <label htmlFor="test4">Add A New Address</label>
+                            </p>
+                            </form>
+                            {
+                                console.log(address)
+                            }
+                            {
+                                address==="newaddress"?(<div className="miniform">
+                                    <div >
+                                    <label>Enter Your Address</label>
+                                    <textarea onChange={(e)=>setAddressValue(e.target.value)} placeholder="Enter Your Address" type="text" value={addressvalue} />
+                                    </div>
+                                    <div > 
+                                    <label>Enter Mobile Number</label>
+                                    <input onChange={(e)=>setNumber(e.target.value)} placeholder="Enter Your Mobile Number" type="text" value={number} />
+                                    </div>
+                                    {/* <form onSubmit={handleSubmit(onSubmit)}>
+                                        <div className="row signupcontent">
+                                        <div className="col-12">
+                                            <label>
+                                                Address
+                                            </label>
+                                            <input className={errors.address?`errorinput`:``} {...register('address',{required:true})} style={{padding:"1% 1%"}} name="address"  placeholder="Enter Your Address" />
+                                            {errors.address?<div className="ui pointing red basic label">Address is Invalid</div>:null}
+                                        </div>
+                                        <div className="col-12">
+                                        <button className="blackbutton" type="submit">LogIn</button>
+                                        </div> 
+                                        </div>
+                                    </form> */}
+                                </div>):null
+                            }
+                            <p className="heading2">Choose Payment Method</p>
+                            <p onClick={()=>setOption("ONLINE")}>
+                            <input type="radio" id="test1" name="radio-group" />
                             <label htmlFor="test1">Pay Via Debit / Credit / UPI / Net Banking</label>
                             </p>
-                            <p onClick={()=>setOption("cashondelivery")}>
-                            <input type="radio" id="test2" name="radio-group"  />
+                            {
+                                option==="COD"?(
+                            <p onClick={()=>setOption("COD")}>
+                            <input type="radio" id="test2" name="radio-group" checked />
                             <label htmlFor="test2">Cash on Delivery</label>
                             </p>
+                                ):(
+                                    <p onClick={()=>setOption("COD")}>
+                            <input type="radio" id="test2" name="radio-group" />
+                            <label htmlFor="test2">Cash on Delivery</label>
+                            </p>
+                                )
+                            }
+                            
+                            {
+                                error.length>0?<p style={{color:"red"}}>{error}</p>:null
+                            }
+                            {
+                                message.length>0?<p>{message}</p>:null
+                            }
                             <button onClick={()=>buyNow()} className="blackbutton">Buy Now</button>
                             </div>
                </div>
@@ -158,6 +290,7 @@ const Cart = (props) => {
 
 
             </div>
+            <Footer />
         </div>
     );
 }

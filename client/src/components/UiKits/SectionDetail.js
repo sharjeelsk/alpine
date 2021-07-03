@@ -4,6 +4,7 @@ import Header from '../Header/Header'
 import {addToCart} from '../redux/cart/CartActions'
 import {connect} from 'react-redux'
 import {animated, useSpring} from 'react-spring'
+import Copy from './copy.png'
 const SectionDetail = (props) => {
     let card = React.useRef()
     let products = props.history.location.state.value
@@ -24,16 +25,13 @@ const SectionDetail = (props) => {
     return (
         <div className="cardDetail">
             <Header />
-           <animated.div style={animProps} >elem</animated.div>
-           <h1 onClick={()=>{
-               setAnimProps({...animProps,reset:true})}}>Click event</h1>
-           <h1 onClick={()=>animate({opacity:0})}>disable</h1>
+          
         <h1>{props.history.location.state.name}</h1>
         <div className="row">
         {//class
             products.map(item=>(
-                <div className="shadow col-2 carddiv" key={item.name}>
-                    <img src={`Images/${item.img}`} alt={item.name} />
+                <div className="shadow col-sm-12 col-xs-12 col-md-4 col-lg-2 col-xl-2 carddiv" key={item.name}>
+                    <img src={`Images/${item.img}`} alt="" />
                     <h4>{item.name}</h4>
                     <p className="price">Price: ₹{item.price}</p>
                     <p className="discount">MRP: ₹{item.MRP}</p>

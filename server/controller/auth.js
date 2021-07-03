@@ -1,4 +1,4 @@
-const { toTitleCase, validateEmail, validatePhoneNumber } = require("../config/function");
+const { toTitleCase, validateEmail, validatePhoneNumber, phoneNumberCheckInDatabase } = require("../config/function");
 const bcrypt = require("bcryptjs");
 const userModel = require("../models/user");
 const jwt = require("jsonwebtoken");
@@ -60,6 +60,7 @@ class Auth {
           try {
               password = bcrypt.hashSync(password, 10);
               const data = await userModel.findOne({ email: email });
+              const data2 = await userModel.findOne({ phoneNumber: phoneNumber });
               if (data) {
                 error = {
                   // ...error,
@@ -67,6 +68,15 @@ class Auth {
                   // name: "",
                   // email: "Email already exists",
                   message :"Email already Exists",
+                };
+                return res.json({ error });
+              } else if (data2) {
+                error = {
+                  // ...error,
+                  // password: "",
+                  // name: "",
+                  // email: "Email already exists",
+                  message :"Phone Number already Exists",
                 };
                 return res.json({ error });
               } else {

@@ -10,6 +10,9 @@ import Cart from './components/cart/Cart'
 import ContactUs from './components/ContactUs/ContactUs'
 import Test from './components/UiKits/Test'
 import User from './components/User/User'
+import OrderPlaced from './components/OrderPlaced/OrderPlaced'
+import AboutUs from './components/AboutUs/AboutUs'
+
 function App() {
   return (
     <Switch>
@@ -23,6 +26,8 @@ function App() {
       <Route path="/contactus" component={ContactUs} />
       <Route path="/test" component={Test} />
       <Route path="/userdetails" component={User} />
+      <Route path="/orderplaced" component={OrderPlaced} />
+      <Route path="/aboutus" component={AboutUs} />
     </Switch>
   );
 }

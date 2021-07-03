@@ -124,5 +124,59 @@
     .trashcan:hover{
         color: black;
     }
-    
+    .miniform{
+        margin-left: 5%;
+        input,textarea{
+            display: block;
+            border: 1px solid #ccc;
+            width: 50%;
+            padding: 1%;
+        }
+        label{
+            margin-top: 1%;
+
+        }
+    }
+    .heading1,.heading2{
+        font-family: $primaryfont;
+        font-size: 2em;
+        margin-top: 3%;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+
+
+}
+@media (max-width: 576px) {
+    .cartdiv{
+        h1{
+            font-size: 3em;
+        }
+        .cartitemsdiv{
+            .head{
+                margin: 5% 10%;
+                padding: 0;
+                .row{
+                    .col-4,.col-2{
+                        h2{
+                            font-size: 1.5em;
+                        }
+                    }
+                }
+                .item{
+                    .col-2{
+                        .trashcan{
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }

@@ -25,3 +25,9 @@ export const deleteItem = (item)=>{
         payload:item
     }
 }
+
+export const setNull = ()=>{
+    return{
+        type:"SET_NULL"
+    }
+}

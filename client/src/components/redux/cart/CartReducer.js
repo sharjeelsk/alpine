@@ -45,6 +45,8 @@ const CartReducer = (state=initialState,action)=>{
             let filterarray = state.items.filter(item=>item!==action.payload)
             console.log(filterarray)
             return {...state,items:filterarray}
+       case "SET_NULL":
+             return initialState
      default:
          return state;
  }

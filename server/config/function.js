@@ -36,11 +36,10 @@ exports.emailCheckInDatabase = async function (email) {
 
 exports.phoneNumberCheckInDatabase = async function (phoneNumber) {
   let user = await userModel.findOne({ phoneNumber: phoneNumber });
-  user.exec((err, data) => {
-    if (data) {
+    if (user) {
       return true;
     } else {
       return false;
     }
-  });
+  
 };

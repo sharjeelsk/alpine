@@ -19,14 +19,14 @@ const orderSchema = new mongoose.Schema(
     paymentMode: {
       type: String,
       enum: [
-        "Card",
+        "ONLINE",
         "COD",
       ],
       require: true,
     },
     paymentStatus: {
       type: Boolean,
-      default: 0,
+      default: false,
       require: true,
     },
     address: {

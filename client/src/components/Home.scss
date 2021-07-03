@@ -4,8 +4,15 @@
    h1{
     text-align: center;
     font-family: $primaryfont;
-    font-size: 6em;
-    font-weight: bold;
+    font-size: 5.5em;
+    font-weight: 700;
+    background: -webkit-linear-gradient(45deg,#000000, #8a8a8afd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   }
+   .homeheadcards{
+background-image: linear-gradient(315deg, #bdd4e73d 0%, #8693ab41 74%);
+
    }
    .headingpara{
        font-size: 2em;
@@ -32,14 +39,22 @@
                 h3{
                     font-size: 2.5em;
                     margin-top: 2%;
+                    color: rgb(102, 102, 102);
+                    font-weight: lighter;
+                 
                 }
             }
             .shadow-lg:hover{
+                background-image: linear-gradient(315deg, #bdd4e7ab 0%, #8693abb0 74%);
                 img{
-                    transition: 1s;
+                    transition: .5s;
                     transform: scale(1.2);
                 }
-             
+             h3{
+                background: -webkit-linear-gradient(#000000, #25657efd);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+             }
               
             }
         }
@@ -106,4 +121,71 @@
         
     }
 
+}
+
+
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+
+
+}
+@media (max-width: 576px) {
+    .homeonediv{
+        h1{
+            font-size: 3.3em;
+        }
+        .headingpara{
+            font-size: 1.5em;
+        }
+        .shopnowdiv{
+       
+            .heading{
+                font-size: 1.9em;
+            }
+            .row{
+            .homeheadcards{
+                margin-top: 10%;
+                h3{
+                    font-size: 2.1em;
+                }
+            }
+        }
+        }
+        .trendingitemsdiv{
+            h2{
+                font-size: 2.8em;
+            }
+            .row{
+                .col-2{
+                    margin: 0 auto;
+                }
+
+                
+            }
+            overflow-x: auto;
+        }
+        .brief{
+            h2{
+                font-size: 3.0em;
+            }
+            p{
+                margin: 3% 5%;
+            }
+        }
+        .customers{
+            h2{
+                font-size: 2.8em;
+            }
+            .row{
+                
+            .col-xl-3{
+            margin-top: 10%;   
+            padding:10%;
+            }
+            }
+        }
+    }
+    
 }

@@ -3,21 +3,22 @@ import "./Home.scss"
 import Header from './Header/Header'
 import stationaries from '../Images/stationery.png'
 import books from '../Images/book.png'
+import Footer from './Footer/Footer'
 const Home = ({history}) => {
     return (
         <div className="homeonediv">
             <Header id='1' />
-        <h1>Anmol Stationarie's</h1>
+        <h1>Alpine Stationarie's</h1>
         <p className="headingpara">Bright up Your future in one day</p>
 
         <div className="shopnowdiv">
         <h2 className="heading">Shop Now <i className=" fa fa-shopping-bag" aria-hidden="true"></i></h2>
         <div className="row ">
-            <div onClick={()=>history.push("/stationaries")} className="shadow-lg col-xs-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
+            <div onClick={()=>history.push("/stationaries")} className="homeheadcards shadow-lg col-xs-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
                 <img src={stationaries} alt="stationaries" />
                 <h3>Stationarie's</h3>
             </div>
-            <div onClick={()=>history.push("/books")} className="shadow-lg col-xs-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
+            <div onClick={()=>history.push("/books")} className="homeheadcards shadow-lg col-xs-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
                 <img src={books} alt="books" />
                 <h3>Book's</h3>
             </div>
@@ -198,11 +199,7 @@ const Home = ({history}) => {
             </div>
         </div>
 
-<h1>jdslkfjlksd</h1>
-<h1>jdslkfjlksd</h1>
-<h1>jdslkfjlksd</h1>
-<h1>jdslkfjlksd</h1>
-<h1>jdslkfjlksd</h1>
+<Footer />
 
         </div>
     );

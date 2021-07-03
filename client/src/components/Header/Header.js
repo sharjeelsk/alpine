@@ -3,7 +3,7 @@ import "./Header.scss"
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 const Header = (props) => {
-
+console.log(props);
 	return (
         <div className=" p-5  rounded">
         <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top  navbarclass " >
@@ -21,10 +21,10 @@ const Header = (props) => {
 			{props.id==="3"?<Link  className="nav-link active" to="/contactus">Contact Us</Link>:<Link  className="nav-link"  to="/contactus">Contact Us</Link>}
 			</li>
 			<li className="nav-item">
-			{props.id==="4"?<Link  className="nav-link active" to={props.user===null?"/signup":"/userdetails"}><i className="fa-2x fa fa-user-circle" aria-hidden="true"></i></Link>:<Link  className="nav-link"  to={props.user===null?"/signup":"/userdetails"}><i className="fa-2x fa fa-user-circle" aria-hidden="true"></i></Link>}
+			{props.id==="4"?<Link  className="nav-link active" to={(props.user===null || props.user===undefined)?"/signup":"/userdetails"}><i className="fa-2x fa fa-user-circle" aria-hidden="true"></i></Link>:<Link  className="nav-link"  to={(props.user===null || props.user===undefined)?"/signup":"/userdetails"}><i className="fa-2x fa fa-user-circle" aria-hidden="true"></i></Link>}
 			</li>
             <li className="nav-item">
-			{props.id==="5"?<Link  className="nav-link active" to="/cart"><span className="custombadge">{props.cartCount}</span><i className="fa-2x fa fa-shopping-bag" aria-hidden="true"></i></Link>:<Link  className="nav-link"  to="/cart"><span className="custombadge">{props.cartCount}</span><i className="fa-2x fa fa-shopping-bag" aria-hidden="true"></i></Link>}
+			{props.id==="5"?<Link  className="nav-link active" to="/cart"><span className="custombadge">{props.cart.length}</span><i className="fa-2x fa fa-shopping-bag" aria-hidden="true"></i></Link>:<Link  className="nav-link"  to="/cart"><span className="custombadge">{props.cart.length}</span><i className="fa-2x fa fa-shopping-bag" aria-hidden="true"></i></Link>}
 			</li>
           
 		</ul>
@@ -38,6 +38,7 @@ const Header = (props) => {
 const mapStateToProps=({cart,user})=>{
 	return {
 		cartCount:cart.itemsCount,
+		cart:cart.items,
 		user:user.user
 	}
 }

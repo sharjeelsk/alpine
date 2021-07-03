@@ -41,37 +41,45 @@ class Order {
   }
 
   async postCreateOrder(req, res) {
-    let { allProduct, user, amount, transactionId, address, phone, paymentMode, token } = req.body;
+    let { allProduct, amount, transactionId, address, phone, paymentMode, token } = req.body;
+    let decoded = jwt.verify(token, JWT_SECRET);
     if (
       !allProduct ||
-      !user ||
       !amount ||
-      !transactionId ||
-      !address ||
-      !phone ||
+      // !address ||
+      // !phone ||
       !paymentMode ||
       !token
     ) {
-      return res.json({ message: "All filled must be required" });
+      return res.json({ err: "All filled must be required" });
     } else {
       try {
-        let decoded = jwt.verify(token, JWT_SECRET);
+        if(phone === "" && address === ""){
+          let currentUser = await userModel
+                .findById(decoded._id)
+                .select("phoneNumber address")
+          console.log(currentUser)
+          address = currentUser.address;
+          phone = currentUser.phoneNumber;
+        }
         let newOrder = new orderModel({
           allProduct,
           user: decoded._id,
           amount,
-          transactionId,
           address,
           phone,
           paymentMode,
         });
         let save = await newOrder.save();
         if (save) {
+          console.log(save)
           let orderId = await userModel.updateOne({_id: decoded._id},{$push: {history:save._id}})
           if(orderId){
             console.log(orderId)
           }
-          return res.json({ success: "Order created successfully" });
+          return res.json({ success: "Order created successfully",
+                            orderId: save._id
+        });
         }
       } catch (err) {
         return res.json({ error: err });
@@ -110,6 +118,65 @@ class Order {
       }
     }
   }
+
+  async returnOrder(req, res) {
+    let { bankAccountNo, ifscCode, bankName, bankBranch, token , orderId} = req.body;
+    let decoded = jwt.verify(token, JWT_SECRET);
+
+    let user = await userModel.findById({_id: decoded._id});
+    if (user){
+      /**
+ *
+ * This call sends a message to the given recipient with vars and custom vars.
+ *
+ */
+const mailjet = require ('node-mailjet')
+.connect(process.env.MJ_APIKEY_PUBLIC, process.env.MJ_APIKEY_PRIVATE)
+const request = mailjet
+.post("send", {'version': 'v3.1'})
+.request({
+  "Messages":[
+    {
+      "From": {
+        "Email": "alpinestationeries@gmail.com",
+        "Name": "Return Order"
+      },
+      "To": [
+        {
+          "Email": "alpinestationeries@gmail.com",
+          "Name": "passenger 1"
+        }
+      ],
+      "TemplateID": 3018067,
+      "TemplateLanguage": true,
+      "Subject": "Hey Admin, we have return request",
+      "Variables": {
+    "userName": user.Name,
+    "phoneNumber": user.phone,
+    "email": user.email,
+    "userAddress": user.address,
+    "pinCode": user.pin,
+    "orderId": orderId,
+    "bankName": bankName,
+    "ifscCode": ifscCode,
+    "bankBranch": bankBranch,
+    "accountNumber": bankAccountNo,
+  }
+    }
+  ]
+})
+request
+.then((result) => {
+  console.log(result.body)
+  res.send(result.body.Messages[0].Status)
+})
+.catch((err) => {
+res.status(400).send("failed")
+})
+    }
+ 
+  }
+
 }
 
 const ordersController = new Order();
