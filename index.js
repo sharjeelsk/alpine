@@ -44,10 +44,14 @@ app.use("/api", authRouter);
 app.use("/api/user", usersRouter);
 app.use("/api/contactUs", contactUsRouter);
 app.use("/api/order", orderRouter);
+if(process.env.NODE_ENV==='production'){
+  app.use(express.static('client/build'));
+  app.get('*',(req,res)=>{
+      res.sendFile(path.resolve(__dirname,'client','build','index.html'))
 
-app.get("/test", (req,res) => {
-  res.send("hello")
-})
+  })
+}
+
 
 
 // Payments Routes
