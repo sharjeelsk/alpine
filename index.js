@@ -81,7 +81,7 @@ app.post("/callback",(req,res)=>{
             if(updatedOrder){
               console.log(updatedOrder)
             }
-            res.redirect("http://alpinestationeries.herokuapp.com/orderplaced")
+            res.redirect("https://alpinestationeries.herokuapp.com/orderplaced")
             
         }else {
           //once payment is failed then delete the current assigned object whose flag was set as not verfied
@@ -130,7 +130,7 @@ app.post("/payment",async (req,res)=>{ //you get array buffer when you use wrong
     params['ORDER_ID'] = req.body.orderId
     params['CUST_ID'] = `EWF_10${email.email.replace("@gmail.com","")}`;
     params['TXN_AMOUNT'] = TotalPrice(req.body.description);
-    params['CALLBACK_URL'] = `http://alpinestationeries.herokuapp.com/callback`;
+    params['CALLBACK_URL'] = `https://alpinestationeries.herokuapp.com/callback`;
     params['EMAIL'] = `${email.email}`;
     params['MOBILE_NO'] = "";
     
