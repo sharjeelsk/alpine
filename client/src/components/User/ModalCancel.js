@@ -4,7 +4,7 @@ import {useForm} from 'react-hook-form'
 import axios from 'axios'
 import {connect} from 'react-redux'
 import "./User.scss"
-const ModalReturn = ({name,item,user,orderId,navigation}) => {
+const ModalCancel = ({name,item,user,orderId,navigation}) => {
 
     console.log(navigation)
     const {register, handleSubmit, formState:{errors}} = useForm()
@@ -12,11 +12,9 @@ const ModalReturn = ({name,item,user,orderId,navigation}) => {
   const [success,setSuccess] = React.useState(null)
   const onSubmit = (data)=>{
     console.log(data)
- axios.post("/order/return",{bankAccountNo:data.number,ifscCode:data.ifsc,bankName:data.name,bankBranch:data.branch,phone:data.upi,token:user,orderId})
+ axios.post("/order/cancel",{bankAccountNo:data.number,ifscCode:data.ifsc,bankName:data.name,bankBranch:data.branch,token:user,orderId})
  .then(res=>{
-
-  navigation.history.push("/orderstatus",{heading:"Return in Process",content:"Your Amount will be credited to your bank account within 2 days"})
-
+        navigation.history.push("/orderstatus",{heading:"Order Cancelled",content:"Please let us know the reason for cancellation in contact us tab"})
  })
  .catch(err=>console.log(err))
 }
@@ -26,7 +24,7 @@ const ModalReturn = ({name,item,user,orderId,navigation}) => {
       open={open}
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
-      trigger={<Button className="ui blue button">Return</Button>}
+      trigger={<Button className="ui red button">Cancel</Button>}
     >
       <Modal.Header><h3>Enter Bank Details</h3></Modal.Header>
       <Modal.Content image scrolling>
@@ -105,4 +103,4 @@ const mapStateToProps = ({user})=>{
         user:user.user
     }
 }
-export default connect(mapStateToProps)(ModalReturn)
+export default connect(mapStateToProps)(ModalCancel)

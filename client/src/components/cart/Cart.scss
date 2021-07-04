@@ -51,6 +51,11 @@
 }
 
 .cartdiv{
+    .cartitemsdiv{
+        .item{
+            
+        }
+    }
     .sorrymessage{
         text-align: center;
         margin: 5% 0;
@@ -81,7 +86,9 @@
         border-right: 1px solid black;
         padding:.5% 0 ;
         h2{
-            font-weight: bold;
+            font-weight: 400;
+            font-size: 1.5em;
+            font-family: $secondaryfont;
         }
         .arrows{
             transition: .2s;
@@ -97,9 +104,12 @@
         .blackbutton{
             padding: 1% 7%;
         }
+        .total{
+            font-size: 2.5em !important;
+        }
         h1{
         text-align: left;
-        font-size: 2em;
+        font-size: 1.8em;
         font-family: $secondaryfont;
         font-weight: lighter;
         span{

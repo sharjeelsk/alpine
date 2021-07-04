@@ -95,12 +95,28 @@ app.post("/callback",(req,res)=>{
 app.post("/payment",async (req,res)=>{ //you get array buffer when you use wrong credentials
   var params = {};
   //decode token
-  
+  function TotalPrice(items){
+    let totalam=0;
+    items.forEach(item=>{
+        totalam = totalam+item.price*item.quantity
+    })
+    if(totalam > 300){
+      return totalam.toString()
+    } else {
+      totalam =totalam+40
+      totalam.toString()
+      return totalam.toString()
+    }
+    
+  }
+  console.log(TotalPrice(req.body.description))
     //  req.body.token
     // console.log(req.body.token)
     let decoded = jwt.verify(req.body.token, JWT_SECRET);
     // console.log(decoded)
     const email = await userModel.findById(decoded._id);
+    console.log("_________________________________________________________________")
+    console.log(req.body)
 
     /* initialize an array */
     params['MID'] = process.env.PAYTM_MID;
@@ -109,7 +125,7 @@ app.post("/payment",async (req,res)=>{ //you get array buffer when you use wrong
     params['INDUSTRY_TYPE_ID'] = 'Retail';
     params['ORDER_ID'] = req.body.orderId
     params['CUST_ID'] = `EWF_10${email.email.replace("@gmail.com","")}`;
-    params['TXN_AMOUNT'] = '1360';
+    params['TXN_AMOUNT'] = TotalPrice(req.body.description);
     params['CALLBACK_URL'] = `http://localhost:3002/callback`;
     params['EMAIL'] = `${email.email}`;
     params['MOBILE_NO'] = "";

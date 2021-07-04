@@ -4,10 +4,8 @@ import "./OrderPlaced.scss"
 import image from './shopping-bag (2).png'
 import {setNull} from '../redux/cart/CartActions'
 import {connect} from 'react-redux'
-const OrderPlaced = (props) => {
-    React.useEffect(()=>{
-        props.setNull()
-    },[])
+const OrderStatus = (props) => {
+  console.log(props.location.state.heading);
  
     return (
         <div>
@@ -15,8 +13,8 @@ const OrderPlaced = (props) => {
             <Header />
             <div className="orderplaced">
             <img src={image} alt="bag" />
-            <h1>Order Placed Successfully</h1>
-            <p>You can expect your delivery by today</p>
+            <h1>{props.location.state.heading}</h1>
+            <p>{props.location.state.content}</p>
             <button className="blackbutton" onClick={()=>props.history.push("/")}>Continue Shopping <span style={{marginLeft:10}}><i class="fa fa-shopping-basket" aria-hidden="true"></i></span></button>
             </div>
         </div>
@@ -27,4 +25,4 @@ const mapDispatchToProps=(dispatch)=>{
         setNull:()=>dispatch(setNull())
     }
 }
-export default connect(null,mapDispatchToProps)(OrderPlaced);
+export default connect(null,mapDispatchToProps)(OrderStatus);

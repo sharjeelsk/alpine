@@ -36,6 +36,9 @@ class ContactUs{
         request
         .then((result) => {
             console.log(result.body)
+            res.json({
+                message: "success"
+            })
         })
         .catch((err) => {
             console.log(err.statusCode)

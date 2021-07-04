@@ -45,6 +45,7 @@ background-image: linear-gradient(315deg, #bdd4e73d 0%, #8693ab41 74%);
                 }
             }
             .shadow-lg:hover{
+                cursor: pointer;
                 background-image: linear-gradient(315deg, #bdd4e7ab 0%, #8693abb0 74%);
                 img{
                     transition: .5s;

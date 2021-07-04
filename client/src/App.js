@@ -12,7 +12,7 @@ import Test from './components/UiKits/Test'
 import User from './components/User/User'
 import OrderPlaced from './components/OrderPlaced/OrderPlaced'
 import AboutUs from './components/AboutUs/AboutUs'
-
+import OrderStatus from './components/OrderPlaced/OrderStatus'
 function App() {
   return (
     <Switch>
@@ -28,6 +28,7 @@ function App() {
       <Route path="/userdetails" component={User} />
       <Route path="/orderplaced" component={OrderPlaced} />
       <Route path="/aboutus" component={AboutUs} />
+      <Route path="/orderstatus" component={OrderStatus} />
     </Switch>
   );
 }

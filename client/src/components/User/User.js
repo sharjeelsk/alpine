@@ -7,6 +7,7 @@ import axios from 'axios'
 import ModalExampleScrollingContent from './ModalCustom'
 import InputModal from './InputModal'
 import ModalReturn from './ModalReturn'
+import ModalCancel from './ModalCancel'
 import Footer from '../Footer/Footer'
 const User = (props) => {
     const [state,setState] = React.useState(false)
@@ -15,6 +16,13 @@ const User = (props) => {
         axios.post(`/user/single-user`,{token:props.user})
         .then(res=>setData(res.data.User))
     },[])
+    const cancelCodItem = (id)=>{
+        axios.post("/order/cancel",{orderId:id,token:props.user})
+ .then(res=>{
+        props.history.push("/orderstatus",{heading:"Order Cancelled",content:"Please let us know the reason for cancellation in contact us tab"})
+ })
+ .catch(err=>console.log(err))
+    }
     const renderContent =()=>{
         if (typeof window.orientation === 'undefined') {
             return(
@@ -53,7 +61,7 @@ const User = (props) => {
 
                             <div style={{flexDirection:"row",display:"flex",justifyContent:"space-between"}}>
                             <p><span style={{color:"grey"}}>Status:</span> {item.status}</p>
-                            <p><span style={{color:"grey"}}>Date:</span> {item.createdAt}</p>
+                            <p><span style={{color:"grey"}}>Date:</span> {item.date}</p>
                             </div>
                             <div style={{flexDirection:"row",display:"flex",justifyContent:"space-between"}}>
                             <p><span style={{color:"grey"}}>Address:</span> {item.address}</p>
@@ -63,6 +71,12 @@ const User = (props) => {
                             <ModalExampleScrollingContent item={item} />
                             {
                                 item.status==="Delivered"?<ModalReturn navigation={props} orderId={item._id} />:null
+                            }
+                            {
+                                item.status==="Out For Delivery" && item.paymentMode==="ONLINE"?<ModalCancel navigation={props} orderId={item._id} />:null
+                            }
+                            {
+                                item.status==="Out For Delivery" && item.paymentMode==="COD"?<button className="ui red button" onClick={()=>cancelCodItem(item._id)}>Cancel</button>:null
                             }
                             
                         </div>
@@ -109,7 +123,7 @@ const User = (props) => {
                             <div className=" carddetails">
                             <div style={{flexDirection:"row",display:"flex",justifyContent:"space-between"}}>
                             <p><span style={{color:"grey"}}>Status:</span> {item.status}</p>
-                            <p><span style={{color:"grey"}}>Date:</span> {item.createdAt}</p>
+                            <p><span style={{color:"grey"}}>Date:</span> {item.date}</p>
                             </div>
                             <div style={{flexDirection:"row",display:"flex",justifyContent:"space-between"}}>
                             <p><span style={{color:"grey"}}>Address:</span> {item.address}</p>
@@ -119,6 +133,12 @@ const User = (props) => {
                             <ModalExampleScrollingContent item={item} />
                             {
                                 item.status==="Delivered"?<ModalReturn navigation={props} orderId={item._id}/>:null
+                            }
+                              {
+                                item.status==="Out For Delivery" && item.paymentMode==="ONLINE"?<ModalCancel navigation={props} orderId={item._id} />:null
+                            }
+                            {
+                                item.status==="Out For Delivery" && item.paymentMode==="COD"?<button className="ui red button" onClick={()=>cancelCodItem(item._id)}>Cancel</button>:null
                             }
                         </div>
                         ))

@@ -7,17 +7,23 @@ import axios from 'axios'
 const ContactUs = () => {
     const {register, handleSubmit, formState:{errors}} = useForm()
     const [success,setSuccess] = React.useState(null)
+    const [loading,setLoading] = React.useState(false)
     const onSubmit = (data)=>{
+        setLoading(true)
         console.log(data)
-        axios.post(`${process.env.REACT_APP_DEV_LINK}/contactUs/sendMail`,{
+        axios.post(`/contactUs/sendMail`,{
             name:data.name,
             phoneNumber:data.mobileno,
             message:data.Message
         })
         .then(response=>{
+            setLoading(false)
             console.log(response);
             setSuccess("Successfully Sent Email !")
         })
+        .catch(err=>{
+            setLoading(false)
+            console.log(err)})
     }
     return (
         <div>
@@ -51,13 +57,18 @@ const ContactUs = () => {
                 {errors.Message?<div className="ui pointing red basic label">Message is Invalid</div>:null}
 
                 </div>
-                
+                <div className="col-12" style={{textAlign:"center"}}>
                 {
-                    success!==null?<p>{success}</p>:null
+                    success!==null?<p style={{fontWeight:"bold",color:"green"}}>{success}</p>:null
                 }
-                <div className="col-12">
+                </div>
+               {loading?
+               <div className="ui active dimmer">
+               <div className="ui medium text loader">Loading</div>
+             </div> 
+               :<div className="col-12">
                     <button className="blackbutton" type="submit">Submit</button>
-                </div> 
+                </div> }
             </div>
             </form>
            

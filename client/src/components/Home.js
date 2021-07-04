@@ -8,7 +8,7 @@ const Home = ({history}) => {
     return (
         <div className="homeonediv">
             <Header id='1' />
-        <h1>Alpine Stationarie's</h1>
+        <h1>Alpine Stationery</h1>
         <p className="headingpara">Bright up Your future in one day</p>
 
         <div className="shopnowdiv">
@@ -16,7 +16,7 @@ const Home = ({history}) => {
         <div className="row ">
             <div onClick={()=>history.push("/stationaries")} className="homeheadcards shadow-lg col-xs-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
                 <img src={stationaries} alt="stationaries" />
-                <h3>Stationarie's</h3>
+                <h3>Stationery</h3>
             </div>
             <div onClick={()=>history.push("/books")} className="homeheadcards shadow-lg col-xs-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
                 <img src={books} alt="books" />
@@ -118,9 +118,9 @@ const Home = ({history}) => {
 
 
         <div className="brief">
-            <h2>Brief About Anmol Stationarie's</h2>
+            <h2>Brief About Alpine Stationery</h2>
             <p>
-                Anmol stationaries is an aurangabad based e-commerce store which
+                Alpine Stationery is an aurangabad based e-commerce store which
                 provides delivery within a day to the residents of aurangabad
                 with wide variety of product's and payment options with flexible 
                 returns.

@@ -29,7 +29,7 @@ class User {
         let User = await userModel
           .findById(decoded._id)
           .select("name email phoneNumber address pin history")
-          .populate("history");
+          .populate({path: 'history', options: { sort: {'createdAt': -1} }});
         if (User) {
           return res.json({ User });
         }

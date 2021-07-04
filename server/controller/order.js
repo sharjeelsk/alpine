@@ -2,6 +2,7 @@ const orderModel = require("../models/order");
 const userModel = require("../models/user")
 const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = require("../config/keys");
+const dateP = require('date-and-time');
 
 class Order {
   async getAllOrders(req, res) {
@@ -10,7 +11,7 @@ class Order {
         .find({})
         // .populate("history")
         .populate("user", "name email")
-        .sort({ _id: -1 });
+        .sort({ createdAt: -1 });
       if (Orders) {
         return res.json({ Orders });
       }
@@ -54,6 +55,8 @@ class Order {
       return res.json({ err: "All filled must be required" });
     } else {
       try {
+        
+        
         if(phone === "" && address === ""){
           let currentUser = await userModel
                 .findById(decoded._id)
@@ -62,7 +65,10 @@ class Order {
           address = currentUser.address;
           phone = currentUser.phoneNumber;
         }
+        const now = new Date();
+        console.log(dateP.format(now, 'YYYY/MM/DD HH:mm:ss'),)
         let newOrder = new orderModel({
+          date: dateP.format(now, 'YYYY/MM/DD HH:mm:ss'),
           allProduct,
           user: decoded._id,
           amount,
@@ -88,19 +94,19 @@ class Order {
   }
 
   async postUpdateOrder(req, res) {
-    let { oId, status } = req.body;
-    if (!oId || !status) {
-      return res.json({ message: "All filled must be required" });
-    } else {
-      let currentOrder = await orderModel.findByIdAndUpdate(oId, {
-        status: status,
-        updatedAt: Date.now(),
-      });
-      currentOrder.exec((err, result) => {
-        if (err) console.log(err);
-        return res.json({ success: "Order updated successfully" });
-      });
-    }
+    let { status, oId } = req.body;
+      if (!status || !oId) {
+        let decoded = jwt.verify(token, JWT_SECRET);
+        return res.json({ message: "Field Required" });
+      } else {
+        let currentOrder = await orderModel.updateOne({_id: oId}, {
+          status: status,
+          updatedAt: Date.now(),
+        });
+        if(currentOrder){
+            return res.json({ message: "success" });
+        }
+      }
   }
 
   async postDeleteOrder(req, res) {
@@ -120,62 +126,135 @@ class Order {
   }
 
   async returnOrder(req, res) {
+    console.log("Return__________________________________________________________________________________________________")
     let { bankAccountNo, ifscCode, bankName, bankBranch, token , orderId} = req.body;
     let decoded = jwt.verify(token, JWT_SECRET);
 
     let user = await userModel.findById({_id: decoded._id});
     if (user){
-      /**
- *
- * This call sends a message to the given recipient with vars and custom vars.
- *
- */
-const mailjet = require ('node-mailjet')
-.connect(process.env.MJ_APIKEY_PUBLIC, process.env.MJ_APIKEY_PRIVATE)
-const request = mailjet
-.post("send", {'version': 'v3.1'})
-.request({
-  "Messages":[
-    {
-      "From": {
-        "Email": "alpinestationeries@gmail.com",
-        "Name": "Return Order"
-      },
-      "To": [
-        {
-          "Email": "alpinestationeries@gmail.com",
-          "Name": "passenger 1"
-        }
-      ],
-      "TemplateID": 3018067,
-      "TemplateLanguage": true,
-      "Subject": "Hey Admin, we have return request",
-      "Variables": {
-    "userName": user.Name,
-    "phoneNumber": user.phone,
-    "email": user.email,
-    "userAddress": user.address,
-    "pinCode": user.pin,
-    "orderId": orderId,
-    "bankName": bankName,
-    "ifscCode": ifscCode,
-    "bankBranch": bankBranch,
-    "accountNumber": bankAccountNo,
-  }
+      
+
+      let order = await orderModel.updateOne({_id: orderId}, {$set: {status: "Return in Process"}})
+      if(order) {
+        console.log(user)
+      console.log(bankAccountNo, ifscCode, bankName, bankBranch,token , orderId)
+        const mailjet = require ('node-mailjet')
+        .connect(process.env.MJ_APIKEY_PUBLIC, process.env.MJ_APIKEY_PRIVATE)
+        const request = mailjet
+        .post("send", {'version': 'v3.1'})
+        .request({
+          "Messages":[
+            {
+              "From": {
+                "Email": "techgeeksfs@gmail.com",
+                "Name": "Order Return"
+              },
+              "To": [
+                {
+                  "Email": "alpinestationeries@gmail.com",
+                  "Name": "passenger 1"
+                }
+              ],
+              "TemplateID": 3021313,
+              "TemplateLanguage": true,
+              "Subject": "Hey Admin, we have a return request",
+              "Variables": {
+                "userName": `${user.name}`,
+                "phoneNumber": `${user.phoneNumber}`,
+                "email":`${user.email}`,
+                "userAddress": `${user.address}`,
+                "pinCode": `${user.pin}`,
+                "orderId": `${orderId}`,
+                "bankName": `${bankName}`,
+                "ifscCode": `${ifscCode}`,
+                "bankBranch": `${bankBranch}`,
+                "accountNumber": `${bankAccountNo}`,
+          }
+            }
+          ]
+        })
+        request
+        .then((result) => {
+          console.log(result.body);
+          return res.json({ message: "success" });
+        })
+        .catch((err) => {
+          console.log(err.statusCode)
+        })
+      } else {
+        return res.json({ message: "Somthing went Wrong" });
+      }
     }
-  ]
-})
-request
-.then((result) => {
-  console.log(result.body)
-  res.send(result.body.Messages[0].Status)
-})
-.catch((err) => {
-res.status(400).send("failed")
-})
+  }
+
+  async cancelOrder(req, res) {
+    console.log("Cancelled__________________________________________________________________________________________________")
+    let { bankAccountNo, ifscCode, bankName, bankBranch, token , orderId} = req.body;
+    let decoded = jwt.verify(token, JWT_SECRET);
+
+    let user = await userModel.findById({_id: decoded._id});
+    if (user){
+
+      let order = await orderModel.findById({_id: orderId})
+      if(order.paymentMode === "ONLINE") {
+
+        let changeOrder = await orderModel.updateOne({_id: order._id},{$set: {status: "Cancelled"}})
+        console.log(changeOrder)
+        const mailjet = require ('node-mailjet')
+        .connect(process.env.MJ_APIKEY_PUBLIC, process.env.MJ_APIKEY_PRIVATE)
+        const request = mailjet
+        .post("send", {'version': 'v3.1'})
+        .request({
+          "Messages":[
+            {
+              "From": {
+                "Email": "techgeeksfs@gmail.com",
+                "Name": "Order Cancel"
+              },
+              "To": [
+                {
+                  "Email": "alpinestationeries@gmail.com",
+                  "Name": "passenger 1"
+                }
+              ],
+              "TemplateID": 3021619,
+              "TemplateLanguage": true,
+              "Subject": "Hey Admin, we have a Cancel request",
+              "Variables": {
+                "userName": `${user.name}`,
+                "phoneNumber": `${user.phoneNumber}`,
+                "email":`${user.email}`,
+                "userAddress": `${user.address}`,
+                "pinCode": `${user.pin}`,
+                "orderId": `${orderId}`,
+                "bankName": `${bankName}`,
+                "ifscCode": `${ifscCode}`,
+                "bankBranch": `${bankBranch}`,
+                "accountNumber": `${bankAccountNo}`,
+          }
+            }
+          ]
+        })
+        request
+        .then((result) => {
+          console.log(result.body);
+          return res.json({ message: "success" });
+        })
+        .catch((err) => {
+          console.log(err.statusCode)
+        })
+      } else if(order.paymentMode === "COD") {
+        let changeOrder = await orderModel.updateOne({_id: order._id},{$set: {status: "Cancelled"}});
+        return res.json({ message: "success" });
+      }
+
+
     }
  
   }
+
+  
+
 
 }
 

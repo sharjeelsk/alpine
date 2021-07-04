@@ -8,6 +8,7 @@ const SignUp = ({history}) => {
     const [error,setError] = React.useState(null)
     const [loading,setLoading] = React.useState(false)
     const onSubmit = (data)=>{
+        setLoading(true)
         console.log(data)
         if(data.password!==data.confirmpassword){
             setError( "Password's Don't Match");
@@ -15,6 +16,7 @@ const SignUp = ({history}) => {
         }
         axios.post(`${process.env.REACT_APP_DEV_LINK}/signup`,{name:data.name,email:data.email,password:data.password,cPassword:data.confirmpassword,pin:data.pincode,address:data.address,phoneNumber:data.mobileno})
         .then(response=>{
+            setLoading(false)
             if(Object.keys(response.data).includes("error")){
 
                 setError(response.data.error.message)
@@ -29,6 +31,7 @@ const SignUp = ({history}) => {
         })
         .catch(err=>{
           //  console.log(err);
+          setLoading(false)
             setError("Something went wrong")
         })
      

@@ -91,7 +91,7 @@ const Cart = (props) => {
                             post(information)
                                 }).catch(err=>console.log(err))
                     }else{
-                        setMessage("Order Placed Successfully")
+                        props.history.push("/orderplaced")
                     }
                     
                 })
@@ -112,7 +112,7 @@ const Cart = (props) => {
                     }else{
                     console.log("inside new address and cod payment mehtod",option,addressvalue,number);
                         setError("")
-                        setMessage("Order Placed Successfully")
+                        props.history.push("/orderplaced")
                     }
                     
                 })
@@ -198,7 +198,7 @@ const Cart = (props) => {
                                         style={{color:"#ccc",fontSize:".8em",margin:"0 3%"}}><i className="fa fa-angle-right" aria-hidden="true"></i></span></h2>
                                     </div>
                                     <div className="col-2">
-                                        <h2>${item.price*item.quantity}</h2>
+                                        <h2>₹{item.price*item.quantity}</h2>
                                     </div>
                                     <div  className="col-2">
                                     <span className="trashcan" onClick={()=>props.deleteItem(item)}><i className="fa fa-trash" aria-hidden="true"></i></span>
@@ -215,7 +215,8 @@ const Cart = (props) => {
                             <h1>Items : <span>{props.cart.items.length}</span></h1>
                             <h1>MRP : <span>₹{mrp()}</span></h1>
                             <h1 className="discount">Discount : <span>₹{mrp()-total()}</span></h1>
-                            <h1 className="total">Total : <span>₹{total()}</span></h1>
+                            <h1>Delivery Fee: <span>{total()>300?"₹0":"₹40"}</span></h1>
+                            <h1 className="total">Total : <span>₹{total()>300?total():total()+40}</span></h1>
                             <form>
                             <p className="heading1">Choose Address</p>
                             <p onClick={()=>setAddress("default")}>
@@ -279,7 +280,7 @@ const Cart = (props) => {
                                 error.length>0?<p style={{color:"red"}}>{error}</p>:null
                             }
                             {
-                                message.length>0?<p>{message}</p>:null
+                                message.length>0?<p style={{color:"green",fontWeight:"bolder"}}>{message}</p>:null
                             }
                             <button onClick={()=>buyNow()} className="blackbutton">Buy Now</button>
                             </div>

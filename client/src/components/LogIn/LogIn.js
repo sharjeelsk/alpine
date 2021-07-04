@@ -6,15 +6,18 @@ import axios from 'axios'
 import {setUser} from '../redux/user/userActions'
 import {connect} from 'react-redux'
 const LogIn = (props) => {
+    const [loading,setLoading] = React.useState(false)
     console.log(props)
     const [error,setError] = React.useState(null)
     const {register, handleSubmit, formState:{errors}} = useForm()
     const onSubmit = (data)=>{
+        setLoading(true)
         console.log(data)
         axios.post(`/signin`,{
             phoneNumber:data.mobileno,
             password:data.password
         }).then(res=>{
+            setLoading(false)
             if(res.data.message==="success"){
                 console.log(res.data);
                 props.setUser(res.data.token)
@@ -51,9 +54,13 @@ const LogIn = (props) => {
                     error!==null?<p>{error}</p>:null
                 }
 
-                <div className="col-12">
+                {loading?
+                <div className="ui active dimmer">
+                <div className="ui medium text loader">Loading</div>
+              </div> 
+                :<div className="col-12">
                     <button className="blackbutton" type="submit">LogIn</button>
-                </div> 
+                </div>} 
                 <div className="col-12">
                     <Link style={{color:"black"}} to="/login">Forgot password?</Link>
                 </div> 
