@@ -40,10 +40,10 @@ if(process.env.NODE_ENV==='production'){
 //app.use(express.json());
 
 // Routes
-app.use("/api", authRouter);
-app.use("/api/user", usersRouter);
-app.use("/api/contactUs", contactUsRouter);
-app.use("/api/order", orderRouter);
+app.use("/", authRouter);
+app.use("/user", usersRouter);
+app.use("/contactUs", contactUsRouter);
+app.use("/order", orderRouter);
 if(process.env.NODE_ENV==='production'){
   app.use(express.static('client/build'));
   app.get('*',(req,res)=>{
