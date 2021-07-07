@@ -76,7 +76,7 @@
         font-size: 2.5em;
         color: white;
         }
-        background-color: black;
+        background-color: $secondary-color;
 
     }
     .item{
@@ -110,7 +110,7 @@
         h1{
         text-align: left;
         font-size: 1.8em;
-        font-family: $secondaryfont;
+        font-family: $primaryfont;
         font-weight: lighter;
         span{
             font-weight: lighter;

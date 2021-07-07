@@ -247,15 +247,8 @@ class Order {
         let changeOrder = await orderModel.updateOne({_id: order._id},{$set: {status: "Cancelled"}});
         return res.json({ message: "success" });
       }
-
-
     }
- 
   }
-
-  
-
-
 }
 
 const ordersController = new Order();

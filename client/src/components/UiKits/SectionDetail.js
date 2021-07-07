@@ -31,7 +31,7 @@ const SectionDetail = (props) => {
         {//class
             products.map(item=>(
                 <div className="shadow col-sm-12 col-xs-12 col-md-4 col-lg-2 col-xl-2 carddiv" key={item.name}>
-                    <img src={`Images/${item.img}`} alt="" />
+                    {props.history.location.state.name==="Nursury & KG"?<img src={`Images/${item.img}`} alt="" />:<img src={`Images/${item.img.replace(" ","")+".jpg"}`} alt="" />}
                     <h4>{item.name}</h4>
                     <p className="price">Price: ₹{item.price}</p>
                     <p className="discount">MRP: ₹{item.MRP}</p>

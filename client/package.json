@@ -28,7 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://alpinestationeries.herokuapp.com/api",
+  "proxy": "https://alpinestationeries.herokuapp.com",
   "eslintConfig": {
     "extends": [
       "react-app",

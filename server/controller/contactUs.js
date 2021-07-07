@@ -1,6 +1,7 @@
 
 const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = require("../config/keys");
+let Count = require("../models/count")
 
 class ContactUs{
 
@@ -45,7 +46,34 @@ class ContactUs{
         })
       }
 
+      async increaseCount(req, res) {
+        let count = await Count.updateOne({}, {$inc: {count: 1}}) ;
+        if(count){
+            console.log(count)
+            res.json({meassage: "Successfully increamented Count"})
+        } else {
+            res.json({meassage: "Something went wrong"})
+        }
+
+    }
+
+    async getCount(req, res) {
+        let count = await Count.find({}) ;
+        if(count){
+            console.log(count)
+            res.json({
+                meassage: "Success",
+                Count: count
+            })
+        } else {
+            res.json({meassage: "Something went wrong"})
+        }
+
+    }
+
 }
+
+
 
 const contactUsController = new ContactUs();
 module.exports = contactUsController;

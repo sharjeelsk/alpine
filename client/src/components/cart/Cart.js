@@ -216,6 +216,7 @@ const Cart = (props) => {
                             <h1>MRP : <span>₹{mrp()}</span></h1>
                             <h1 className="discount">Discount : <span>₹{mrp()-total()}</span></h1>
                             <h1>Delivery Fee: <span>{total()>300?"₹0":"₹40"}</span></h1>
+                            <h1>Sub Total: <span>₹{total()}</span></h1>
                             <h1 className="total">Total : <span>₹{total()>300?total():total()+40}</span></h1>
                             <form>
                             <p className="heading1">Choose Address</p>

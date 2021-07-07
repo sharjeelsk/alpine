@@ -2,7 +2,8 @@ import React from 'react'
 import "./Books.scss"
 import Header from '../Header/Header'
 import SectionCard from '../UiKits/SectionCard'
-import stationaries from '../Assets/books.json'
+import stationaries from '../Assets/books (1).json'
+import Footer from '../Footer/Footer'
 const Books = ({history}) => {
     let entries  = Object.entries(stationaries)
     console.log(entries)
@@ -20,6 +21,7 @@ const Books = ({history}) => {
             }
                </div>
         </div>
+        <Footer />
         </div>
     );
 }

@@ -36,12 +36,11 @@ font-weight: 600;
  }
  
  .navbar{
-     background-color: white !important;
+     background-color: $primary-color !important;
      font-family: $secondaryfont;
  }
 
  #nav{
-     color:"white"
  }
 
  .logo{
@@ -49,7 +48,7 @@ font-weight: 600;
  }
 
 .nav-link{
-    color:#cccc !important;
+    color:$tertiary-color !important;
     font-weight: 600;
 
 }

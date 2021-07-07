@@ -4,12 +4,18 @@ import Header from './Header/Header'
 import stationaries from '../Images/stationery.png'
 import books from '../Images/book.png'
 import Footer from './Footer/Footer'
+import Alpine from '../Images/Group 6.png'
+import axios from 'axios'
 const Home = ({history}) => {
+    React.useEffect(() =>{
+        axios.post("/count/increaseCount")
+    },[])
     return (
         <div className="homeonediv">
             <Header id='1' />
-        <h1>Alpine Stationery</h1>
-        <p className="headingpara">Bright up Your future in one day</p>
+            <div style={{textAlign:"center"}}>
+            <img src={Alpine} alt="alpine" id="alpine" />
+            </div>
 
         <div className="shopnowdiv">
         <h2 className="heading">Shop Now <i className=" fa fa-shopping-bag" aria-hidden="true"></i></h2>

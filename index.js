@@ -19,6 +19,9 @@ const authRouter = require("./server/routes/auth");
 const contactUsRouter = require("./server/routes/contactUs");
 const orderRouter = require("./server/routes/order");
 const usersRouter = require("./server/routes/user");
+const categoryRouter = require("./server/routes/category");
+const productRouter = require("./server/routes/product");
+const countRouter = require("./server/routes/count");
 // const { default: User } = require("./client/src/components/User/User");
 
 // Model
@@ -45,6 +48,9 @@ app.use("/", authRouter);
 app.use("/user", usersRouter);
 app.use("/contactUs", contactUsRouter);
 app.use("/order", orderRouter);
+app.use("/count", countRouter);
+app.use("/category", categoryRouter);
+app.use("/product", productRouter);
 if(process.env.NODE_ENV==='production'){
   app.use(express.static('client/build'));
   app.get('*',(req,res)=>{
@@ -82,7 +88,7 @@ app.post("/callback",(req,res)=>{
             if(updatedOrder){
               console.log(updatedOrder)
             }
-            res.redirect("https://alpinestationeries.herokuapp.com/orderplaced")
+            res.redirect("https://alpinestationery.in/orderplaced")
             
         }else {
           //once payment is failed then delete the current assigned object whose flag was set as not verfied
@@ -131,7 +137,7 @@ app.post("/payment",async (req,res)=>{ //you get array buffer when you use wrong
     params['ORDER_ID'] = req.body.orderId
     params['CUST_ID'] = `EWF_10${email.email.replace("@gmail.com","")}`;
     params['TXN_AMOUNT'] = TotalPrice(req.body.description);
-    params['CALLBACK_URL'] = `https://alpinestationeries.herokuapp.com/callback`;
+    params['CALLBACK_URL'] = `https://alpinestationery.in/callback`;
     params['EMAIL'] = `${email.email}`;
     params['MOBILE_NO'] = "";
     

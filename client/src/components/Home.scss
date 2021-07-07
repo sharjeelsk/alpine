@@ -1,6 +1,27 @@
 @import "../App.scss";
 
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#C0FEFC !important;
+}
+
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(to bottom,#daf6ff 1%, #2aa39f 40%,#daf6ff);
+    opacity:0.2;
+    border-radius:25px
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#2aa39f;
+}
 .homeonediv{
+    #alpine{
+        width: 40%;
+    }
    h1{
     text-align: center;
     font-family: $primaryfont;
@@ -11,7 +32,8 @@
     -webkit-text-fill-color: transparent;
    }
    .homeheadcards{
-background-image: linear-gradient(315deg, #bdd4e73d 0%, #8693ab41 74%);
+background-image: linear-gradient(315deg, #0444793d 0%, #9cb0d641 74%);
+transition: .2s;
 
    }
    .headingpara{
@@ -39,14 +61,16 @@ background-image: linear-gradient(315deg, #bdd4e73d 0%, #8693ab41 74%);
                 h3{
                     font-size: 2.5em;
                     margin-top: 2%;
-                    color: rgb(102, 102, 102);
+                    color: rgb(29, 29, 29);
                     font-weight: lighter;
                  
                 }
             }
             .shadow-lg:hover{
+                transition: .2s;
+
                 cursor: pointer;
-                background-image: linear-gradient(315deg, #bdd4e7ab 0%, #8693abb0 74%);
+                background-image: linear-gradient(315deg, #9cb0d6b2 0%,#002e5398  74%);
                 img{
                     transition: .5s;
                     transform: scale(1.2);
@@ -68,7 +92,7 @@ background-image: linear-gradient(315deg, #bdd4e73d 0%, #8693ab41 74%);
             margin: 10% 0 4% 0;
         }
         .row{
-            background-color: $secondary-color;
+            background-image: linear-gradient(315deg, #0444793d 0%, #9cb0d641 74%);
             padding: 3%;
             .col-2{
                 background-color: $primary-color;
