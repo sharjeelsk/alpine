@@ -20,18 +20,17 @@ const ModalCancel = ({name,item,user,orderId,navigation}) => {
 }
   return (
     <Modal
-    style={{height:"50%",margin:"auto"}}
+    style={{height:"80vh",margin:"auto"}}
       open={open}
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
       trigger={<Button className="ui red button">Cancel</Button>}
     >
       <Modal.Header><h3>Enter Bank Details</h3></Modal.Header>
-      <Modal.Content image scrolling>
-
+      <Modal.Content scrolling>
         <Modal.Description>
         
-        <div className="contactusdiv">
+        <div className="contactusdiv" style={{overflowY:"auto"}}>
                 <div className="signupdiv">
             <form onSubmit = {handleSubmit(onSubmit)}>
             <div className="signupcontent">
@@ -89,7 +88,7 @@ const ModalCancel = ({name,item,user,orderId,navigation}) => {
         </div>
             </div>
 
-            <div style={{height:"50%"}}>
+            <div style={{height:"150%"}}>
         </div>
 
         </Modal.Description>

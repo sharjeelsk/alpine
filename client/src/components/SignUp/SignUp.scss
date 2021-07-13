@@ -14,17 +14,28 @@
 .whitebutton:focus{
     outline: none;
 }
-
 .blackbutton{
-    padding: 1.5% 10%;
-    background-color: black;
-    color: white;
+    background-image: linear-gradient(to right, #1D976C 0%, #93F9B9  51%, #1D976C  100%);
+}
+.blackbutton{
+    margin: 10px auto;
+    padding: 10px 60px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
     outline: none;
-    border: 1.5px solid black;
-    font-family: $secondaryfont;
+    border: none;
 }
 .blackbutton:hover{
  cursor: pointer;
+ background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
 }
 .blackbutton:focus{
     outline: none;

@@ -2,13 +2,14 @@ import React from 'react'
 import "./Header.scss"
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
+import Logo from '../../Images/Group 15.png'
 const Header = (props) => {
 console.log(props);
 	return (
         <div className=" p-5  rounded">
         <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top  navbarclass " >
 	<div className="container-fluid">
-		<Link className="navbar-brand"  style={{color:"black"}} to="/"><span style={{fontWeight:"bold",color:"#ccc"}}><span style={{color:"red",fontWeight:"bold"}}>A</span>S</span></Link>
+		<Link className="navbar-brand"  style={{color:"black"}} to="/"><img style={{height:"6vh"}} src={Logo} /></Link>
 	<button className="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 		<span className="navbar-toggler-icon" ></span>
 	</button>

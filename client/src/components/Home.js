@@ -4,7 +4,7 @@ import Header from './Header/Header'
 import stationaries from '../Images/stationery.png'
 import books from '../Images/book.png'
 import Footer from './Footer/Footer'
-import Alpine from '../Images/Group 6.png'
+import Alpine from '../Images/Group 12.png'
 import axios from 'axios'
 const Home = ({history}) => {
     React.useEffect(() =>{
@@ -13,16 +13,20 @@ const Home = ({history}) => {
     return (
         <div className="homeonediv">
             <Header id='1' />
+
             <div style={{textAlign:"center"}}>
             <img src={Alpine} alt="alpine" id="alpine" />
             </div>
 
+
         <div className="shopnowdiv">
+
         <h2 className="heading">Shop Now <i className=" fa fa-shopping-bag" aria-hidden="true"></i></h2>
+
         <div className="row ">
             <div onClick={()=>history.push("/stationaries")} className="homeheadcards shadow-lg col-xs-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
                 <img src={stationaries} alt="stationaries" />
-                <h3>Stationery</h3>
+                <h3 >Stationery</h3>
             </div>
             <div onClick={()=>history.push("/books")} className="homeheadcards shadow-lg col-xs-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
                 <img src={books} alt="books" />
@@ -31,7 +35,7 @@ const Home = ({history}) => {
         </div>
         </div>
 
-        <div className="trendingitemsdiv">
+        <div className="trendingitemsdiv" style={{color:"white"}}>
             <h2>Trending Item's</h2>
             <div className="row">
                 <div className="col-2">

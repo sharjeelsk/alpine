@@ -19,6 +19,11 @@
     background:#2aa39f;
 }
 .homeonediv{
+    .backimg{
+        position: relative;
+
+    }
+   
     #alpine{
         width: 40%;
     }
@@ -32,7 +37,7 @@
     -webkit-text-fill-color: transparent;
    }
    .homeheadcards{
-background-image: linear-gradient(315deg, #0444793d 0%, #9cb0d641 74%);
+background-image: linear-gradient(315deg, #03c4a1 0%, #3dfdda 74%);
 transition: .2s;
 
    }
@@ -61,8 +66,8 @@ transition: .2s;
                 h3{
                     font-size: 2.5em;
                     margin-top: 2%;
-                    color: rgb(29, 29, 29);
-                    font-weight: lighter;
+                    color: -webkit-linear-gradient(45deg,#000000, #8a8a8afd);
+                    font-weight: 400;
                  
                 }
             }
@@ -70,7 +75,7 @@ transition: .2s;
                 transition: .2s;
 
                 cursor: pointer;
-                background-image: linear-gradient(315deg, #9cb0d6b2 0%,#002e5398  74%);
+                background-image: linear-gradient(315deg, #00fcce 0%, #a5fded 74%);
                 img{
                     transition: .5s;
                     transform: scale(1.2);

@@ -1,11 +1,9 @@
 import React from 'react'
 import "./SectionCard.scss"
-import Copy from './copy.png'
 const SectionCard = ({name,imgSource,value,history}) => {
     console.log(name);
     let imageLoc = ""
     if(name==="Nursury & KG"){
-        console.log("ldksfj")
         imageLoc="Images/crayons.png"
     }else if(name==="Class I"){
         imageLoc="Images/class1.png"
@@ -32,13 +30,13 @@ const SectionCard = ({name,imgSource,value,history}) => {
     }else if(name==="Class 11 Science"){
         imageLoc= "Images/class11science.png"
     }else if(name==="Class 11th Arts Marathi Medium"){
-        imageLoc= "Images/"
+        //imageLoc= "Images/"
     }else if(name==="Class 11th commerce english medium"){
-        imageLoc= "Images/"
+        //imageLoc= "Images/"
     }else if(name==="Class 12th"){
         imageLoc= "Images/class12science.png"
     }else if(name==="Class 12th science"){
-        imageLoc= "Images/"
+        //imageLoc= "Images/"
     }
     return ( 
      <div onClick={()=>history.push("/sectiondetail",{value,name})} className="shadow-lg col-xs-12 col-sm-12 col-md-6 col-lg-2 col-xl-2">

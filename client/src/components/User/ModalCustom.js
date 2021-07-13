@@ -6,7 +6,7 @@ const ModalExampleScrollingContent = ({item}) => {
 
   return (
     <Modal
-    style={{height:"50%",margin:"auto"}}
+    style={{height:"80%",margin:"auto"}}
       open={open}
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
