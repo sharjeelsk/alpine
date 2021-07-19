@@ -412,7 +412,7 @@
             "price":18,
             "quantity":1,
             "MRP":20,
-            "img":"camlinsinglelinenotebook72pages"
+            "img":"camlisinglelinenotebook72pages"
     
         },
         {
@@ -436,7 +436,7 @@
                 "price":18,
                 "quantity":1,
                 "MRP":20,
-                "img":"camlinfourlinenotebook72pages"
+                "img":"camlinfourlinenotebook72pagesjpeg"
                },
                {
               "name":"camlin fourline notebook 164 pages",
@@ -451,7 +451,7 @@
                     "price":15,
                     "quantity":1,
                     "MRP":17,
-                    "img":"camlinunrulesnotebook88pages"
+                    "img":"camlinunrulesnotebook88pagesjpeg"
         
                 },
                 {
@@ -491,7 +491,7 @@
                     "price":24,
                     "quantity":1,
                     "MRP":28,
-                    "img":"camlindoublelinenotebook164pages"
+                    "img":"camlindoublelinenotebook164pagespng"
         
                 },   
                 {
@@ -531,7 +531,7 @@
                     "price":45,
                     "quantity":1,
                     "MRP":50,
-                    "img":"camlinjumboa5softsinglelinenotebook172pages"
+                    "img":"camlinjumboa5softsinglelinenotebook172pagesjpeg"
         
                 },  
     
@@ -540,7 +540,7 @@
                     "price":45,
                     "quantity":1,
                     "MRP":50,
-                    "img":"camlinjumboa5softfourlinenotebook172pages"
+                    "img":"camlinjumboa5softfourlinenotebook172pagesjpeg"
         
                 }, 
                 {
@@ -556,7 +556,7 @@
                     "price":45,
                     "quantity":1,
                     "MRP":50,
-                    "img":"camlinA5sizehardbondsinglelinenotebook164pages"
+                    "img":"camlinA5sizehardbondsinglelinenotebook164pagesjpeg"
         
                 }, 
                 {
@@ -564,7 +564,7 @@
                     "price":27,
                     "quantity":1,
                     "MRP":30,
-                    "img":"camlinA5sizesoftbondunrulesnotebook100pages"
+                    "img":"camlinA5sizesoftbondunrulesnotebook100pagespng"
         
                 }, 
                 {
@@ -588,7 +588,7 @@
                     "price":27,
                     "quantity":1,
                     "MRP":30,
-                    "img":"camlinA5sizesoftbondsinglelinenotebook100pages"
+                    "img":"camlinA5sizesoftbondsinglelinenotebook100pagespng"
         
                 },
                 {
@@ -596,7 +596,7 @@
                     "price":27,
                     "quantity":1,
                     "MRP":30,
-                    "img":"camlinA5sizesoftbonddoublelinenotebook100pages"
+                    "img":"camlinA5sizesoftbonddoublelinenotebook100pagespng"
         
                 },
                 {
@@ -685,7 +685,7 @@
                     "price":60,
                     "quantity":1,
                     "MRP":65,
-                    "img":"camlinA4sizesoftbondusinglelinenotebook172pages"
+                    "img":"camlinA4sizesoftbondusinglelinenotebook172pagespng"
         
                 },
                 {
@@ -693,7 +693,7 @@
                     "price":135,
                     "quantity":1,
                     "MRP":150,
-                    "img":"camlinA4sizesoftbondusinglelinenotebook392pages"
+                    "img":"camlinA4sizesoftbondusinglelinenotebook392pagesjpeg"
         
                 },
                 {

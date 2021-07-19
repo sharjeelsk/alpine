@@ -42,6 +42,7 @@ const SectionDetail = (props) => {
                             animate({delay:500,opacity:0})
                         }, 3000);
                         props.addItem(item)}} className="blackbutton"><i className="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</button>
+                       
                 </div>
             ))
         }

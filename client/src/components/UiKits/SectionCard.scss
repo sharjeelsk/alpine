@@ -38,11 +38,12 @@
     h1{
         text-align: center;
         font-size: 6em;
+        margin-top: 1%;
     }
     text-align: center;
     .carddiv{
+        padding-bottom: 6% !important;
         background-color: white;
-        padding-bottom: 5% !important;
         img{
 background-image:url('./copy.png');
 background-repeat: no-repeat;
@@ -71,13 +72,10 @@ background-repeat: no-repeat;
             font-family: $secondaryfont;
             text-decoration: line-through;
             color: #aaaa;
-            margin-bottom: 0;
         }
         .blackbutton{
-          
             padding:3% 20%;
         }
-        border:1px solid #ccca
     }
     .displaycount{
         font-size: 1.2em;
@@ -89,10 +87,30 @@ background-repeat: no-repeat;
 
 
 @media (max-width: 992px) {
-
+.cardDetail{
+    .row{
+        .carddiv{
+            padding-bottom: 15% !important;
+        }
+    }
+}
 }
 @media (max-width: 768px) {
-
+    .cardDetail{
+        h1{
+            font-size: 3.3em;
+        }
+        .row{
+            margin: auto 10%;
+            .carddiv{
+                padding-bottom: 35% !important;
+                h4{
+                    font-size: 2em;
+                }
+                padding: 10%;
+            }
+        }
+    }
 
 }
 @media (max-width: 576px) {
@@ -103,6 +121,7 @@ background-repeat: no-repeat;
         .row{
             margin: auto 10%;
             .carddiv{
+                padding-bottom: 35% !important;
                 h4{
                     font-size: 2em;
                 }
