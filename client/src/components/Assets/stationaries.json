@@ -310,91 +310,485 @@
     ],
     "pencil":[
         {
-            "name":"Natraj",
-            "price":2,
+            "name":"Natraj Regular Pencil (Pack of 10 Pencil",
+            "price":35,
             "quantity":1,
-            "MRP":18
+            "MRP":40,
+            "img":"natrajregularpencil"
         },
         {
-            "name":"Apsara",
-            "price":1,
+            "name":"Apsara Platinum (Pack of 10 Pencil)",
+            "price":45,
             "quantity":1,
-            "MRP":18
+           "MRP":50,
+           "img":"apsarapaltinum"
+        },
+        {
+            "name":"Apsara Marvel Avengers Pencil (Pack of 10 Pencil)",
+            "price":90,
+            "quantity":1,
+            "MRP":99,
+            "img":"marvelapsaravaenger"
+        },
+        {
+            "name":"Apsara Disney Princess Pencils (Pack of 10 Pencil)",
+            "price":90,
+            "quantity":1,
+            "MRP":99,
+            "img":"apsaradisneyprincesspencil"
+        },
+        {
+            "name":"Apsara Drawing 10B & 12B (Pack of 10 Pencil)",
+            "price":90,
+            "quantity":1,
+            "MRP":99,
+             "img":"apsaradrawing10b12b"
+        },
+        {
+            "name":"Apsara Drawing 8B & 9B (Pack of 10 Pencil)",
+            "price":75,
+            "quantity":1,
+            "MRP":80,
+             "img":"apsaradrawing8b9b"
+        },
+        {
+            "name":"Apsara 6H to 6B (Pack of 10 Pencil)",
+            "price":55,
+            "quantity":1,
+            "MRP":60,
+             "img":"apsara6h6b"
+        },
+        {
+            "name":"Apsara Assorted HB,2B,4B,6B,8B,10B (Pack of 10 Pencil)",
+            "price":35,
+            "quantity":1,
+            "MRP":40,
+             "img":"apsaraassortedhb2b"
+        },
+        {
+            "name":"Apsara Assorted HB,B,2B,2B,4B,6B (Pack of 10 Pencil)",
+            "price":31,
+            "quantity":1,
+            "MRP":36,
+             "img":"apsaraassortedhbb"
+        },
+        {
+            "name":"Apsara Charcoal (Pack of 3 Pencil)",
+            "price":45,
+            "quantity":1,
+            "MRP":50,
+             "img":"apsaracharcoal"
+        },
+        {
+            "name":"Apsara Glass Marking Pencils (Pack of 10 Pencil available in all colours)",
+            "price":55,
+            "quantity":1,
+            "MRP":60,
+             "img":"apsaraglassmarkingpencil"
+        },
+        {
+            "name":"Apsara Colour Copying Pencil (Pack of 10 Pencil available in purple and brown)",
+            "price":55,
+            "quantity":1,
+            "MRP":60,
+             "img":"apsaracolourcopyingpencil"
+        },
+        {
+            "name":"Apsara Steno Pencil (Pack of 10 Pencil)",
+            "price":45,
+            "quantity":1,
+            "MRP":50,
+             "img":"apsarastenopencil"
+        },
+        {
+            "name":"Natraj Fluro Prints Pencil (Pack of 10 Pencil)",
+            "price":45,
+            "quantity":1,
+            "MRP":50,
+             "img":"natrajfluroprintspencil"
+        },
+        {
+            "name":"Marvel Spider-Man Pencil (Pack of 10 Pencil)",
+            "price":45,
+            "quantity":1,
+            "MRP":50,
+             "img":"marvelspidermanpencil"
+        },
+        {
+            "name":"Apsara Premium Colour Pencil (Pack of 26 Pencil)",
+            "price":225,
+            "quantity":1,
+            "MRP":250,
+             "img":"apsarapremiumcolourpencil26"
+        },
+        {
+            "name":"Apsara Premium Colour Pencil (Pack of 14 Pencil)",
+            "price":125,
+            "quantity":1,
+            "MRP":150,
+             "img":"apsarapremiumcolourpencil14"
+        },
+        {
+            "name":"Natraj Colour Pencil 24FS Tin (Pack of 24 Pencil)",
+            "price":125,
+            "quantity":1,
+            "MRP":150,
+             "img":"natrajcolourpencil24fs"
+        },
+        {
+            "name":"Natraj Colour Pencil 12FS Tin (Pack of 12 Pencil)",
+            "price":70,
+            "quantity":1,
+            "MRP":75,
+             "img":"natrajcolourpencil12fs"
         }
     ]
     ,
     "Eraser":[
         {
-            "name":"Dom",
-            "price":2,
+            "name":"Apsara Mechano Eraser",
+            "price":18,
             "quantity":1,
-            "MRP":18
+            "MRP":20,
+             "img":"apsaramechanoeraser"
         },
         {
-            "name":"Er",
-            "price":1,
+            "name":"Apsara Pop Eraser (Pack of 50 piece)",
+            "price":225,
             "quantity":1,
-            "MRP":18
+            "MRP":250,
+             "img":"apsarapoperaser"
+        },
+        {
+            "name":"Apsara Non-Dust Eraser (Pack of 20)",
+            "price":55,
+            "quantity":1,
+            "MRP":60,
+             "img":"apsaranondusteraser"
+        },
+        {
+            "name":"Nataraj Fluro Dust Clear Eraser (Pack of 20)",
+            "price":90,
+            "quantity":1,
+            "MRP":100,
+             "img":"natarajflurodustcleareraser"
+        },
+        {
+            "name":"Natraj Wild-E's Eraser (Pack of 5)",
+            "price":35,
+            "quantity":1,
+            "MRP":40,
+             "img":"natrajwildeseraser"
+        },
+        {
+            "name":"Natraj Petals Eraser (Pack of 5)",
+            "price":35,
+            "quantity":1,
+            "MRP":40,
+             "img":"natrajpetalseraser"
         }
     ]
     ,
     "Sharpner":[
         {
-            "name":"Dom",
-            "price":2,
+            "name":"Spaceball Sharpners",
+            "price":14,
             "quantity":1,
-            "MRP":18
+            "MRP":15,
+             "img":"spaceballsharpners"
         },
         {
-            "name":"Er",
-            "price":1,
+            "name":"Tidy-Up-Eraser-Sharpner",
+            "price":14,
             "quantity":1,
-            "MRP":18
+            "MRP":15,
+             "img":"tidyuperasersharpner"
+        },
+        {
+            "name":"Apsara Absolute Sharpner",
+            "price":65,
+            "quantity":1,
+            "MRP":70,
+             "img":"apsaraabsolutesharpner"
+        },
+        {
+            "name":"Apsara Long Point Sharpner (Pack of 20 Piece)",
+            "price":90,
+            "quantity":1,
+            "MRP":100,
+             "img":"apsaralongpointsharpner"
+        },
+        {
+            "name":"Tidy Top Sharpner (Pack of 20 Piece)",
+            "price":90,
+            "quantity":1,
+            "MRP":100,
+             "img":"tidytopsharpner"
+        },
+        {
+            "name":"Apsara Long Point Sharpner (Pack of 20 Piece)",
+            "price":90,
+            "quantity":1,
+            "MRP":100,
+             "img":"apsaralongpointsharpner"
         }
     ]
     ,
     "scale":[
         {
-            "name":"Dom",
-            "price":2,
+            "name":"Apsara Absolute Scale 30cm",
+            "price":22,
             "quantity":1,
-            "MRP":18
+            "MRP":25,
+             "img":"apsaraabsolutescale30cm"
         },
         {
-            "name":"Er",
-            "price":1,
+            "name":"Apsara Scale 15cm",
+            "price":8,
             "quantity":1,
-            "MRP":18
+            "MRP":10,
+             "img":"apsarascale15cm"
+        },
+        {
+            "name":"Shatter Resistant Scale",
+            "price":12,
+            "quantity":1,
+            "MRP":15,
+             "img":"shatterresistantscale"
         }
     ]
     ,
     "Geometry":[
         {
-            "name":"Dom",
-            "price":2,
+            "name":"Toolkit Geometry Box",
+            "price":115,
             "quantity":1,
-            "MRP":18
+            "MRP":125,
+             "img":"toolkitgeometrybox"
         },
         {
-            "name":"Er",
+            "name":"Mathematical Instrument",
+            "price":18,
+            "quantity":1,
+            "MRP":20,
+             "img":"mathematicalinstrument"
+        },
+        {
+            "name":"Onpoint Geometry Box",
+            "price":85,
+            "quantity":1,
+            "MRP":100,
+             "img":"onpointgeometrybox"
+        },
+        {
+            "name":"Fundamental Instrument Set",
+            "price":25,
+            "quantity":1,
+            "MRP":30,
+             "img":"fundamentalinstrumentset"
+        },
+        {
+            "name":"Classic Compass",
+            "price":22,
+            "quantity":1,
+            "MRP":25,
+             "img":"classiccompass"
+        },
+        {
+            "name":"Classic Protractor",
             "price":1,
             "quantity":1,
-            "MRP":18
+            "MRP":50,
+             "img":"classicprotactor"
         }
     ]
     ,
-    "Whitener":[
+    "Kits and Packs":[
         {
-            "name":"Dom",
-            "price":2,
+            "name":"My Apsara Kit",
+            "price":420,
             "quantity":1,
-            "MRP":18
+            "MRP":500,
+             "img":"myapsarakit"
         },
         {
-            "name":"Er",
-            "price":1,
+            "name":"Writing Kit",
+            "price":220,
             "quantity":1,
-            "MRP":18
+            "MRP":250,
+             "img":"writingkit"
+        },
+        {
+            "name":"Designer's Kit",
+            "price":175,
+            "quantity":1,
+            "MRP":199,
+             "img":"designerskit"
+        },
+        {
+            "name":"Art Kit",
+            "price":130,
+            "quantity":1,
+            "MRP":150,
+             "img":"artkit"
+        },
+        {
+            "name":"Premium Scholar's Kit",
+            "price":130,
+            "quantity":1,
+            "MRP":149,
+             "img":"premiumscholarskit"
+        },
+        {
+            "name":"Scholar's Kit",
+            "price":80,
+            "quantity":1,
+            "MRP":99,
+             "img":"scholarskit"
+        },
+        {
+            "name":"Avengers Power Pack",
+            "price":80,
+            "quantity":1,
+            "MRP":99,
+             "img":"avengerspowerpack"
+        },
+        {
+            "name":"Absolute Kit",
+            "price":85,
+            "quantity":1,
+            "MRP":99,
+             "img":"absolutekit"
+        },
+        {
+            "name":"Mini Art Kit",
+            "price":45,
+            "quantity":1,
+            "MRP":50,
+             "img":"minitartkit"
+        },
+        {
+            "name":"Frozen Kit",
+            "price":26,
+            "quantity":1,
+            "MRP":30,
+             "img":"frozenkit"
+        },
+        {
+            "name":"Avengers Kit",
+            "price":26,
+            "quantity":1,
+            "MRP":30,
+             "img":"avengerskit"
+        },
+        {
+            "name":"Matt Magic Kit",
+            "price":18,
+            "quantity":1,
+            "MRP":20,
+             "img":"mattmagickit"
+        },
+        {
+            "name":"Platinum Kit",
+            "price":18,
+            "quantity":1,
+            "MRP":20,
+             "img":"platinumkit"
+        },
+        {
+            "name":"Happy Birthday Kit",
+            "price":45,
+            "quantity":1,
+            "MRP":50,
+             "img":"happybirthdaykit"
+        },
+        {
+            "name":"Thank You Teacher Kit",
+            "price":45,
+            "quantity":1,
+            "MRP":50,
+             "img":"thankyouteacherkit"
+        },
+        {
+            "name":"Spider-Man Power Pack",
+            "price":42,
+            "quantity":1,
+            "MRP":49,
+             "img":"spidermanpowerpack"
+        },
+        {
+            "name":"Natraj Writing Kit",
+            "price":42,
+            "quantity":1,
+            "MRP":49,
+             "img":"natrajwritingkit"
+        },
+        {
+            "name":"Left Ease Kit",
+            "price":18,
+            "quantity":1,
+            "MRP":20,
+             "img":"lefteasekit"
+        },
+        {
+            "name":"Fluro Kit",
+            "price":18,
+            "quantity":1,
+            "MRP":20,
+             "img":"flurokit"
+        },
+        {
+            "name":"Pixy Kit",
+            "price":18,
+            "quantity":1,
+            "MRP":20,
+             "img":"pixykit"
+        },
+        {
+            "name":"Best of Luck Kit",
+            "price":10,
+            "quantity":1,
+            "MRP":12,
+             "img":"bestofluckkit"
+        }
+    ],
+    "Chalk":[
+        {
+            "name":"Apsara Dustless Chalk Assorted (Available in colours)",
+            "price":28,
+            "quantity":1,
+            "MRP":30,
+             "img":"apsaradustlesschalksassorted"
+        }
+    ],
+    "Cutters":[
+        {
+            "Name":"Large Cutter",
+            "price":18,
+            "quantity":1,
+            "MRP":20,
+             "img":"largecutter"
+        },
+        {
+            "Name":"Classic Cutter",
+            "price":14,
+            "quantity":1,
+            "MRP":15,
+             "img":"classiccutter"
+        },
+        {
+            "Name":"Handy Cutter",
+            "price":9,
+            "quantity":1,
+            "MRP":10,
+             "img":"handycutter"
+        },
+        {
+            "Name":"Mini Cutter",
+            "price":4,
+            "quantity":1,
+            "MRP":5,
+             "img":"minicutter"
         }
     ],
     "Camlin Notebook":[
@@ -420,7 +814,7 @@
             "price":18,
             "quantity":1,
             "MRP":20,
-            "img":"camlindoublelinenotebook72pages"
+            "img":"camlisinglelinenotebook72pages"
     
         },
         {
@@ -467,7 +861,7 @@
                     "price":15,
                     "quantity":1,
                     "MRP":17,
-                    "img":"camlinusinglelinenotebook88pages"
+                    "img":"camlinfourlinenotebook72pagesjpeg"
         
                 },
                 {
@@ -475,7 +869,7 @@
                     "price":24,
                     "quantity":1,
                     "MRP":28,
-                    "img":"camlinsinglelinenotebook164pages"
+                    "img":"camlinfourlinenotebook72pagesjpeg"
         
                 },   
                 {
@@ -483,7 +877,7 @@
                     "price":15,
                     "quantity":1,
                     "MRP":17,
-                    "img":"camlindoublelinenotebook88pages"
+                    "img":"camlinfourlinenotebook72pagesjpeg"
         
                 },  
                 {
@@ -507,7 +901,7 @@
                     "price":15,
                     "quantity":1,
                     "MRP":17,
-                    "img":"camlinfourlinenotebook88pages"
+                    "img":"camlinfourlinenotebook72pagesjpeg"
         
                 },   
                 {
@@ -540,7 +934,7 @@
                     "price":45,
                     "quantity":1,
                     "MRP":50,
-                    "img":"camlinjumboa5softfourlinenotebook172pagesjpeg"
+                    "img":"camlinjumboa5softsinglelinenotebook172pagesjpeg"
         
                 }, 
                 {
@@ -564,7 +958,7 @@
                     "price":27,
                     "quantity":1,
                     "MRP":30,
-                    "img":"camlinA5sizesoftbondunrulesnotebook100pagespng"
+                    "img":"camlinA5sizehardbondsinglelinenotebook164pagesjpeg"
         
                 }, 
                 {
@@ -572,7 +966,7 @@
                     "price":45,
                     "quantity":1,
                     "MRP":50,
-                    "img":"camlinA5sizesoftbondunrulesnotebook180pages"
+                    "img":"camlinA5sizehardbondsinglelinenotebook164pagesjpeg"
         
                 }, 
                 {
@@ -580,7 +974,7 @@
                     "price":45,
                     "quantity":1,
                     "MRP":50,
-                    "img":"camlinA5sizesoftbondsinglelinenotebook180pages"
+                    "img":"camlinA5sizehardbondsinglelinenotebook164pagesjpeg"
         
                 },
                 {
@@ -652,7 +1046,7 @@
                     "price":75,
                     "quantity":1,
                     "MRP":85,
-                    "img":"camlinA4sizehardbondnotebook172pages"
+                    "img":"camlinA4sizehardbondnotebook144pages"
         
                 },
                 {
@@ -668,7 +1062,7 @@
                     "price":100,
                     "quantity":1,
                     "MRP":110,
-                    "img":"camlinA4sizesoftbondunrulednotebook292pages"
+                    "img":"camlinA4sizesoftbondunrulednotebook72pages"
         
                 },
     
@@ -717,7 +1111,7 @@
                     "price":45,
                     "quantity":1,
                     "MRP":50,
-                    "img":"camlinultrasoftbonduunruledlinelongbook112pages"
+                    "img":"camlinA4sizesoftbondusinglelinepremionotebook200pages"
         
                 },
                 {
@@ -725,7 +1119,7 @@
                     "price":115,
                     "quantity":1,
                     "MRP":130,
-                    "img":"camlinultrasoftbonduunruledlinelongbook304pages"
+                    "img":"camlinA4sizesoftbondusinglelinepremionotebook200pages"
         
                 },
                 {
@@ -792,7 +1186,145 @@
                     "img":"camlinspiralbooka4size192pages"
         
                 }
-    ],    
+    ],
+    "Youva Practical Book":[
+        {
+            "name":"Physics 96 pgs",
+            "price":60,
+            "quantity":1,
+            "MRP":60,
+            "img":"physics96pgs"
+        },
+        {
+            "name":"Physics 144 pgs",
+            "price":90,
+            "quantity":1,
+            "MRP":90,
+            "img":"physics144pgs"
+        },
+        {
+            "name":"Physics 176 pgs",
+            "price":100,
+            "quantity":1,
+            "MRP":100,
+            "img":"physics176pgs"
+        }
+        ,
+        {
+            "name":"Chemistry 96 pgs",
+            "price":60,
+            "quantity":1,
+            "MRP":60,
+            "img":"chemistry96pgs"
+        },
+        {
+            "name":"Chemistry 144 pgs",
+            "price":90,
+            "quantity":1,
+            "MRP":90,
+            "img":"Chemistry144pgs"
+        },
+        {
+            "name":"Chemistry 176 pgs",
+            "price":100,
+            "quantity":1,
+            "MRP":100,
+            "img":"Chemistry176pgs"
+        },
+        {
+            "name":"Biology 96 pgs",
+            "price":60,
+            "quantity":1,
+            "MRP":60,
+            "img":"Biology96pgs"
+        },
+        {
+            "name":"Biology 144 pgs",
+            "price":90,
+            "quantity":1,
+            "MRP":90,
+            "img":"Biology144pgs"
+        },
+        {
+            "name":"Biology 176 pgs",
+            "price":100,
+            "quantity":1,
+            "MRP":100,
+            "img":"Biology176pgs"
+        }
+
+        ,
+        {
+            "name":"Combined 84 pgs",
+            "price":60,
+            "quantity":1,
+            "MRP":60,
+            "img":"combined84pgs"
+        },
+        {
+            "name":"Combined 96 pgs",
+            "price":60,
+            "quantity":1,
+            "MRP":60,
+            "img":"combined96pgs"
+        },
+        {
+            "name":"Combined 128 pgs",
+            "price":60,
+            "quantity":1,
+            "MRP":60,
+            "img":"combined128pgs"
+        },
+        {
+            "name":"Combined 144 pgs",
+            "price":90,
+            "quantity":1,
+            "MRP":90,
+            "img":"Combined144pgs"
+        },
+        {
+            "name":"Combined 176 pgs",
+            "price":100,
+            "quantity":1,
+            "MRP":100,
+            "img":"Combined176pgs"
+        },
+        {
+            "name":"Computer 96 pgs",
+            "price":100,
+            "quantity":1,
+            "MRP":100,
+            "img":"Computer96pgs"
+        },
+        {
+            "name":"Electric Gazette 96 pgs",
+            "price":100,
+            "quantity":1,
+            "MRP":100,
+            "img":"electricgazette96"
+        },
+        {
+            "name":"Electric Gazette 176 pgs",
+            "price":100,
+            "quantity":1,
+            "MRP":100,
+            "img":"electricgazette96"
+        },
+        {
+            "name":"Maths Laboratory 96 pgs",
+            "price":100,
+            "quantity":1,
+            "MRP":100,
+            "img":"Mathslaboratory96pgs"
+        },
+        {
+            "name":"Maths Laboratory 64 pgs",
+            "price":100,
+            "quantity":1,
+            "MRP":100,
+            "img":"mathslaboratory"
+        }
+],    
     "Classmate Notebook":[
         {
             "name":"camlinsamllgraphbooka28pages",

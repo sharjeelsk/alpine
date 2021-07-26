@@ -109,6 +109,24 @@ class Order {
       }
   }
 
+  async updateData(req, res) {
+   console.log(req.headers.oId, "fdsfdsfsdfs")
+    const updateOps = {};
+    for(const ops of req.body){
+        updateOps[ops.propName] = ops.value;
+    }
+    console.log(updateOps)
+
+    let currentOrder = orderModel.findByIdAndUpdate(req.headers.oId, {
+      $set: updateOps
+    });
+    currentOrder.exec((err, result) => {
+      if (err) console.log(err);
+      return res.json({ success: "User updated successfully" });
+    });
+  }
+
+
   async postDeleteOrder(req, res) {
     let { oId } = req.body;
     if (!oId) {

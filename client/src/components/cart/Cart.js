@@ -75,47 +75,133 @@ const Cart = (props) => {
         form.remove()
       }
       const cod="ONLINE"
+      const loadScript = (src)=>{
+        return new Promise((resolve)=>{
+            const script = document.createElement("script")
+            script.src = src
+            script.onload = ()=>{
+                resolve(true)
+            }
+            script.onerror = ()=>{
+                resolve(false)
+            }
+            document.body.appendChild(script)
+
+        })
+      }
+    const displayRazorpay = async (orderId)=>{
+        console.log("lalaaaaaaaaaaaaaaaaaaatest",orderId)
+        const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
+        if(!res){
+            alert("Payment failed to load")
+            return
+        }
+        axios.post('http://localhost:3002/razorpay')
+        .then((t)=>{
+            console.log(t);
+            var options = {
+                "key":"rzp_test_Sn8RPLYLlLXlyD", //"rzp_live_xV8XqpPhDFWsHa", // Enter the Key ID generated from the Dashboard rzp_test_Sn8RPLYLlLXlyD
+                "amount": t.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 100000 refers to 1000 rs
+                "currency": t.data.currency,
+                "name": "Alpine Enterprises",
+                "description": "Test Transaction",
+                "image": "https://example.com/your_logo",
+                "order_id": t.data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+                "handler": function (response){
+                    axios.post(`/order/create-order`,{token:props.user.user,allProduct:props.cart.items,address:addressvalue,phone:number,paymentMode:option,amount:total()})
+                    .then(doc => {
+                        console.log("OrderCreated FOr ONline Mode")
+                        console.log(doc.data.orderId)
+                        axios.post(`/order/updateO-data`,[{"propName": "paymentStatus", "value": true}, {"propName":"transactionId", "value": response.razorpay_order_id }],{headers:{"oId":doc.data.orderId}})
+                    })
+                  console.log(response)
+                },
+                "notes": {
+                    "address": "Razorpay Corporate Office"
+                },
+                "theme": {
+                    "color": "#3399cc"
+                }
+            };
+            const paymentObject = new window.Razorpay(options);
+            paymentObject.open()
+        })
+       console.log(document.domain)
+      
+    }
     const buyNow = ()=>{
         console.log(props.user);
         if(props.user.user!==null){
             if(address==="default"||address===null){
                 console.log("defaultaddress",address,option);
-                axios.post(`/order/create-order`,{token:props.user.user,allProduct:props.cart.items,address:"",phone:"",paymentMode:option,amount:total()})
-                .then(res=>{
-                    if(option==="ONLINE"){
-                        axios.post(`${process.env.REACT_APP_NONAPI_LINK}/payment`,{token:props.user.user,description:props.cart.items,orderId:res.data.orderId}).then(responsepayment=>{
-                            let information={
-                                action:'https://securegw-stage.paytm.in/order/process', //remove -stage for live
-                                params:responsepayment.data
-                            }
-                            post(information)
-                                }).catch(err=>console.log(err))
-                    }else{
+                if(option==="ONLINE"){
+                    displayRazorpay()
+                }else{
+                    axios.post(`/order/create-order`,{token:props.user.user,allProduct:props.cart.items,address:"",phone:"",paymentMode:option,amount:total()})
+                    .then(res=>{
                         props.history.push("/orderplaced")
-                    }
+                    }) 
+                }
+
+                // axios.post(`/order/create-order`,{token:props.user.user,allProduct:props.cart.items,address:"",phone:"",paymentMode:option,amount:total()})
+                // .then(res=>{
+                //     if(option==="ONLINE"){
+                //         axios.post(`${process.env.REACT_APP_NONAPI_LINK}/payment`,{token:props.user.user,description:props.cart.items,orderId:res.data.orderId}).then(responsepayment=>{
+                //             // let information={
+                //             //     action:'https://securegw-stage.paytm.in/order/process', //remove -stage for live
+                //             //     params:responsepayment.data
+                //             // }
+                //             // post(information)
+                //             displayRazorpay()
+                //                 }).catch(err=>console.log(err))
+                //     }else{
+                //         props.history.push("/orderplaced")
+                //     }
                     
-                })
-            }else if(address==="newaddress"){
+                // })
+                
+
+
+            }
+            else if(address==="newaddress"){
                 console.log("newaddress",address);
                 if(addressvalue.length>0 && number.length>0){
                     //sendreq
-                    axios.post(`/order/create-order`,{token:props.user.user,allProduct:props.cart.items,address:addressvalue,phone:number,paymentMode:option,amount:total()})
-                .then(res=>{
                     if(option==="ONLINE"){
-                        axios.post(`${process.env.REACT_APP_NONAPI_LINK}/payment`,{token:props.user.user,description:props.cart.items,orderId:res.data.orderId}).then(responsepayment=>{
-                            let information={
-                                action:'https://securegw-stage.paytm.in/order/process', //remove -stage for live
-                                params:responsepayment.data
-                            }
-                            post(information)
-                                }).catch(err=>console.log(err))
+                        displayRazorpay()
                     }else{
-                    console.log("inside new address and cod payment mehtod",option,addressvalue,number);
-                        setError("")
-                        props.history.push("/orderplaced")
+                        axios.post(`/order/create-order`,{token:props.user.user,allProduct:props.cart.items,address:addressvalue,phone:number,paymentMode:option,amount:total()})
+                        .then(res=>{
+                            console.log("inside new address and cod payment mehtod",option,addressvalue,number);
+                            setError("")
+                            props.history.push("/orderplaced")
+                        })
                     }
+                //     axios.post(`/order/create-order`,{token:props.user.user,allProduct:props.cart.items,address:addressvalue,phone:number,paymentMode:option,amount:total()})
+                // .then(res=>{
+                //     if(option==="ONLINE"){
+                //         // axios.post(`${process.env.REACT_APP_NONAPI_LINK}/payment`,{token:props.user.user,description:props.cart.items,orderId:res.data.orderId}).then(responsepayment=>{
+                //         //     let information={
+                //         //         action:'https://securegw-stage.paytm.in/order/process', //remove -stage for live
+                //         //         params:responsepayment.data
+                //         //     }
+                //         //     post(information)
+                //         //         }).catch(err=>console.log(err))
+                //         axios.post(`${process.env.REACT_APP_NONAPI_LINK}/payment`,{token:props.user.user,description:props.cart.items,orderId:res.data.orderId}).then(responsepayment=>{
+                //             // let information={
+                //             //     action:'https://securegw-stage.paytm.in/order/process', //remove -stage for live
+                //             //     params:responsepayment.data
+                //             // }
+                //             // post(information)
+                //             displayRazorpay()
+                //                 }).catch(err=>console.log(err))
+                //     }else{
+                //     console.log("inside new address and cod payment mehtod",option,addressvalue,number);
+                //         setError("")
+                //         props.history.push("/orderplaced")
+                //     }
                     
-                })
+                // })
                 }else{
                     setError("Fill Up the Details")
                     console.log("fill up the details");

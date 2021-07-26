@@ -8,8 +8,15 @@ const cors = require("cors");
 const jwt = require('jsonwebtoken');
 const { JWT_SECRET } = require("./server/config/keys");
 const path = require('path')
+const Razorpay = require('razorpay')
+const shortid=require("shortid")
 // http://alpinestationeries.herokuapp.com/api/user/all-user
 const app = express()
+
+const razorpay = new Razorpay({
+  key_id:"rzp_test_Sn8RPLYLlLXlyD",//rzp_live_xV8XqpPhDFWsHa rzp_test_Sn8RPLYLlLXlyD
+  key_secret:"gYNiAy64SIqvxaoIJudoLA1c" //"ESlYH3kbFjDF8MDGynQNKN8Y"
+})
 
 app.use(bodyParser.json())
 const PORT = process.env.PORT || 3002;
@@ -59,7 +66,24 @@ if(process.env.NODE_ENV==='production'){
   })
 }
 
-
+app.post("/razorpay",async (req,res)=>{
+  const payment_capture=1;
+  const amount=5;
+  currency="INR"
+  razorpay.orders.create({
+    amount:amount*100,currency,receipt:shortid.generate(),payment_capture
+  }).then(response=>{
+    console.log("____________________________________________________________________")
+    console.log(response)
+    res.status(200).json({
+      id:response.id,
+      currency:response.currency,
+      amount:response.amount
+    })
+  })
+  .catch(err=>console.log(err))
+  
+})
 
 // Payments Routes
 app.post("/callback",(req,res)=>{
