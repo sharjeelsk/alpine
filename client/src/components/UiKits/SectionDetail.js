@@ -35,6 +35,7 @@ const SectionDetail = (props) => {
                     <h4>{item.name}</h4>
                     <p className="price">Price: ₹{item.price}</p>
                     <p className="discount">MRP: ₹{item.MRP}</p>
+                    {item.color?<p>Colour:{item.color}</p>:null}
                    <animated.div style={stylesa} className="displaycount">{displayCount(item)!==null?<animated.div>Added: {displayCount(item)}</animated.div>:null}</animated.div>
                     <button onClick={()=>{
                         animate({delay:100,opacity:1})

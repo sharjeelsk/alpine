@@ -2,100 +2,205 @@
     "Pen":[
         
         {
-            "name":"Trimax",
-            "price":40,
+            "name":"Trimax Blue",
+            "price":43,
             "quantity":1,
             "img":"trimax",
-            "MRP":56
-        }, {
-            "name":"Cello finegrip",
-            "price":12,
+            "MRP":50
+        }, 
+        {
+            "name":"Trimax Black",
+            "price":43,
             "quantity":1,
-            "MRP":18,
-            "img":"Cello"
+            "img":"trimaxblack",
+            "MRP":50
         },
         {
-            "name":"CelloPapersoft",
-            "price":12,
+            "name":"Trimax Red",
+            "price":43,
             "quantity":1,
-            "MRP":18,
-            "img":"Cello"
+            "img":"trimaxred",
+            "MRP":50
         },
+        
         {
             "name":"Reynolds JETTER CLASSIC",
-        "price":18,
+            "price":18,
             "quantity":1,
             "MRP":20,
-            "img":"Reynolds JETTER CLASSIC"
+            "img":"reynoldsjetterclassic"
         },
         {"name":"Reynolds Jetter AeroSoft",
             "price":23,
                 "quantity":1,
                 "MRP":25,
-                "img":"Reynolds Jetter AeroSoft "
+                "img":"reynoldsjetteraerosoft "
             },
             {
-                "name":"Reynoldsliquidflo Blue black red",
-                "price":9,
+                "name":"Reynoldsliquidflow Blue Pack of 5",
+                "price":21,
                 "quantity":1,
-                "MRP":10,
-                "img":"Reynolds Liquiflo"
+                "MRP":25,
+                "img":"reynoldsliquidflowblue"
             },
             {
-                "name":"Reynolds Brite Blue black red green ",
+                "name":"Reynoldsliquidflow Black Pack of 5",
+                "price":21,
+                "quantity":1,
+                "MRP":25,
+                "img":"reynoldsliquidflowblack"
+            },
+            {
+                "name":"Reynoldsliquidflow Red Pack of 5",
+                "price":21,
+                "quantity":1,
+                "MRP":25,
+                "img":"reynoldsliquidflowred"
+            },
+            {
+                "name":"Reynolds Brite Blue Pack of 5",
                 "price":18,
                 "quantity":5,
                 "MRP":25,
-                "img":"Reynolds Brite Blue black red green"
+                "img":"reynoldsbriteblue"
+            },{
+                "name":"Reynolds Brite Black Pack of 5",
+                "price":18,
+                "quantity":5,
+                "MRP":25,
+                "img":"reynoldsbriteblack"
             },
             {
-                "name":"Reynolds Jiffy Gel Blue black red green ",
+                "name":"Reynolds Brite Red Pack of 5",
+                "price":18,
+                "quantity":5,
+                "MRP":25,
+                "img":"reynoldsbritered"
+            },
+            {
+                "name":"Reynolds Brite Green Pack of 5",
+                "price":18,
+                "quantity":5,
+                "MRP":25,
+                "img":"reynoldsbritegreen"
+            },
+            {
+                "name":"Reynolds Jiffy Gel Blue",
                 "price":20,
                 "quantity":5,
                 "MRP":25,
-                "img":"Reynolds Jiffy Gel Blue black red green"
+                "img":"reynoldsjiffygelblue"
             },
             {
-                "name":"Reynolds Racer Gel Blue black red green ",
+                "name":"Reynolds Jiffy Gel Black",
+                "price":20,
+                "quantity":5,
+                "MRP":25,
+                "img":"reynoldsjiffygelblack"
+            },
+            {
+                "name":"Reynolds Jiffy Gel Red",
+                "price":20,
+                "quantity":5,
+                "MRP":25,
+                "img":"reynoldsjiffygelred"
+            },
+            {
+                "name":"Reynolds Jiffy Gel Green ",
+                "price":20,
+                "quantity":5,
+                "MRP":25,
+                "img":"reynoldsjiffygelgreen"
+            },
+            {
+                "name":"Reynolds Racer Gel Blue",
                 "price":9,
                 "quantity":1,
                 "MRP":10,
-                "img":"Reynolds Racer Gel Blue black red green"
+                "img":"reynoldsracergelblue"
+            },{
+                "name":"Reynolds Racer Gel black ",
+                "price":9,
+                "quantity":1,
+                "MRP":10,
+                "img":"reynoldsracergelblack"
+            },
+            {
+                "name":"Reynolds Racer Gel red ",
+                "price":9,
+                "quantity":1,
+                "MRP":10,
+                "img":"reynoldsracergelred"
+            },
+            {
+                "name":"Reynolds Racer Gel green ",
+                "price":9,
+                "quantity":1,
+                "MRP":10,
+                "img":"reynoldsracergelgreen"
             },
             {
                 "name":"Reynolds Trimax Gold ",
                 "price":85,
                 "quantity":1,
                 "MRP":90,
-                "img":"Reynolds Trimax Gold"
+                "img":"reynoldstrimaxgold"
             },
             {
                 "name":"Reynolds JETTER AeroSoft GOLD ",
                 "price":47,
                 "quantity":1,
                 "MRP":50,
-                "img":"Reynolds JETTER AeroSoft GOLD"
+                "img":"aerosoftgold"
             },
             {
-                "name":"Reynolds Racer Sporty blue Blck ",
+                "name":"Reynolds Racer Sporty blue",
                 "price":9,
                 "quantity":1,
                 "MRP":10,
-                "img":"Reynolds Racer Sporty blue Blck"
+                "img":"reynoldsracersportyblue"
+            },
+            {
+                "name":"Reynolds Racer Sporty black",
+                "price":9,
+                "quantity":1,
+                "MRP":10,
+                "img":"reynoldsracersportyblack"
             },
             {
                 "name":"Reynolds Jetter Metalic FX ",
                 "price":38,
                 "quantity":1,
                 "MRP":40,
-                "img":"Reynolds Jetter Metalic FX"
+                "img":"reynoldsjettermetalicfx"
             },
             {
-                "name":"goldex pen blue blck red green. ",
+                "name":"goldex pen Blue",
                 "price":30,
                 "quantity":5,
                 "MRP":22,
-                "img":"goldex pen blue blck red green"
+                "img":"goldexpen"
+            },
+            {
+                "name":"goldex pen Black ",
+                "price":30,
+                "quantity":5,
+                "MRP":22,
+                "img":"goldexpen"
+            },
+            {
+                "name":"goldex pen Red ",
+                "price":30,
+                "quantity":5,
+                "MRP":22,
+                "img":"goldexpen"
+            },
+            {
+                "name":"goldex pen Green. ",
+                "price":30,
+                "quantity":5,
+                "MRP":22,
+                "img":"goldexpen"
             },
             {
                 "name":"Cello Stylo Blue. ",
@@ -195,7 +300,7 @@
 
             },
             {
-                "name":"cello Pinpoint blue. ",
+                "name":"cello Pinpoint Blue",
                 "price":90,
                 "quantity":10,
                 "MRP":100,
@@ -203,7 +308,14 @@
 
             },
             {
-                "name":"cello Pinpoint black. ",
+                "name":"cello Pinpoint Black",
+                "price":90,
+                "quantity":10,
+                "MRP":100,
+                "img":"celloPinpointblack"
+
+            },{
+                "name":"cello Pinpoint Red",
                 "price":90,
                 "quantity":10,
                 "MRP":100,
@@ -211,11 +323,11 @@
 
             },
             {
-                "name":"cello Top tec. ",
+                "name":"Pen Tek Top Tek",
                 "price":60,
                 "quantity":10,
                 "MRP":70,
-                "img":"cello top tec.png"
+                "img":"pentektoptek"
 
             },
             {
@@ -231,7 +343,7 @@
                 "price":90,
                 "quantity":1,
                 "MRP":99,
-                "img":"cello TRISTAR GOLD.png"
+                "img":"cellotristargold"
 
             },
             {
@@ -255,7 +367,7 @@
                 "price":9,
                 "quantity":1,
                 "MRP":10,
-                "img":"celloLIQUIBALLBlack"
+                "img":"celloliquiballblack"
 
             },
             {
@@ -263,7 +375,7 @@
                 "price":22,
                 "quantity":5,
                 "MRP":30,
-                "img":"celloWOWGEL"
+                "img":"cellowowgel"
 
             },
 
@@ -272,15 +384,15 @@
                 "price":9,
                 "quantity":1,
                 "MRP":10,
-                "img":"cello Butter GEL.png"
+                "img":"cellobuttergel"
 
             },
             {
-                "name":"orito-fasty-blue-gel. ",
+                "name":"Rorito-fasty-blue-gel. ",
                 "price":20,
                 "quantity":5,
                 "MRP":25,
-                "img":"orito-fasty-blue-gel.jpeg"
+                "img":"roritofastybluegel"
 
             },
             {
@@ -288,7 +400,7 @@
                 "price":20,
                 "quantity":5,
                 "MRP":25,
-                "img":"Rorito Bmax Blue.jpeg"
+                "img":"roritobmaxblue"
 
             },
             {
@@ -296,7 +408,7 @@
                 "price":90,
                 "quantity":10,
                 "MRP":100,
-                "img":"Montex Mint ball Pen.jpeg"
+                "img":"montexmintball"
 
             },
             {
@@ -304,11 +416,11 @@
                 "price":45,
                 "quantity":10,
                 "MRP":50,
-                "img":"Montex Hy kid ball Pen.jpeg"
+                "img":"montexhykid"
 
             }
     ],
-    "pencil":[
+    "Pencil":[
         {
             "name":"Natraj Regular Pencil (Pack of 10 Pencil",
             "price":35,
@@ -489,44 +601,44 @@
         }
     ]
     ,
-    "Sharpner":[
+    "Sharpener":[
         {
-            "name":"Spaceball Sharpners",
+            "name":"Spaceball Sharpeners",
             "price":14,
             "quantity":1,
             "MRP":15,
              "img":"spaceballsharpners"
         },
         {
-            "name":"Tidy-Up-Eraser-Sharpner",
+            "name":"Tidy-Up-Eraser-Sharpener",
             "price":14,
             "quantity":1,
             "MRP":15,
              "img":"tidyuperasersharpner"
         },
         {
-            "name":"Apsara Absolute Sharpner",
+            "name":"Apsara Absolute Sharpener",
             "price":65,
             "quantity":1,
             "MRP":70,
-             "img":"apsaraabsolutesharpner"
+             "img":"apsaraabsolutesharpener"
         },
         {
-            "name":"Apsara Long Point Sharpner (Pack of 20 Piece)",
+            "name":"Apsara Long Point Sharpener (Pack of 20 Piece)",
             "price":90,
             "quantity":1,
             "MRP":100,
-             "img":"apsaralongpointsharpner"
+             "img":"apsaralongpointsharpener"
         },
         {
-            "name":"Tidy Top Sharpner (Pack of 20 Piece)",
+            "name":"Tidy Top Sharpener (Pack of 20 Piece)",
             "price":90,
             "quantity":1,
             "MRP":100,
              "img":"tidytopsharpner"
         },
         {
-            "name":"Apsara Long Point Sharpner (Pack of 20 Piece)",
+            "name":"Apsara Long Point Sharpener (Pack of 20 Piece)",
             "price":90,
             "quantity":1,
             "MRP":100,
@@ -534,7 +646,7 @@
         }
     ]
     ,
-    "scale":[
+    "Scale":[
         {
             "name":"Apsara Absolute Scale 30cm",
             "price":22,
@@ -1187,7 +1299,7 @@
         
                 }
     ],
-    "Youva Practical Book":[
+    "Navneet NoteBooks":[
         {
             "name":"Physics 96 pgs",
             "price":60,
@@ -1323,7 +1435,147 @@
             "quantity":1,
             "MRP":100,
             "img":"mathslaboratory"
+        },
+        
+        {
+            "name":"Regular Jumbo Size Soft Bond 76 pgs brown Single Line",
+            "price":22,
+            "quantity":1,
+            "MRP":25,
+            "img":"regularjumbosizesoftbond76pgsbrownsingleline"
+        },
+        {
+            "name":"Regular Jumbo Size Soft Bond 76 pgs brown Double Line",
+            "price":22,
+            "quantity":1,
+            "MRP":25,
+            "img":"regularjumbosizesoftbond76pgsbrowndoubleline"
+        },
+        {
+            "name":"Regular Jumbo Size Soft Bond 76 pgs brown Red & Blue (with Gap)",
+            "price":22,
+            "quantity":1,
+            "MRP":25,
+            "img":"regularjumbosizesoftbond76pgsbrownredandblue"
+        },{
+            "name":"Regular Jumbo Size Soft Bond 76 pgs brown Small Square",
+            "price":22,
+            "quantity":1,
+            "MRP":25,
+            "img":"regularjumbosizesoftbond76pgsbrownsmallsquare"
+        },{
+            "name":"Regular Jumbo Size Soft Bond 76 pgs brown Meduim Square",
+            "price":22,
+            "quantity":1,
+            "MRP":25,
+            "img":"regularjumbosizesoftbond76pgsbrownmeduimsquare"
+        },
+        {
+            "name":"Regular Jumbo Size Soft Bond 172 pgs brown Single Line",
+            "price":40,
+            "quantity":1,
+            "MRP":50,
+            "img":"regularjumbosizesoftbond172pgsbrownsingleline"
+        },
+        {
+            "name":"Regular Jumbo Size Soft Bond 172 pgs brown Double Line",
+            "price":40,
+            "quantity":1,
+            "MRP":50,
+            "img":"regularjumbosizesoftbond172pgsbrowndoubleline"
+        },
+        {
+            "name":"Regular Jumbo Size Soft Bond 172 pgs brown Red & Blue (with Gap)",
+            "price":40,
+            "quantity":1,
+            "MRP":50,
+            "img":"regularjumbosizesoftbond172pgsbrownredandblue"
+        },{
+            "name":"Regular Jumbo Size Soft Bond 172 pgs brown Small Square",
+            "price":40,
+            "quantity":1,
+            "MRP":50,
+            "img":"regularjumbosizesoftbond172pgsbrownsmallsquare"
+        },{
+            "name":"Regular Jumbo Size Soft Bond 172 pgs brown Meduim Square",
+            "price":40,
+            "quantity":1,
+            "MRP":50,
+            "img":"regularjumbosizesoftbond172pgsbrownmeduimsquare"
+        },{
+            "name":"Regular Long Book A4 Size Soft Bond 140 pgs",
+            "price":45,
+            "quantity":1,
+            "MRP":55,
+            "img":"regularlongbooka4sizesoftbond140pgs"
+        },{
+            "name":"Regular Long Book A4 Size Soft Bond 162 pgs",
+            "price":55,
+            "quantity":1,
+            "MRP":65,
+            "img":"regularlongbooka4sizesoftbond162pgs"
+        },{
+            "name":"Regular Long Book A4 Size Soft Bond 228 pgs",
+            "price":80,
+            "quantity":1,
+            "MRP":90,
+            "img":"regularlongbooka4sizesoftbond228pgs"
+        },{
+            "name":"Regular Long Book A4 Size Soft Bond 196 pgs Single Line",
+            "price":70,
+            "quantity":1,
+            "MRP":80,
+            "img":"regularlongbooka4sizesoftbond196pgssingleline"
+        },{
+            "name":"Regular Long Book A4 Size Soft Bond 196 pgs Unruled",
+            "price":70,
+            "quantity":1,
+            "MRP":80,
+            "img":"regularlongbooka4sizesoftbond196pgssingleline"
+        },{
+            "name":"Regular Long Book A4 Size Soft Bond 228 pgs Single Line",
+            "price":75,
+            "quantity":1,
+            "MRP":85,
+            "img":"regularlongbooka4sizesoftbond228pgssingleline"
+        },{
+            "name":"Regular Long Book A4 Size Soft Bond 228 pgs Unruled",
+            "price":75,
+            "quantity":1,
+            "MRP":85,
+            "img":"regularlongbooka4sizesoftbond228pgsunruled"
+        },{
+            "name":"Regular Long Book A4 Size Soft Bond 276 pgs Single Line",
+            "price":95,
+            "quantity":1,
+            "MRP":105,
+            "img":"regularlongbooka4sizesoftbond276pgssingleline"
+        },{
+            "name":"Regular Long Book A4 Size Soft Bond 276 pgs Unruled",
+            "price":95,
+            "quantity":1,
+            "MRP":105,
+            "img":"regularlongbooka4sizesoftbond276pgsunruled"
+        },{
+            "name":"Regular A4 Size Soft Bond Rainbow 140 pgs Single Line",
+            "price":45,
+            "quantity":1,
+            "MRP":55,
+            "img":"regulara4sizesoftbondrainbow140pgssingleline"
+        },{
+            "name":"Regular A4 Size Soft Bond Rainbow 172 pgs Single Line",
+            "price":50,
+            "quantity":1,
+            "MRP":65,
+            "img":"regulara4sizesoftbondrainbow172pgssingleline"
+        },{
+            "name":"Regular A4 Size Soft Bond Rainbow 228 pgs Single Line",
+            "price":75,
+            "quantity":1,
+            "MRP":90,
+            "img":"regulara4sizesoftbondrainbow228pgssingleline"
         }
+        
 ],    
     "Classmate Notebook":[
         {
@@ -1333,6 +1585,65 @@
             "MRP":10,
             "img":"camlinsamllgraphbooka28page"
 
+        },{
+            "name":"Classmate 200pgs Single Line Notebook",
+            "price":200,
+            "quantity":1,
+            "MRP":250,
+            "img":"classmate200pgssinglelinenotebook"
+        }
+    ],
+    "Exam Pad":[
+        {
+            "name":"Wooden Exam Board",
+            "price":105,
+            "quantity":1,
+            "MRP":125,
+            "img":"woodenexamboard"
+        },
+        {
+            "name":"Drawing Exam Board",
+            "price":125,
+            "quantity":1,
+            "MRP":150,
+            "img":"drawingexamboard"
+        },
+        {
+            "name":"Clear Exam Board",
+            "price":170,
+            "quantity":1,
+            "MRP":190,
+            "img":"clearexamboard"
+        },
+        {
+            "name":"Youva Exam Board",
+            "price":75,
+            "quantity":1,
+            "MRP":90,
+            "img":"woodenexamboard"
+        },
+        {
+            "name":"Youva Trendy Exam Board",
+            "price":85,
+            "quantity":1,
+            "MRP":100,
+            "img":"woodenexamboard"
+        }
+    ],
+    "Answer Sheet":[
+        {
+            "name":"Youva Answer Book set of 25 (Each set 12pgs)",
+            "price":110,
+            "quantity":1,
+            "MRP":125,
+            "img":"woodenexamboard"
+        },
+        {
+            "name":"Youva Answer Book set of 25 (Each set 16pgs)",
+            "price":160,
+            "quantity":1,
+            "MRP":175,
+            "img":"woodenexamboard"
         }
     ],
     "Other Notebooks":[
@@ -1364,5 +1675,385 @@
                 "MRP":20,
                 "img":"camlinbiggraphbooka28page"
     
-            }]
+            },
+            {
+                "name":"Youva Graph Book 32 pgs",
+                "price":18,
+                "quantity":1,
+                "MRP":20,
+                "img":"youvagraphbook32"
+    
+            },
+            {
+                "name":"camlinbiggraphbooka28pages",
+                "price":18,
+                "quantity":1,
+                "MRP":20,
+                "img":"camlinbiggraphbooka28page"
+    
+            }
+        ],
+
+        "Classmate Brown Notebook": [
+            {
+                "name": "Classmate Brown Notebooks 72 pgs Square Line (Pack of 6)",
+                "MRP": 150,
+                "price": 132,
+                "quantity":6,
+                "img": "ClassmateBrownNotebooks72pgsSquareLine(Packof6)"
+            
+            },
+            {
+                "name": "Classmate Brown Notebooks 72 pgs Four Line With Gap (Pack of 6)",
+                "MRP": 150,
+                "price": 132,
+                "quantity":6,
+                "img": "ClassmateBrownNotebooks72pgsFourLineWithGap(Packof6)"
+            
+            },
+            {
+                "name": "Classmate Brown Notebooks 72 pgs Four Line (Pack of 6)",
+                "MRP": 150,
+                "price": 132,
+                "quantity":6,
+                "img": "ClassmateBrownNotebooks72pgsFourLine(Packof6)"
+            
+            },
+            {
+                "name": "Classmate Brown Notebooks 72 pgs Two Line (Pack of 6)",
+                "MRP": 150,
+                "price": 132,
+                "quantity":6,
+                "img": "ClassmateBrownNotebooks72pgsTwoLine(Packof6)"
+            
+            },
+            {
+                "name": "Classmate Brown Notebooks 72 pgs Single Line (Pack of 6)",
+                "MRP": 150,
+                "price": 132,
+                "quantity":6,
+                "img": "ClassmateBrownNotebooks72pgsSingleLine(Packof6)"
+            
+            },
+
+
+
+            {
+                "name": "Classmate Brown Notebooks 172 pgs Square Line (Pack of 6)",
+                "MRP": 288,
+                "price": 251,
+                "quantity":6,
+                "img": "ClassmateBrownNotebooks172pgsSquareLine(Packof6)"
+            
+            },
+            {
+                "name": "Classmate Brown Notebooks 172 pgs Four Line With Gap (Pack of 6)",
+                "MRP": 288,
+                "price": 251,
+                "quantity":6,
+                "img": "ClassmateBrownNotebooks172pgsFourLineWithGap(Packof6)"
+            
+            },
+            {
+                "name": "Classmate Brown Notebooks 172 pgs Four Line (Pack of 6)",
+                "MRP": 288,
+                "price": 251,
+                "quantity":6,
+                "img": "ClassmateBrownNotebooks172pgsFourLine(Packof6)"
+            
+            },
+            {
+                "name": "Classmate Brown Notebooks 172 pgs Two Line (Pack of 6)",
+                "MRP": 288,
+                "price": 251,
+                "quantity":6,
+                "img": "ClassmateBrownNotebooks172pgsTwoLine(Packof6)"
+            
+            },
+            {
+                "name": "Classmate Brown Notebooks 172 pgs Single Line (Pack of 6)",
+                "MRP": 288,
+                "price": 251,
+                "quantity":6,
+                "img": "ClassmateBrownNotebooks172pgsSingleLine(Packof6)"
+            
+            }
+        ],
+
+
+
+
+
+        "Classmate Register":[
+            {
+                "name": "Classmate A4 Size Register 304 pgs",
+                "MRP": 110,
+                "price": 99,
+                "quantity":1,
+                "img": "ClassmateA4SizeRegister304pgs"
+            
+            },
+            {
+                "name": "Classmate A4 Size Register 240 pgs",
+                "MRP": 80,
+                "price": 70,
+                "quantity":1,
+                "img": "ClassmateA4SizeRegister240pgs"
+            
+            }
+            ,
+            {
+                "name": "Classmate A4 Size Register 172 pgs",
+                "MRP": 62,
+                "price": 55,
+                "quantity":1,
+                "img": "ClassmateA4SizeRegister172pgs"
+            
+            }
+            ,
+            {
+                "name": "Classmate A4 Size Register 140 pgs",
+                "MRP": 55,
+                "price": 47,
+                "quantity":1,
+                "img": "ClassmateA4SizeRegister140pgs"
+            
+            }
+            ,
+            {
+                "name": "Classmate A4 Size Register 108 pgs",
+                "MRP": 40,
+                "price": 35,
+                "quantity":1,
+                "img": "ClassmateA4SizeRegister108pgs"
+            
+            },
+
+
+            {
+                "name": "Classmate A4 Size Register 304 pgs Unruled",
+                "MRP": 110,
+                "price": 99,
+                "quantity":1,
+                "img": "ClassmateA4SizeRegister304pgsUnruled"
+            
+            },
+            {
+                "name": "Classmate A4 Size Register 240 pgs Unruled",
+                "MRP": 80,
+                "price": 70,
+                "quantity":1,
+                "img": "ClassmateA4SizeRegister240pgsUnruled"
+            
+            }
+            ,
+            {
+                "name": "Classmate A4 Size Register 172 pgs Unruled",
+                "MRP": 62,
+                "price": 55,
+                "quantity":1,
+                "img": "ClassmateA4SizeRegister172pgsUnruled"
+            
+            }
+            ,
+            {
+                "name": "Classmate A4 Size Register 140 pgs Unruled",
+                "MRP": 55,
+                "price": 47,
+                "quantity":1,
+                "img": "ClassmateA4SizeRegister140pgsUnruled"
+            
+            }
+            ,
+            {
+                "name": "Classmate A4 Size Register 108 pgs Unruled",
+                "MRP": 40,
+                "price": 35,
+                "quantity":1,
+                "img": "ClassmateA4SizeRegister108pgsUnruled"
+            
+            },
+
+
+
+
+            {
+                "name": "Classmate A4 Size Register Hard Bound 160 pgs",
+                "MRP": 75,
+                "price": 68,
+                "quantity":1,
+                "img": "ClassmateA4SizeRegisterHardBound160pgs"
+            
+            }
+            ,
+            {
+                "name": "Classmate A4 Size Register Hard Bound 240 pgs",
+                "MRP": 110,
+                "price": 95,
+                "quantity":1,
+                "img": "ClassmateA4SizeRegisterHardBound240pgs"
+            
+            }
+            ,
+            {
+                "name": "Classmate A4 Size Register Hard Bound 364 pgs",
+                "MRP": 170,
+                "price": 155,
+                "quantity":1,
+                "img": "ClassmateA4SizeRegisterHardBound364pgs"
+            
+            },
+
+
+
+
+            
+            {
+                "name": "Classmate Long Book Register 72 pgs",
+                "MRP": 22,
+                "price": 19,
+                "quantity":1,
+                "img": "ClassmateLongBookRegister72pgs"
+            
+            },
+            {
+                "name": "Classmate Long Book Register 120 pgs",
+                "MRP": 32,
+                "price": 28,
+                "quantity":1,
+                "img": "ClassmateLongBookRegister120pgs"
+            
+            },
+            {
+                "name": "Classmate Long Book Register 172 pgs",
+                "MRP": 48,
+                "price": 41,
+                "quantity":1,
+                "img": "ClassmateLongBookRegister172pgs"
+            
+            },
+            {
+                "name": "Classmate Long Book Register 256 pgs",
+                "MRP": 65,
+                "price": 57,
+                "quantity":1,
+                "img": "ClassmateLongBookRegister256pgs"
+            
+            },
+            {
+                "name": "Classmate Long Book Register 300 pgs",
+                "MRP": 80,
+                "price": 69,
+                "quantity":1,
+                "img": "ClassmateLongBookRegister300pgs"
+            
+            },
+            {
+                "name": "Classmate Long Book Register 400 pgs",
+                "MRP": 100,
+                "price": 85,
+                "quantity":1,
+                "img": "ClassmateLongBookRegister400pgs"
+            
+            },
+
+
+
+
+            {
+                "name": "Classmate Long Book Register Soft Bond 120 pgs (330 x 210)",
+                "MRP": 45,
+                "price": 40,
+                "quantity":1,
+                "img": "ClassmateLongBookRegisterSoftBond120pgs(330x210)"
+            
+            },
+            {
+                "name": "Classmate Long Book Register Soft Bond 228 pgs (330 x 210)",
+                "MRP": 85,
+                "price": 78,
+                "quantity":1,
+                "img": "ClassmateLongBookRegisterSoftBond228pgs(330x210)"
+            
+            },
+            {
+                "name": "Classmate Long Book Register Soft Bond 320 pgs (330 x 210)",
+                "MRP": 120,
+                "price": 101,
+                "quantity":1,
+                "img": "ClassmateLongBookRegisterSoftBond320pgs(330x210)"
+            
+            },
+
+
+
+
+            {
+                "name": "Classmate Long Book Register Soft Bond 120 pgs Unruled (330 x 210)",
+                "MRP": 45,
+                "price": 40,
+                "quantity":1,
+                "img": "ClassmateLongBookRegisterSoftBond120pgsUnruled(330x210)"
+            
+            },
+            {
+                "name": "Classmate Long Book Register Soft Bond 228 pgs Unruled (330 x 210)",
+                "MRP": 85,
+                "price": 78,
+                "quantity":1,
+                "img": "ClassmateLongBookRegisterSoftBond228pgsUnruled(330x210)"
+            
+            },
+            {
+                "name": "Classmate Long Book Register Soft Bond 320 pgs Unruled (330 x 210)",
+                "MRP": 120,
+                "price": 101,
+                "quantity":1,
+                "img": "ClassmateLongBookRegisterSoftBond320pgsUnruled(330x210)"
+            
+            },
+
+
+
+
+            {
+                "name": "Classmate Long Book Register Hard Bond 160 pgs Unruled (330 x 210)",
+                "MRP": 78,
+                "price": 68,
+                "quantity":1,
+                "img": "ClassmateLongBookRegisterHardBond160pgsUnruled(330x210)"
+            
+            },
+            {
+                "name": "Classmate Long Book Register Hard Bond 256 pgs Unruled (330 x 210)",
+                "MRP": 150,
+                "price": 130,
+                "quantity":1,
+                "img": "ClassmateLongBookRegisterHardBond256pgsUnruled(330x210)"
+            
+            },
+            {
+                "name": "Classmate Long Book Register Hard Bond 400 pgs Unruled (330 x 210)",
+                "MRP": 195,
+                "price": 175,
+                "quantity":1,
+                "img": "ClassmateLongBookRegisterHardBond400pgsUnruled(330x210)"
+            
+            },
+
+
+
+
+
+
+            {
+                "name": "Classmate Long Book Register Hard Bond 400 pgs Unruled (330 x 210)",
+                "MRP": 195,
+                "price": 175,
+                "quantity":1,
+                "img": "ClassmateLongBookRegisterHardBond400pgsUnruled(330x210)"
+            
+            }
+
+        ]
 }

@@ -38,6 +38,40 @@ const SectionCard = ({name,imgSource,value,history}) => {
     }else if(name==="Class 12th science"){
         //imageLoc= "Images/"
     }
+    //stationery section starts from here........................
+    else if(name==="Pen"){
+        imageLoc="Images/pen.png"
+    }else if(name==="Pencil"){
+        imageLoc="Images/pencil.png"
+    }else if(name==="Eraser"){
+        imageLoc="Images/eraser.png"
+    }else if(name==="Sharpener"){
+        imageLoc="Images/pencil-sharpener.png"
+    }else if(name==="Scale"){
+        imageLoc="Images/ruler.png"
+    }else if(name==="Geometry"){
+        imageLoc="Images/geometry.png"
+    }else if(name==="Kits and Packs"){
+        imageLoc="Images/kitsandpacks.png"
+    }else if(name==="Chalk"){
+        imageLoc="Images/chalks.png"
+    }else if(name==="Cutters"){
+        imageLoc="Images/cutter.png"
+    }else if(name==="Camlin Notebook"){
+        imageLoc="Images/CamlinLogo.png"
+    }else if(name==="Navneet NoteBooks"){
+        imageLoc="Images/navneetlogo.png"
+    }else if(name==="Classmate Notebook"){
+        imageLoc="Images/classmatelogo.png"
+    }else if(name==="Exam Pad"){
+        imageLoc="Images/clipboard.png"
+    }else if(name==="Answer Sheet"){
+        imageLoc="Images/test.png"
+    }else if(name==="Other Notebooks"){
+        imageLoc="Images/notebook.png"
+    }else if(name==="Graphbook"){
+        imageLoc="Images/bar-graph.png"
+    }
     return ( 
      <div onClick={()=>history.push("/sectiondetail",{value,name})} className="shadow-lg col-xs-12 col-sm-12 col-md-6 col-lg-2 col-xl-2">
     <img src={imageLoc} alt="" />

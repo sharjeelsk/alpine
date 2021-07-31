@@ -13,6 +13,9 @@ import User from './components/User/User'
 import OrderPlaced from './components/OrderPlaced/OrderPlaced'
 import AboutUs from './components/AboutUs/AboutUs'
 import OrderStatus from './components/OrderPlaced/OrderStatus'
+import TermsAndConditions from './components/TermsAndConditions/TermsAndConditions';
+import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
+import Refund from './components/PrivacyPolicy/Refund'
 function App() {
   return (
     <Switch>
@@ -29,6 +32,9 @@ function App() {
       <Route path="/orderplaced" component={OrderPlaced} />
       <Route path="/aboutus" component={AboutUs} />
       <Route path="/orderstatus" component={OrderStatus} />
+      <Route path="/termsandconditions" component={TermsAndConditions} />
+      <Route path="/privacypolicy" component={PrivacyPolicy} />
+      <Route path="/refund" component={Refund} />
     </Switch>
   );
 }

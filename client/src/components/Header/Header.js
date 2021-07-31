@@ -6,7 +6,7 @@ import Logo from '../../Images/Group 15.png'
 const Header = (props) => {
 console.log(props);
 	return (
-        <div className=" p-5  rounded">
+        <div className=" p-5  rounded" style={{marginBottom:"2%"}}>
         <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top  navbarclass " >
 	<div className="container-fluid">
 		<Link className="navbar-brand"  style={{color:"black"}} to="/"><img style={{height:"6vh"}} src={Logo} /></Link>
@@ -18,6 +18,15 @@ console.log(props);
 			<li className="nav-item">
 			{props.id==="2"?<Link  className="nav-link active" to="/aboutus">About Us</Link>:<Link  className="nav-link"  to="/aboutus">About Us</Link>}
 			</li>
+			<li className="nav-item">
+			{props.id==="6"?<Link  className="nav-link active" to="/termsandconditions">Terms</Link>:<Link  className="nav-link"  to="/termsandconditions">Terms</Link>}
+			</li>
+			<li className="nav-item">
+			{props.id==="7"?<Link  className="nav-link active" to="/privacypolicy">Privacy Policy</Link>:<Link  className="nav-link"  to="/privacypolicy">Privacy Policy</Link>}
+			</li>
+			<li className="nav-item">
+			{props.id==="8"?<Link  className="nav-link active" to="/refund">Refund Policy</Link>:<Link  className="nav-link"  to="/refund">Refund Policy</Link>}
+			</li>
             <li className="nav-item">
 			{props.id==="3"?<Link  className="nav-link active" to="/contactus">Contact Us</Link>:<Link  className="nav-link"  to="/contactus">Contact Us</Link>}
 			</li>
@@ -27,7 +36,7 @@ console.log(props);
             <li className="nav-item">
 			{props.id==="5"?<Link  className="nav-link active" to="/cart"><span className="custombadge">{props.cart.length}</span><i className="fa-2x fa fa-shopping-bag" aria-hidden="true"></i></Link>:<Link  className="nav-link"  to="/cart"><span className="custombadge">{props.cart.length}</span><i className="fa-2x fa fa-shopping-bag" aria-hidden="true"></i></Link>}
 			</li>
-          
+			
 		</ul>
 	</div>
 </div>
