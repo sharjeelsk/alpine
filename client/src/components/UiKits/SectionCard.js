@@ -70,7 +70,7 @@ const SectionCard = ({name,imgSource,value,history}) => {
     }else if(name==="Other Notebooks"){
         imageLoc="Images/notebook.png"
     }else if(name==="Graphbook"){
-        imageLoc="Images/bar-graph.png"
+        imageLoc="Images/bargraph.png"
     }
     return ( 
      <div onClick={()=>history.push("/sectiondetail",{value,name})} className="shadow-lg col-xs-12 col-sm-12 col-md-6 col-lg-2 col-xl-2">

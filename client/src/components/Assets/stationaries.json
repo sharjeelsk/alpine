@@ -440,14 +440,14 @@
             "price":90,
             "quantity":1,
             "MRP":99,
-            "img":"marvelapsaravaenger"
+            "img":"apsaramarvelavengerspencil"
         },
         {
-            "name":"Apsara Disney Princess Pencils (Pack of 10 Pencil)",
+            "name":"Apsara Disney Princess Pencil (Pack of 10 Pencil)",
             "price":90,
             "quantity":1,
             "MRP":99,
-            "img":"apsaradisneyprincesspencil"
+            "img":"apsaradisneyprincesspencils"
         },
         {
             "name":"Apsara Drawing 10B & 12B (Pack of 10 Pencil)",
@@ -475,14 +475,14 @@
             "price":35,
             "quantity":1,
             "MRP":40,
-             "img":"apsaraassortedhb2b"
+             "img":"apsaraassortedhb2b4b"
         },
         {
             "name":"Apsara Assorted HB,B,2B,2B,4B,6B (Pack of 10 Pencil)",
             "price":31,
             "quantity":1,
             "MRP":36,
-             "img":"apsaraassortedhbb"
+             "img":"apsaraassortedhb2b4b"
         },
         {
             "name":"Apsara Charcoal (Pack of 3 Pencil)",
@@ -517,7 +517,7 @@
             "price":45,
             "quantity":1,
             "MRP":50,
-             "img":"natrajfluroprintspencil"
+             "img":"natrajflurodustcleareraser"
         },
         {
             "name":"Marvel Spider-Man Pencil (Pack of 10 Pencil)",
@@ -531,7 +531,7 @@
             "price":225,
             "quantity":1,
             "MRP":250,
-             "img":"apsarapremiumcolourpencil26"
+             "img":"apsarapremiumcolourpencil"
         },
         {
             "name":"Apsara Premium Colour Pencil (Pack of 14 Pencil)",
@@ -621,7 +621,7 @@
             "price":65,
             "quantity":1,
             "MRP":70,
-             "img":"apsaraabsolutesharpener"
+             "img":"apsaraabsolutesharpner"
         },
         {
             "name":"Apsara Long Point Sharpener (Pack of 20 Piece)",
@@ -1305,21 +1305,21 @@
             "price":60,
             "quantity":1,
             "MRP":60,
-            "img":"physics96pgs"
+            "img":"youvaphysics"
         },
         {
             "name":"Physics 144 pgs",
             "price":90,
             "quantity":1,
             "MRP":90,
-            "img":"physics144pgs"
+            "img":"youvaphysics"
         },
         {
             "name":"Physics 176 pgs",
             "price":100,
             "quantity":1,
             "MRP":100,
-            "img":"physics176pgs"
+            "img":"youvaphysics"
         }
         ,
         {
@@ -1327,42 +1327,42 @@
             "price":60,
             "quantity":1,
             "MRP":60,
-            "img":"chemistry96pgs"
+            "img":"youvachemistry"
         },
         {
             "name":"Chemistry 144 pgs",
             "price":90,
             "quantity":1,
             "MRP":90,
-            "img":"Chemistry144pgs"
+            "img":"youvachemistry"
         },
         {
             "name":"Chemistry 176 pgs",
             "price":100,
             "quantity":1,
             "MRP":100,
-            "img":"Chemistry176pgs"
+            "img":"youvachemistry"
         },
         {
             "name":"Biology 96 pgs",
             "price":60,
             "quantity":1,
             "MRP":60,
-            "img":"Biology96pgs"
+            "img":"youvabiology"
         },
         {
             "name":"Biology 144 pgs",
             "price":90,
             "quantity":1,
             "MRP":90,
-            "img":"Biology144pgs"
+            "img":"youvabiology"
         },
         {
             "name":"Biology 176 pgs",
             "price":100,
             "quantity":1,
             "MRP":100,
-            "img":"Biology176pgs"
+            "img":"youvabiology"
         }
 
         ,
@@ -1371,63 +1371,63 @@
             "price":60,
             "quantity":1,
             "MRP":60,
-            "img":"combined84pgs"
+            "img":"youvacombined"
         },
         {
             "name":"Combined 96 pgs",
             "price":60,
             "quantity":1,
             "MRP":60,
-            "img":"combined96pgs"
+            "img":"youvacombined"
         },
         {
             "name":"Combined 128 pgs",
             "price":60,
             "quantity":1,
             "MRP":60,
-            "img":"combined128pgs"
+            "img":"youvacombined"
         },
         {
             "name":"Combined 144 pgs",
             "price":90,
             "quantity":1,
             "MRP":90,
-            "img":"Combined144pgs"
+            "img":"youvacombined"
         },
         {
             "name":"Combined 176 pgs",
             "price":100,
             "quantity":1,
             "MRP":100,
-            "img":"Combined176pgs"
+            "img":"youvacombined"
         },
         {
             "name":"Computer 96 pgs",
             "price":100,
             "quantity":1,
             "MRP":100,
-            "img":"Computer96pgs"
+            "img":"youvacomputer"
         },
         {
             "name":"Electric Gazette 96 pgs",
             "price":100,
             "quantity":1,
             "MRP":100,
-            "img":"electricgazette96"
+            "img":"electricgazette"
         },
         {
             "name":"Electric Gazette 176 pgs",
             "price":100,
             "quantity":1,
             "MRP":100,
-            "img":"electricgazette96"
+            "img":"electricgazette"
         },
         {
             "name":"Maths Laboratory 96 pgs",
             "price":100,
             "quantity":1,
             "MRP":100,
-            "img":"Mathslaboratory96pgs"
+            "img":"mathslaboratory"
         },
         {
             "name":"Maths Laboratory 64 pgs",
@@ -1442,155 +1442,500 @@
             "price":22,
             "quantity":1,
             "MRP":25,
-            "img":"regularjumbosizesoftbond76pgsbrownsingleline"
+            "img":"youvabrown"
         },
         {
             "name":"Regular Jumbo Size Soft Bond 76 pgs brown Double Line",
             "price":22,
             "quantity":1,
             "MRP":25,
-            "img":"regularjumbosizesoftbond76pgsbrowndoubleline"
+            "img":"youvabrown"
         },
         {
             "name":"Regular Jumbo Size Soft Bond 76 pgs brown Red & Blue (with Gap)",
             "price":22,
             "quantity":1,
             "MRP":25,
-            "img":"regularjumbosizesoftbond76pgsbrownredandblue"
+            "img":"youvabrown"
         },{
             "name":"Regular Jumbo Size Soft Bond 76 pgs brown Small Square",
             "price":22,
             "quantity":1,
             "MRP":25,
-            "img":"regularjumbosizesoftbond76pgsbrownsmallsquare"
+            "img":"youvabrown"
         },{
             "name":"Regular Jumbo Size Soft Bond 76 pgs brown Meduim Square",
             "price":22,
             "quantity":1,
             "MRP":25,
-            "img":"regularjumbosizesoftbond76pgsbrownmeduimsquare"
+            "img":"youvabrown"
         },
         {
             "name":"Regular Jumbo Size Soft Bond 172 pgs brown Single Line",
             "price":40,
             "quantity":1,
             "MRP":50,
-            "img":"regularjumbosizesoftbond172pgsbrownsingleline"
+            "img":"youvabrown"
         },
         {
             "name":"Regular Jumbo Size Soft Bond 172 pgs brown Double Line",
             "price":40,
             "quantity":1,
             "MRP":50,
-            "img":"regularjumbosizesoftbond172pgsbrowndoubleline"
+            "img":"youvabrown"
         },
         {
             "name":"Regular Jumbo Size Soft Bond 172 pgs brown Red & Blue (with Gap)",
             "price":40,
             "quantity":1,
             "MRP":50,
-            "img":"regularjumbosizesoftbond172pgsbrownredandblue"
+            "img":"youvabrown"
         },{
             "name":"Regular Jumbo Size Soft Bond 172 pgs brown Small Square",
             "price":40,
             "quantity":1,
             "MRP":50,
-            "img":"regularjumbosizesoftbond172pgsbrownsmallsquare"
+            "img":"youvabrown"
         },{
             "name":"Regular Jumbo Size Soft Bond 172 pgs brown Meduim Square",
             "price":40,
             "quantity":1,
             "MRP":50,
-            "img":"regularjumbosizesoftbond172pgsbrownmeduimsquare"
+            "img":"youvabrown"
         },{
             "name":"Regular Long Book A4 Size Soft Bond 140 pgs",
             "price":45,
             "quantity":1,
             "MRP":55,
-            "img":"regularlongbooka4sizesoftbond140pgs"
+            "img":"youvalongbook"
         },{
             "name":"Regular Long Book A4 Size Soft Bond 162 pgs",
             "price":55,
             "quantity":1,
             "MRP":65,
-            "img":"regularlongbooka4sizesoftbond162pgs"
+            "img":"youvalongbook"
         },{
             "name":"Regular Long Book A4 Size Soft Bond 228 pgs",
             "price":80,
             "quantity":1,
             "MRP":90,
-            "img":"regularlongbooka4sizesoftbond228pgs"
+            "img":"youvalongbook"
         },{
             "name":"Regular Long Book A4 Size Soft Bond 196 pgs Single Line",
             "price":70,
             "quantity":1,
             "MRP":80,
-            "img":"regularlongbooka4sizesoftbond196pgssingleline"
+            "img":"youvalongbook"
         },{
             "name":"Regular Long Book A4 Size Soft Bond 196 pgs Unruled",
             "price":70,
             "quantity":1,
             "MRP":80,
-            "img":"regularlongbooka4sizesoftbond196pgssingleline"
+            "img":"youvalongbook"
         },{
             "name":"Regular Long Book A4 Size Soft Bond 228 pgs Single Line",
             "price":75,
             "quantity":1,
             "MRP":85,
-            "img":"regularlongbooka4sizesoftbond228pgssingleline"
+            "img":"youvalongbook"
         },{
             "name":"Regular Long Book A4 Size Soft Bond 228 pgs Unruled",
             "price":75,
             "quantity":1,
             "MRP":85,
-            "img":"regularlongbooka4sizesoftbond228pgsunruled"
+            "img":"youvalongbook"
         },{
             "name":"Regular Long Book A4 Size Soft Bond 276 pgs Single Line",
             "price":95,
             "quantity":1,
             "MRP":105,
-            "img":"regularlongbooka4sizesoftbond276pgssingleline"
+            "img":"youvalongbook"
         },{
             "name":"Regular Long Book A4 Size Soft Bond 276 pgs Unruled",
             "price":95,
             "quantity":1,
             "MRP":105,
-            "img":"regularlongbooka4sizesoftbond276pgsunruled"
+            "img":"youvalongbook"
         },{
             "name":"Regular A4 Size Soft Bond Rainbow 140 pgs Single Line",
             "price":45,
             "quantity":1,
             "MRP":55,
-            "img":"regulara4sizesoftbondrainbow140pgssingleline"
+            "img":"youvalongbook"
         },{
             "name":"Regular A4 Size Soft Bond Rainbow 172 pgs Single Line",
             "price":50,
             "quantity":1,
             "MRP":65,
-            "img":"regulara4sizesoftbondrainbow172pgssingleline"
+            "img":"youvalongbook"
         },{
             "name":"Regular A4 Size Soft Bond Rainbow 228 pgs Single Line",
             "price":75,
             "quantity":1,
             "MRP":90,
-            "img":"regulara4sizesoftbondrainbow228pgssingleline"
+            "img":"youvalongbook"
         }
         
 ],    
     "Classmate Notebook":[
         {
-            "name":"camlinsamllgraphbooka28pages",
-            "price":8,
-            "quantity":1,
-            "MRP":10,
-            "img":"camlinsamllgraphbooka28page"
-
-        },{
             "name":"Classmate 200pgs Single Line Notebook",
             "price":200,
             "quantity":1,
             "MRP":250,
             "img":"classmate200pgssinglelinenotebook"
+        },
+        {
+            "name": "Classmate Brown Notebooks 72 pgs Square Line (Pack of 6)",
+            "MRP": 150,
+            "price": 132,
+            "quantity":6,
+            "img": "classmatebrown"
+        
+        },
+        {
+            "name": "Classmate Brown Notebooks 72 pgs Four Line With Gap (Pack of 6)",
+            "MRP": 150,
+            "price": 132,
+            "quantity":6,
+            "img": "classmatebrown"
+        
+        },
+        {
+            "name": "Classmate Brown Notebooks 72 pgs Four Line (Pack of 6)",
+            "MRP": 150,
+            "price": 132,
+            "quantity":6,
+            "img": "classmatebrown"
+        
+        },
+        {
+            "name": "Classmate Brown Notebooks 72 pgs Two Line (Pack of 6)",
+            "MRP": 150,
+            "price": 132,
+            "quantity":6,
+            "img": "classmatebrown"
+        
+        },
+        {
+            "name": "Classmate Brown Notebooks 72 pgs Single Line (Pack of 6)",
+            "MRP": 150,
+            "price": 132,
+            "quantity":6,
+            "img": "classmatebrown"
+        
+        },
+
+
+
+        {
+            "name": "Classmate Brown Notebooks 172 pgs Square Line (Pack of 6)",
+            "MRP": 288,
+            "price": 251,
+            "quantity":6,
+            "img": "classmatebrown"
+        
+        },
+        {
+            "name": "Classmate Brown Notebooks 172 pgs Four Line With Gap (Pack of 6)",
+            "MRP": 288,
+            "price": 251,
+            "quantity":6,
+            "img": "classmatebrown"
+        
+        },
+        {
+            "name": "Classmate Brown Notebooks 172 pgs Four Line (Pack of 6)",
+            "MRP": 288,
+            "price": 251,
+            "quantity":6,
+            "img": "classmatebrown"
+        
+        },
+        {
+            "name": "Classmate Brown Notebooks 172 pgs Two Line (Pack of 6)",
+            "MRP": 288,
+            "price": 251,
+            "quantity":6,
+            "img": "classmatebrown"
+        
+        },
+        {
+            "name": "Classmate Brown Notebooks 172 pgs Single Line (Pack of 6)",
+            "MRP": 288,
+            "price": 251,
+            "quantity":6,
+            "img": "classmatebrown"
+        
+        },
+        {
+            "name": "Classmate A4 Size Register 304 pgs",
+            "MRP": 110,
+            "price": 99,
+            "quantity":1,
+            "img": "classmateregister"
+        
+        },
+        {
+            "name": "Classmate A4 Size Register 240 pgs",
+            "MRP": 80,
+            "price": 70,
+            "quantity":1,
+            "img": "classmateregister"
+        
+        }
+        ,
+        {
+            "name": "Classmate A4 Size Register 172 pgs",
+            "MRP": 62,
+            "price": 55,
+            "quantity":1,
+            "img": "classmateregister"
+        
+        }
+        ,
+        {
+            "name": "Classmate A4 Size Register 140 pgs",
+            "MRP": 55,
+            "price": 47,
+            "quantity":1,
+            "img": "classmateregister"
+        
+        }
+        ,
+        {
+            "name": "Classmate A4 Size Register 108 pgs",
+            "MRP": 40,
+            "price": 35,
+            "quantity":1,
+            "img": "classmateregister"
+        
+        },
+
+
+        {
+            "name": "Classmate A4 Size Register 304 pgs Unruled",
+            "MRP": 110,
+            "price": 99,
+            "quantity":1,
+            "img": "classmateregister"
+        
+        },
+        {
+            "name": "Classmate A4 Size Register 240 pgs Unruled",
+            "MRP": 80,
+            "price": 70,
+            "quantity":1,
+            "img": "classmateregister"
+        
+        }
+        ,
+        {
+            "name": "Classmate A4 Size Register 172 pgs Unruled",
+            "MRP": 62,
+            "price": 55,
+            "quantity":1,
+            "img": "classmateregister"
+        
+        }
+        ,
+        {
+            "name": "Classmate A4 Size Register 140 pgs Unruled",
+            "MRP": 55,
+            "price": 47,
+            "quantity":1,
+            "img": "classmateregister"
+        
+        }
+        ,
+        {
+            "name": "Classmate A4 Size Register 108 pgs Unruled",
+            "MRP": 40,
+            "price": 35,
+            "quantity":1,
+            "img": "classmateregister"
+        
+        },
+
+
+
+
+        {
+            "name": "Classmate A4 Size Register Hard Bound 160 pgs",
+            "MRP": 75,
+            "price": 68,
+            "quantity":1,
+            "img": "classmatehardbond"
+        
+        }
+        ,
+        {
+            "name": "Classmate A4 Size Register Hard Bound 240 pgs",
+            "MRP": 110,
+            "price": 95,
+            "quantity":1,
+            "img": "classmatehardbond"
+        
+        }
+        ,
+        {
+            "name": "Classmate A4 Size Register Hard Bound 364 pgs",
+            "MRP": 170,
+            "price": 155,
+            "quantity":1,
+            "img": "classmatehardbond"
+        
+        },
+
+
+
+
+        
+        {
+            "name": "Classmate Long Book Register 72 pgs",
+            "MRP": 22,
+            "price": 19,
+            "quantity":1,
+            "img": "classmatelongbook"
+        
+        },
+        {
+            "name": "Classmate Long Book Register 120 pgs",
+            "MRP": 32,
+            "price": 28,
+            "quantity":1,
+            "img": "classmatelongbook"
+        
+        },
+        {
+            "name": "Classmate Long Book Register 172 pgs",
+            "MRP": 48,
+            "price": 41,
+            "quantity":1,
+            "img": "classmatelongbook"
+        
+        },
+        {
+            "name": "Classmate Long Book Register 256 pgs",
+            "MRP": 65,
+            "price": 57,
+            "quantity":1,
+            "img": "classmatelongbook"
+        
+        },
+        {
+            "name": "Classmate Long Book Register 300 pgs",
+            "MRP": 80,
+            "price": 69,
+            "quantity":1,
+            "img": "classmatelongbook"
+        
+        },
+        {
+            "name": "Classmate Long Book Register 400 pgs",
+            "MRP": 100,
+            "price": 85,
+            "quantity":1,
+            "img": "classmatelongbook"
+        
+        },
+
+
+
+
+        {
+            "name": "Classmate Long Book Register Soft Bond 120 pgs (330 x 210)",
+            "MRP": 45,
+            "price": 40,
+            "quantity":1,
+            "img": "classmatelongbook"
+        
+        },
+        {
+            "name": "Classmate Long Book Register Soft Bond 228 pgs (330 x 210)",
+            "MRP": 85,
+            "price": 78,
+            "quantity":1,
+            "img": "classmatelongbook"
+        
+        },
+        {
+            "name": "Classmate Long Book Register Soft Bond 320 pgs (330 x 210)",
+            "MRP": 120,
+            "price": 101,
+            "quantity":1,
+            "img": "classmatelongbook"
+        
+        },
+
+
+
+
+        {
+            "name": "Classmate Long Book Register Soft Bond 120 pgs Unruled (330 x 210)",
+            "MRP": 45,
+            "price": 40,
+            "quantity":1,
+            "img": "classmatelongbook"
+        
+        },
+        {
+            "name": "Classmate Long Book Register Soft Bond 228 pgs Unruled (330 x 210)",
+            "MRP": 85,
+            "price": 78,
+            "quantity":1,
+            "img": "classmatelongbook"
+        
+        },
+        {
+            "name": "Classmate Long Book Register Soft Bond 320 pgs Unruled (330 x 210)",
+            "MRP": 120,
+            "price": 101,
+            "quantity":1,
+            "img": "classmatelongbook"
+        
+        },
+
+
+
+
+        {
+            "name": "Classmate Long Book Register Hard Bond 160 pgs Unruled (330 x 210)",
+            "MRP": 78,
+            "price": 68,
+            "quantity":1,
+            "img": "classmatelongbook"
+        
+        },
+        {
+            "name": "Classmate Long Book Register Hard Bond 256 pgs Unruled (330 x 210)",
+            "MRP": 150,
+            "price": 130,
+            "quantity":1,
+            "img": "classmatelongbook"
+        
+        },
+        {
+            "name": "Classmate Long Book Register Hard Bond 400 pgs Unruled (330 x 210)",
+            "MRP": 195,
+            "price": 175,
+            "quantity":1,
+            "img": "classmatelongbook"
+        
+        },
+
+
+
+
+
+
+        {
+            "name": "Classmate Long Book Register Hard Bond 400 pgs Unruled (330 x 210)",
+            "MRP": 195,
+            "price": 175,
+            "quantity":1,
+            "img": "classmatelongbook"
+        
         }
     ],
     "Exam Pad":[
@@ -1599,7 +1944,7 @@
             "price":105,
             "quantity":1,
             "MRP":125,
-            "img":"woodenexamboard"
+            "img":"youvawoodenboard"
         },
         {
             "name":"Drawing Exam Board",
@@ -1620,14 +1965,14 @@
             "price":75,
             "quantity":1,
             "MRP":90,
-            "img":"woodenexamboard"
+            "img":"youvaexamboard"
         },
         {
             "name":"Youva Trendy Exam Board",
             "price":85,
             "quantity":1,
             "MRP":100,
-            "img":"woodenexamboard"
+            "img":"trendyyouva"
         }
     ],
     "Answer Sheet":[
@@ -1636,424 +1981,52 @@
             "price":110,
             "quantity":1,
             "MRP":125,
-            "img":"woodenexamboard"
+            "img":"youvaanswerbook"
         },
         {
             "name":"Youva Answer Book set of 25 (Each set 16pgs)",
             "price":160,
             "quantity":1,
             "MRP":175,
-            "img":"woodenexamboard"
+            "img":"youvaanswerbook"
         }
     ],
-    "Other Notebooks":[
-        {
-            "name":"camlinsamllgraphbooka28pages",
-            "price":8,
-            "quantity":1,
-            "MRP":10,
-            "img":"camlinsamllgraphbooka28page"
-
-        }
-    ],
+  
    
 
 
-                    "Graphbook ":[ 
+                    "Graphbook":[ 
                  {
-                "name":"camlinsamllgraphbooka28pages",
+                "name":"camlin samll graph book 28 pages",
                 "price":8,
                 "quantity":1,
                 "MRP":10,
-                "img":"camlinsamllgraphbooka28page"
+                "img":"camlingraphbook"
     
             },
             {
-                "name":"camlinbiggraphbooka28pages",
+                "name":"camlin big graph book 28 pages",
                 "price":18,
                 "quantity":1,
                 "MRP":20,
-                "img":"camlinbiggraphbooka28page"
+                "img":"youvabig"
     
             },
             {
-                "name":"Youva Graph Book 32 pgs",
+                "name":"Youva Graph Book 32 pages",
                 "price":18,
                 "quantity":1,
                 "MRP":20,
-                "img":"youvagraphbook32"
+                "img":"youvabig"
     
             },
             {
-                "name":"camlinbiggraphbooka28pages",
+                "name":"camlin big graph book 28 pages",
                 "price":18,
                 "quantity":1,
                 "MRP":20,
-                "img":"camlinbiggraphbooka28page"
+                "img":"youvabig"
     
             }
-        ],
-
-        "Classmate Brown Notebook": [
-            {
-                "name": "Classmate Brown Notebooks 72 pgs Square Line (Pack of 6)",
-                "MRP": 150,
-                "price": 132,
-                "quantity":6,
-                "img": "ClassmateBrownNotebooks72pgsSquareLine(Packof6)"
-            
-            },
-            {
-                "name": "Classmate Brown Notebooks 72 pgs Four Line With Gap (Pack of 6)",
-                "MRP": 150,
-                "price": 132,
-                "quantity":6,
-                "img": "ClassmateBrownNotebooks72pgsFourLineWithGap(Packof6)"
-            
-            },
-            {
-                "name": "Classmate Brown Notebooks 72 pgs Four Line (Pack of 6)",
-                "MRP": 150,
-                "price": 132,
-                "quantity":6,
-                "img": "ClassmateBrownNotebooks72pgsFourLine(Packof6)"
-            
-            },
-            {
-                "name": "Classmate Brown Notebooks 72 pgs Two Line (Pack of 6)",
-                "MRP": 150,
-                "price": 132,
-                "quantity":6,
-                "img": "ClassmateBrownNotebooks72pgsTwoLine(Packof6)"
-            
-            },
-            {
-                "name": "Classmate Brown Notebooks 72 pgs Single Line (Pack of 6)",
-                "MRP": 150,
-                "price": 132,
-                "quantity":6,
-                "img": "ClassmateBrownNotebooks72pgsSingleLine(Packof6)"
-            
-            },
-
-
-
-            {
-                "name": "Classmate Brown Notebooks 172 pgs Square Line (Pack of 6)",
-                "MRP": 288,
-                "price": 251,
-                "quantity":6,
-                "img": "ClassmateBrownNotebooks172pgsSquareLine(Packof6)"
-            
-            },
-            {
-                "name": "Classmate Brown Notebooks 172 pgs Four Line With Gap (Pack of 6)",
-                "MRP": 288,
-                "price": 251,
-                "quantity":6,
-                "img": "ClassmateBrownNotebooks172pgsFourLineWithGap(Packof6)"
-            
-            },
-            {
-                "name": "Classmate Brown Notebooks 172 pgs Four Line (Pack of 6)",
-                "MRP": 288,
-                "price": 251,
-                "quantity":6,
-                "img": "ClassmateBrownNotebooks172pgsFourLine(Packof6)"
-            
-            },
-            {
-                "name": "Classmate Brown Notebooks 172 pgs Two Line (Pack of 6)",
-                "MRP": 288,
-                "price": 251,
-                "quantity":6,
-                "img": "ClassmateBrownNotebooks172pgsTwoLine(Packof6)"
-            
-            },
-            {
-                "name": "Classmate Brown Notebooks 172 pgs Single Line (Pack of 6)",
-                "MRP": 288,
-                "price": 251,
-                "quantity":6,
-                "img": "ClassmateBrownNotebooks172pgsSingleLine(Packof6)"
-            
-            }
-        ],
-
-
-
-
-
-        "Classmate Register":[
-            {
-                "name": "Classmate A4 Size Register 304 pgs",
-                "MRP": 110,
-                "price": 99,
-                "quantity":1,
-                "img": "ClassmateA4SizeRegister304pgs"
-            
-            },
-            {
-                "name": "Classmate A4 Size Register 240 pgs",
-                "MRP": 80,
-                "price": 70,
-                "quantity":1,
-                "img": "ClassmateA4SizeRegister240pgs"
-            
-            }
-            ,
-            {
-                "name": "Classmate A4 Size Register 172 pgs",
-                "MRP": 62,
-                "price": 55,
-                "quantity":1,
-                "img": "ClassmateA4SizeRegister172pgs"
-            
-            }
-            ,
-            {
-                "name": "Classmate A4 Size Register 140 pgs",
-                "MRP": 55,
-                "price": 47,
-                "quantity":1,
-                "img": "ClassmateA4SizeRegister140pgs"
-            
-            }
-            ,
-            {
-                "name": "Classmate A4 Size Register 108 pgs",
-                "MRP": 40,
-                "price": 35,
-                "quantity":1,
-                "img": "ClassmateA4SizeRegister108pgs"
-            
-            },
-
-
-            {
-                "name": "Classmate A4 Size Register 304 pgs Unruled",
-                "MRP": 110,
-                "price": 99,
-                "quantity":1,
-                "img": "ClassmateA4SizeRegister304pgsUnruled"
-            
-            },
-            {
-                "name": "Classmate A4 Size Register 240 pgs Unruled",
-                "MRP": 80,
-                "price": 70,
-                "quantity":1,
-                "img": "ClassmateA4SizeRegister240pgsUnruled"
-            
-            }
-            ,
-            {
-                "name": "Classmate A4 Size Register 172 pgs Unruled",
-                "MRP": 62,
-                "price": 55,
-                "quantity":1,
-                "img": "ClassmateA4SizeRegister172pgsUnruled"
-            
-            }
-            ,
-            {
-                "name": "Classmate A4 Size Register 140 pgs Unruled",
-                "MRP": 55,
-                "price": 47,
-                "quantity":1,
-                "img": "ClassmateA4SizeRegister140pgsUnruled"
-            
-            }
-            ,
-            {
-                "name": "Classmate A4 Size Register 108 pgs Unruled",
-                "MRP": 40,
-                "price": 35,
-                "quantity":1,
-                "img": "ClassmateA4SizeRegister108pgsUnruled"
-            
-            },
-
-
-
-
-            {
-                "name": "Classmate A4 Size Register Hard Bound 160 pgs",
-                "MRP": 75,
-                "price": 68,
-                "quantity":1,
-                "img": "ClassmateA4SizeRegisterHardBound160pgs"
-            
-            }
-            ,
-            {
-                "name": "Classmate A4 Size Register Hard Bound 240 pgs",
-                "MRP": 110,
-                "price": 95,
-                "quantity":1,
-                "img": "ClassmateA4SizeRegisterHardBound240pgs"
-            
-            }
-            ,
-            {
-                "name": "Classmate A4 Size Register Hard Bound 364 pgs",
-                "MRP": 170,
-                "price": 155,
-                "quantity":1,
-                "img": "ClassmateA4SizeRegisterHardBound364pgs"
-            
-            },
-
-
-
-
-            
-            {
-                "name": "Classmate Long Book Register 72 pgs",
-                "MRP": 22,
-                "price": 19,
-                "quantity":1,
-                "img": "ClassmateLongBookRegister72pgs"
-            
-            },
-            {
-                "name": "Classmate Long Book Register 120 pgs",
-                "MRP": 32,
-                "price": 28,
-                "quantity":1,
-                "img": "ClassmateLongBookRegister120pgs"
-            
-            },
-            {
-                "name": "Classmate Long Book Register 172 pgs",
-                "MRP": 48,
-                "price": 41,
-                "quantity":1,
-                "img": "ClassmateLongBookRegister172pgs"
-            
-            },
-            {
-                "name": "Classmate Long Book Register 256 pgs",
-                "MRP": 65,
-                "price": 57,
-                "quantity":1,
-                "img": "ClassmateLongBookRegister256pgs"
-            
-            },
-            {
-                "name": "Classmate Long Book Register 300 pgs",
-                "MRP": 80,
-                "price": 69,
-                "quantity":1,
-                "img": "ClassmateLongBookRegister300pgs"
-            
-            },
-            {
-                "name": "Classmate Long Book Register 400 pgs",
-                "MRP": 100,
-                "price": 85,
-                "quantity":1,
-                "img": "ClassmateLongBookRegister400pgs"
-            
-            },
-
-
-
-
-            {
-                "name": "Classmate Long Book Register Soft Bond 120 pgs (330 x 210)",
-                "MRP": 45,
-                "price": 40,
-                "quantity":1,
-                "img": "ClassmateLongBookRegisterSoftBond120pgs(330x210)"
-            
-            },
-            {
-                "name": "Classmate Long Book Register Soft Bond 228 pgs (330 x 210)",
-                "MRP": 85,
-                "price": 78,
-                "quantity":1,
-                "img": "ClassmateLongBookRegisterSoftBond228pgs(330x210)"
-            
-            },
-            {
-                "name": "Classmate Long Book Register Soft Bond 320 pgs (330 x 210)",
-                "MRP": 120,
-                "price": 101,
-                "quantity":1,
-                "img": "ClassmateLongBookRegisterSoftBond320pgs(330x210)"
-            
-            },
-
-
-
-
-            {
-                "name": "Classmate Long Book Register Soft Bond 120 pgs Unruled (330 x 210)",
-                "MRP": 45,
-                "price": 40,
-                "quantity":1,
-                "img": "ClassmateLongBookRegisterSoftBond120pgsUnruled(330x210)"
-            
-            },
-            {
-                "name": "Classmate Long Book Register Soft Bond 228 pgs Unruled (330 x 210)",
-                "MRP": 85,
-                "price": 78,
-                "quantity":1,
-                "img": "ClassmateLongBookRegisterSoftBond228pgsUnruled(330x210)"
-            
-            },
-            {
-                "name": "Classmate Long Book Register Soft Bond 320 pgs Unruled (330 x 210)",
-                "MRP": 120,
-                "price": 101,
-                "quantity":1,
-                "img": "ClassmateLongBookRegisterSoftBond320pgsUnruled(330x210)"
-            
-            },
-
-
-
-
-            {
-                "name": "Classmate Long Book Register Hard Bond 160 pgs Unruled (330 x 210)",
-                "MRP": 78,
-                "price": 68,
-                "quantity":1,
-                "img": "ClassmateLongBookRegisterHardBond160pgsUnruled(330x210)"
-            
-            },
-            {
-                "name": "Classmate Long Book Register Hard Bond 256 pgs Unruled (330 x 210)",
-                "MRP": 150,
-                "price": 130,
-                "quantity":1,
-                "img": "ClassmateLongBookRegisterHardBond256pgsUnruled(330x210)"
-            
-            },
-            {
-                "name": "Classmate Long Book Register Hard Bond 400 pgs Unruled (330 x 210)",
-                "MRP": 195,
-                "price": 175,
-                "quantity":1,
-                "img": "ClassmateLongBookRegisterHardBond400pgsUnruled(330x210)"
-            
-            },
-
-
-
-
-
-
-            {
-                "name": "Classmate Long Book Register Hard Bond 400 pgs Unruled (330 x 210)",
-                "MRP": 195,
-                "price": 175,
-                "quantity":1,
-                "img": "ClassmateLongBookRegisterHardBond400pgsUnruled(330x210)"
-            
-            }
-
         ]
 }

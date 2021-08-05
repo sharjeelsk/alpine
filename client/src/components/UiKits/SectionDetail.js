@@ -22,6 +22,8 @@ const SectionDetail = (props) => {
         console.log(count)
      return count.length===0?null:count[0].quantity;
     }
+
+
     return (
         <div className="cardDetail">
             <Header />

@@ -96,7 +96,7 @@ const Cart = (props) => {
             alert("Payment failed to load")
             return
         }
-        axios.post('http://localhost:3002/razorpay')
+        axios.post('/razorpay')
         .then((t)=>{
             console.log(t);
             var options = {

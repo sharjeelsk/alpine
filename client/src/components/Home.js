@@ -35,32 +35,47 @@ const Home = ({history}) => {
         </div>
         </div>
 
-        <div className="trendingitemsdiv" style={{color:"white"}}>
+        <div className="trendingitemsdiv" style={{color:"#006141"}}>
             <h2>Trending Item's</h2>
-            <div className="row">
-                <div className="col-2">
-                    <h6>itemName</h6>
-                    <p>Description</p>
+            <div className="row countRow ">
+                <div className="col-3">
+                    <img style={{height:150,width:100,marginBottom:10}} src="/Images/trendingitems/trimax.jpg" alt="trimax" />
+                    <h6>Trimax</h6>
+                    <p>Price:30</p>
+                    <p>MRP:40</p>
+                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
                 </div>
                 
-                <div className="col-2">
-                    <h6>itemName</h6>
-                    <p>Description</p>
+                <div className="col-3">
+                <img style={{height:150,width:100,marginBottom:10}} src="/Images/myapsarakit.jpg" alt="trimax" />
+                    <h6>My Apsara Kit</h6>
+                    <p>Price:420</p>
+                    <p>MRP:500</p>
+                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
                 </div>
                 
-                <div className="col-2">
-                    <h6>itemName</h6>
-                    <p>Description</p>
+                <div className="col-3">
+                <img style={{height:150,width:100,marginBottom:10}} src="/Images/avengerskit.jpg" alt="trimax" />
+                    <h6>Avengers Kit</h6>
+                    <p>Price:26</p>
+                    <p>MRP:30</p>
+                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
                 </div>
                 
-                <div className="col-2">
-                    <h6>itemName</h6>
-                    <p>Description</p>
+                <div className="col-3">
+                <img style={{height:150,width:100,marginBottom:10}} src="/Images/natrajwildeseraser.jpg" alt="trimax" />
+                    <h6>Natraj Pack</h6>
+                    <p>Price:35</p>
+                    <p>MRP:40</p>
+                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
                 </div>
                 
-                <div className="col-2">
-                    <h6>itemName</h6>
-                    <p>Description</p>
+                <div className="col-3">
+                <img style={{height:150,width:100,marginBottom:10}} src="/Images/camlisinglelinenotebook72pages.jpg" alt="trimax" />
+                    <h6>Camlin Double Line Notebook</h6>
+                    <p>Price:20</p>
+                    <p>MRP:18</p>
+                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
                 </div>
             </div>
         </div>
@@ -68,60 +83,90 @@ const Home = ({history}) => {
 
         <div className="trendingitemsdiv">
             <h2>Most Bought Item's</h2>
-            <div className="row">
-                <div className="col-2">
-                    <h6>itemName</h6>
-                    <p>Description</p>
+            <div className="row countRow ">
+                <div className="col-3">
+                    <img style={{height:150,width:100,marginBottom:10}} src="/Images/camlinA4sizesoftbondunrulednotebook72pages.jpg" alt="trimax" />
+                    <h6>Camlin A4 Size Notebook 72pgs</h6>
+                    <p>Price:25</p>
+                    <p>MRP:30</p>
+                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
                 </div>
                 
-                <div className="col-2">
-                    <h6>itemName</h6>
-                    <p>Description</p>
+                <div className="col-3">
+                <img style={{height:150,width:100,marginBottom:10}} src="/Images/Englishkumarbharti10jpeg.jpg" alt="trimax" />
+                    <h6>Englishkumarbharti</h6>
+                    <p>Price:140</p>
+                    <p>MRP:150</p>
+                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
                 </div>
                 
-                <div className="col-2">
-                    <h6>itemName</h6>
-                    <p>Description</p>
+                <div className="col-3">
+                <img style={{height:150,width:100,marginBottom:10}} src="/Images/camlinjumboa5softmediumsquarelinenotebook172pages.jpg" alt="trimax" />
+                    <h6>Camlin Jumbo A5 Meduim 172p</h6>
+                    <p>Price:45</p>
+                    <p>MRP:50</p>
+                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
                 </div>
                 
-                <div className="col-2">
-                    <h6>itemName</h6>
-                    <p>Description</p>
+                <div className="col-3">
+                <img style={{height:150,width:100,marginBottom:10}} src="/Images/apsarapaltinum.jpg" alt="trimax" />
+                    <h6>Apsara Platinum Pack</h6>
+                    <p>Price:45</p>
+                    <p>MRP:50</p>
+                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
                 </div>
                 
-                <div className="col-2">
-                    <h6>itemName</h6>
-                    <p>Description</p>
+                <div className="col-3">
+                <img style={{height:150,width:100,marginBottom:10}} src="/Images/apsaraabsolutescale30cm.jpg" alt="trimax" />
+                    <h6>Apsara Absolute Scale</h6>
+                    <p>Price:22</p>
+                    <p>MRP:25</p>
+                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
                 </div>
             </div>
         </div>
 
         <div className="trendingitemsdiv">
             <h2>High on Discount</h2>
-            <div className="row">
-                <div className="col-2">
-                    <h6>itemName</h6>
-                    <p>Description</p>
+            <div className="row countRow ">
+                <div className="col-3">
+                    <img style={{height:150,width:100,marginBottom:10}} src="/Images/trendingitems/trimax.jpg" alt="trimax" />
+                    <h6>Trimax</h6>
+                    <p>Price:30</p>
+                    <p>MRP:40</p>
+                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
                 </div>
                 
-                <div className="col-2">
-                    <h6>itemName</h6>
-                    <p>Description</p>
+                <div className="col-3">
+                <img style={{height:150,width:100,marginBottom:10}} src="/Images/trendingitems/trimax.jpg" alt="trimax" />
+                    <h6>Trimax</h6>
+                    <p>Price:30</p>
+                    <p>MRP:40</p>
+                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
                 </div>
                 
-                <div className="col-2">
-                    <h6>itemName</h6>
-                    <p>Description</p>
+                <div className="col-3">
+                <img style={{height:150,width:100,marginBottom:10}} src="/Images/trendingitems/trimax.jpg" alt="trimax" />
+                    <h6>Trimax</h6>
+                    <p>Price:30</p>
+                    <p>MRP:40</p>
+                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
                 </div>
                 
-                <div className="col-2">
-                    <h6>itemName</h6>
-                    <p>Description</p>
+                <div className="col-3">
+                <img style={{height:150,width:100,marginBottom:10}} src="/Images/trendingitems/trimax.jpg" alt="trimax" />
+                    <h6>Trimax</h6>
+                    <p>Price:30</p>
+                    <p>MRP:40</p>
+                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
                 </div>
                 
-                <div className="col-2">
-                    <h6>itemName</h6>
-                    <p>Description</p>
+                <div className="col-3">
+                <img style={{height:150,width:100,marginBottom:10}} src="/Images/trendingitems/trimax.jpg" alt="trimax" />
+                    <h6>Trimax</h6>
+                    <p>Price:30</p>
+                    <p>MRP:40</p>
+                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
                 </div>
             </div>
         </div>
