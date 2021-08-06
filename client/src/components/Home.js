@@ -130,42 +130,42 @@ const Home = ({history}) => {
             <h2>High on Discount</h2>
             <div className="row countRow ">
                 <div className="col-3">
-                    <img style={{height:150,width:100,marginBottom:10}} src="/Images/trendingitems/trimax.jpg" alt="trimax" />
-                    <h6>Trimax</h6>
+                    <img style={{height:150,width:100,marginBottom:10}} src="/Images/VIKASAPPLEPHONIC(3)PICTUREBOOK.jpg" alt="trimax" />
+                    <h6>VIKAS APPLE PHONIC (3) PICTURE BOOK</h6>
+                    <p>Price:60</p>
+                    <p>MRP:55</p>
+                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
+                </div>
+                
+                <div className="col-3">
+                <img style={{height:150,width:100,marginBottom:10}} src="/Images/trimaxred.jpg" alt="trimax" />
+                    <h6>Trimax Red</h6>
+                    <p>Price:43</p>
+                    <p>MRP:50</p>
+                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
+                </div>
+                
+                <div className="col-3">
+                <img style={{height:150,width:100,marginBottom:10}} src="/Images/celloAVENGERSFOUNTAINPENS.jpg" alt="trimax" />
+                    <h6>Cello Avengers FP</h6>
                     <p>Price:30</p>
                     <p>MRP:40</p>
                     <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
                 </div>
                 
                 <div className="col-3">
-                <img style={{height:150,width:100,marginBottom:10}} src="/Images/trendingitems/trimax.jpg" alt="trimax" />
-                    <h6>Trimax</h6>
+                <img style={{height:150,width:100,marginBottom:10}} src="/Images/apsarapoperaser.jpg" alt="trimax" />
+                    <h6>Apsara Pop Eraser Pack</h6>
                     <p>Price:30</p>
                     <p>MRP:40</p>
                     <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
                 </div>
                 
                 <div className="col-3">
-                <img style={{height:150,width:100,marginBottom:10}} src="/Images/trendingitems/trimax.jpg" alt="trimax" />
-                    <h6>Trimax</h6>
-                    <p>Price:30</p>
-                    <p>MRP:40</p>
-                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
-                </div>
-                
-                <div className="col-3">
-                <img style={{height:150,width:100,marginBottom:10}} src="/Images/trendingitems/trimax.jpg" alt="trimax" />
-                    <h6>Trimax</h6>
-                    <p>Price:30</p>
-                    <p>MRP:40</p>
-                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
-                </div>
-                
-                <div className="col-3">
-                <img style={{height:150,width:100,marginBottom:10}} src="/Images/trendingitems/trimax.jpg" alt="trimax" />
-                    <h6>Trimax</h6>
-                    <p>Price:30</p>
-                    <p>MRP:40</p>
+                <img style={{height:150,width:100,marginBottom:10}} src="/Images/youvawoodenboard.jpg" alt="trimax" />
+                    <h6>Wooden Exam Board</h6>
+                    <p>Price:105</p>
+                    <p>MRP:125</p>
                     <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
                 </div>
             </div>
@@ -186,8 +186,8 @@ const Home = ({history}) => {
             <h2>Happy Customer's</h2>
             <div className="row">
                 <div className="shadow col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    <h4>Daniel</h4>
-                    <h6>CEO at tenors</h6>
+                    <h4>Shaikh Sharjeel</h4>
+                    <h6>CEO at TechGeeks</h6>
                     <span style={{color:"#ffc93c"}}>
                     <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
@@ -204,12 +204,12 @@ const Home = ({history}) => {
                     <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <p>
-                    Real-time feedback about drivers means Uber can correct for issues big and small – while ensuring that only the best drivers stay on the road. We take this feedback seriously – depending on the circumstances, rider feedback may lead to deactivating a partner from the system or serve as validation that the driver is providing great service.
+                    I've been a part of alpine enterprises since a long time. This solution of providing one day delivery to the people of Aurangabad is upto the mark and alpine stationery aims to deliver the product within one day + they give high discounts compare to other sellers
                     </p>
                 </div>
                 <div className="shadow col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    <h4>Ryan</h4>
-                    <h6>Social Worker</h6>
+                    <h4>Giri Shantanu</h4>
+                    <h6>Principal at Dr. DS Paliwagh Junior College of Education</h6>
                     <span style={{color:"#ffc93c"}}>
                     <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
@@ -226,12 +226,12 @@ const Home = ({history}) => {
                     <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <p>
-                    Real-time feedback about drivers means Uber can correct for issues big and small – while ensuring that only the best drivers stay on the road. We take this feedback seriously – depending on the circumstances, rider feedback may lead to deactivating a partner from the system or serve as validation that the driver is providing great service.
+                    Alpine Stationery do what they say. Their service is really good and even the product quality is really good. The thing which i really liked about alpine statonery is flexible returns on each and every product.
                     </p>
                 </div>
                 <div className="shadow col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    <h4>Sudhir</h4>
-                    <h6>Politician</h6>
+                    <h4>Shaikh Rais</h4>
+                    <h6>Principal at Sarosh School Jinsi</h6>
                     <span style={{color:"#ffc93c"}}>
                     <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
@@ -248,7 +248,7 @@ const Home = ({history}) => {
                     <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <p>
-                    Real-time feedback about drivers means Uber can correct for issues big and small – while ensuring that only the best drivers stay on the road. We take this feedback seriously – depending on the circumstances, rider feedback may lead to deactivating a partner from the system or serve as validation that the driver is providing great service.
+                    Had a Wonderful Experience and Great Service 
                     </p>
                 </div>
             </div>

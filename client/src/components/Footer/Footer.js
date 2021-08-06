@@ -18,6 +18,9 @@ const Footer = () => {
             <p>
             <i class="fas fa-phone-volume"></i><span>+91 8668631743</span>
             </p>
+            <p>
+           <span>Designed and Developed By<span style={{color:"darkred",fontWeight:"bold"}}>TechGeeks</span></span>
+            </p>
         </div>
     );
 }
