@@ -12,9 +12,15 @@ import Footer from '../Footer/Footer'
 const User = (props) => {
     const [state,setState] = React.useState(false)
     const [data,setData] = React.useState([])
+    const [loading,setLoading]=React.useState(false)
     React.useEffect(()=>{
+        setLoading(true)
         axios.post(`/user/single-user`,{token:props.user})
-        .then(res=>setData(res.data.User))
+        .then(res=>{
+            setData(res.data.User)
+            setLoading(false)
+        
+        })
     },[])
     const cancelCodItem = (id)=>{
         axios.post("/order/cancel",{orderId:id,token:props.user})
@@ -156,7 +162,11 @@ const User = (props) => {
          }
     }
     return (
-    renderContent()
+        <div>
+    {loading?( <div className="ui active dimmer">
+    <div className="ui medium text loader">Loading</div>
+  </div> ):renderContent()}
+  </div>
         
     );
 }

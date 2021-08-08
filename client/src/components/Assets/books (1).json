@@ -1421,21 +1421,21 @@
         "price":90,
         "quantity":1,
         "MRP":91,
-        "img":"class12physicspracticalbook"
+        "img":"PhysicsPracticalNotebookXII"
     },
     {
         "name":"Chemistry Practical Notebook",
         "price":75,
         "quantity":1,
         "MRP":77,
-        "img":"class12chemistrypracticalbook"
+        "img":"ChemistryPracticalNotebookXII"
     },
     {
         "name":"Biology Practical Notebook",
         "price":80,
         "quantity":1,
         "MRP":82,
-        "img":"class12biologypracticalbook"
+        "img":"BiologyPracticalNotebook"
     },
     
     {
@@ -1443,7 +1443,7 @@
         "price":30,
         "quantity":1,
         "MRP":30,
-        "img":"environmentprojectworkbook"
+        "img":"EnvironmentProjectwork"
     }
    
 ],
@@ -1452,14 +1452,14 @@
     "price":45,
     "quantity":1,
     "MRP":55,
-    "img":"sundarampracticalnotebook100pgs"
+    "img":"SundaramPracticalnotebook"
 },
 {
     "name":"Sundaram Practical Notebook 200pgs",
     "quantity":1,
     "MRP":95,
     "price":80,
-    "img":"sundarampracticalnotebook200pgs"
+    "img":"SundaramPracticalnotebook"
 }
 ],
 "Practical Instrument":[
@@ -1468,14 +1468,14 @@
         "quantity":1,
         "MRP":150,
         "price":110,
-        "img":"himediametaloop"
+        "img":"NicromeloopsHolder"
     },
     {
         "name":"Nicrome Loops Holder",
         "quantity":1,
         "MRP":120,
         "price":19,
-        "img":"nicromeloopsholder"
+        "img":"NicromeloopsHolder"
     }
 
 ],
