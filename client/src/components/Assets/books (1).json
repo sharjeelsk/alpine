@@ -1415,6 +1415,100 @@
     "img":"Biology11"
 
 }],
+"Class 12th Science Practical Book":[
+    {
+        "name":"Physics Practical Notebook",
+        "price":90,
+        "quantity":1,
+        "MRP":91,
+        "img":"class12physicspracticalbook"
+    },
+    {
+        "name":"Chemistry Practical Notebook",
+        "price":75,
+        "quantity":1,
+        "MRP":77,
+        "img":"class12chemistrypracticalbook"
+    },
+    {
+        "name":"Biology Practical Notebook",
+        "price":80,
+        "quantity":1,
+        "MRP":82,
+        "img":"class12biologypracticalbook"
+    },
+    
+    {
+        "name":"Environment Project Workbook",
+        "price":30,
+        "quantity":1,
+        "MRP":30,
+        "img":"environmentprojectworkbook"
+    }
+   
+],
+"Sundaram Practical Notebook":[{
+    "name":"Sundaram Practical Notebook 100pgs",
+    "price":45,
+    "quantity":1,
+    "MRP":55,
+    "img":"sundarampracticalnotebook100pgs"
+},
+{
+    "name":"Sundaram Practical Notebook 200pgs",
+    "quantity":1,
+    "MRP":95,
+    "price":80,
+    "img":"sundarampracticalnotebook200pgs"
+}
+],
+"Practical Instrument":[
+    {
+        "name":"HIMEDIA MetaLoop SS-4",
+        "quantity":1,
+        "MRP":150,
+        "price":110,
+        "img":"himediametaloop"
+    },
+    {
+        "name":"Nicrome Loops Holder",
+        "quantity":1,
+        "MRP":120,
+        "price":19,
+        "img":"nicromeloopsholder"
+    }
+
+],
+"Writeups":[
+    {
+        "name":"Deogiri Write Up Paper One Sided Pack of 100",
+        "quantity":1,
+        "MRP":70,
+        "price":65,
+        "img":"Deogiriwriteuppaperoneside"
+    },
+    {
+        "name":"Deogiri Write Up Paper Two Sided Pack of 100",
+        "quantity":1,
+        "MRP":50,
+        "price":40,
+        "img":"Deogiriwriteuppapertwoside"
+    },
+    {
+        "name":"Practical Paper One Sided Pack of 100",
+        "quantity":1,
+        "MRP":45,
+        "price":40,
+        "img":"Theorypaperoneside"
+    },
+    {
+        "name":"Practical Paper Two Sided Pack of 100",
+        "quantity":1,
+        "MRP":50,
+        "price":45,
+        "img":"Theorypapertwoside"
+    }  
+],
 "Class 11th Arts Marathi Medium":[
 
         {

@@ -553,7 +553,30 @@
             "quantity":1,
             "MRP":75,
              "img":"natrajcolourpencil12fs"
+        },
+        {
+            "name":"Klick Pen Pencil 0.5",
+            "price":10,
+            "quantity":1,
+            "MRP":9,
+             "img":"klickpenpencil0.5"
+        },
+        {
+            "name":"Klick Pen Pencil 0.7",
+            "price":9,
+            "quantity":1,
+            "MRP":10,
+             "img":"klickpenpencil0.7"
+        },
+        
+        {
+            "name":"Lead Box Hi Par 0.5 Pack of 10",
+            "price":45,
+            "quantity":1,
+            "MRP":50,
+             "img":"natrajcolourpencil12fs"
         }
+        
     ]
     ,
     "Eraser":[

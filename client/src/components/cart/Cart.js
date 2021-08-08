@@ -96,23 +96,24 @@ const Cart = (props) => {
             alert("Payment failed to load")
             return
         }
-        axios.post('/razorpay')
+        axios.post('/razorpay',{amount:total()>300?total():total()+40})
         .then((t)=>{
             console.log(t);
             var options = {
-                "key":"rzp_test_Sn8RPLYLlLXlyD", //"rzp_live_xV8XqpPhDFWsHa", // Enter the Key ID generated from the Dashboard rzp_test_Sn8RPLYLlLXlyD
+                "key":"rzp_live_xV8XqpPhDFWsHa", //"rzp_live_xV8XqpPhDFWsHa", // Enter the Key ID generated from the Dashboard rzp_test_Sn8RPLYLlLXlyD
                 "amount": t.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 100000 refers to 1000 rs
                 "currency": t.data.currency,
                 "name": "Alpine Enterprises",
-                "description": "Test Transaction",
-                "image": "https://example.com/your_logo",
+                "description": "Stationery Order",
+                "image": "https://drive.google.com/file/d/1XAuGMqGDi6cAbHXkIP_9JuIgeHtxE9mL/view?usp=sharing",
                 "order_id": t.data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
                 "handler": function (response){
                     axios.post(`/order/create-order`,{token:props.user.user,allProduct:props.cart.items,address:addressvalue,phone:number,paymentMode:option,amount:total()})
-                    .then(doc => {
+                    .then(async doc => {
                         console.log("OrderCreated FOr ONline Mode")
                         console.log(doc.data.orderId)
-                        axios.post(`/order/updateO-data`,[{"propName": "paymentStatus", "value": true}, {"propName":"transactionId", "value": response.razorpay_order_id }],{headers:{"oId":doc.data.orderId}})
+                        await axios.post(`/order/updateO-data`,[{"propName": "paymentStatus", "value": true}, {"propName":"transactionId", "value": response.razorpay_order_id }],{headers:{"oId":doc.data.orderId}})
+                        props.history.push("/orderplaced")
                     })
                   console.log(response)
                 },

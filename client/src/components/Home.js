@@ -6,10 +6,26 @@ import books from '../Images/book.png'
 import Footer from './Footer/Footer'
 import Alpine from '../Images/Group 12.png'
 import axios from 'axios'
-const Home = ({history}) => {
+import {addToCart} from './redux/cart/CartActions'
+import {connect} from 'react-redux'
+import {animated, useSpring} from 'react-spring'
+import highondiscount from './Assets/highondiscount.json'
+const Home = (props) => {
     React.useEffect(() =>{
         axios.post("/count/increaseCount")
     },[])
+    const [stylesa,animate] = useSpring(()=>({opacity:0}))
+    let count = 0
+    const displayCount = (item)=>{
+        count = props.cart.items.filter(e=>{
+            if(e===item){
+                console.log("lksdjfkljsdlkfjsdlkfjdklsjf",e)
+                return e.quantity
+            }
+        })
+        console.log(count)
+     return count.length===0?null:count[0].quantity;
+    }
     return (
         <div className="homeonediv">
             <Header id='1' />
@@ -24,11 +40,11 @@ const Home = ({history}) => {
         <h2 className="heading">Shop Now <i className=" fa fa-shopping-bag" aria-hidden="true"></i></h2>
 
         <div className="row ">
-            <div onClick={()=>history.push("/stationaries")} className="homeheadcards shadow-lg col-xs-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
+            <div onClick={()=>props.history.push("/stationaries")} className="homeheadcards shadow-lg col-xs-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
                 <img src={stationaries} alt="stationaries" />
                 <h3 >Stationery</h3>
             </div>
-            <div onClick={()=>history.push("/books")} className="homeheadcards shadow-lg col-xs-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
+            <div onClick={()=>props.history.push("/books")} className="homeheadcards shadow-lg col-xs-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
                 <img src={books} alt="books" />
                 <h3>Book's</h3>
             </div>
@@ -38,45 +54,25 @@ const Home = ({history}) => {
         <div className="trendingitemsdiv" style={{color:"#006141"}}>
             <h2>Trending Item's</h2>
             <div className="row countRow ">
-                <div className="col-3">
-                    <img style={{height:150,width:100,marginBottom:10}} src="/Images/trendingitems/trimax.jpg" alt="trimax" />
-                    <h6>Trimax</h6>
-                    <p>Price:30</p>
-                    <p>MRP:40</p>
-                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
-                </div>
-                
-                <div className="col-3">
-                <img style={{height:150,width:100,marginBottom:10}} src="/Images/myapsarakit.jpg" alt="trimax" />
-                    <h6>My Apsara Kit</h6>
-                    <p>Price:420</p>
-                    <p>MRP:500</p>
-                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
-                </div>
-                
-                <div className="col-3">
-                <img style={{height:150,width:100,marginBottom:10}} src="/Images/avengerskit.jpg" alt="trimax" />
-                    <h6>Avengers Kit</h6>
-                    <p>Price:26</p>
-                    <p>MRP:30</p>
-                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
-                </div>
-                
-                <div className="col-3">
-                <img style={{height:150,width:100,marginBottom:10}} src="/Images/natrajwildeseraser.jpg" alt="trimax" />
-                    <h6>Natraj Pack</h6>
-                    <p>Price:35</p>
-                    <p>MRP:40</p>
-                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
-                </div>
-                
-                <div className="col-3">
-                <img style={{height:150,width:100,marginBottom:10}} src="/Images/camlisinglelinenotebook72pages.jpg" alt="trimax" />
-                    <h6>Camlin Double Line Notebook</h6>
-                    <p>Price:20</p>
-                    <p>MRP:18</p>
-                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
-                </div>
+            {
+                    highondiscount.trendingitems.map(item=>(
+                     <div className="col3">
+                <img style={{height:150,width:100,marginBottom:10}} src={`/Images/${item.img}.jpg`} alt="trimax" />
+                    <h6>{item.name}</h6>
+                    <p>Price:{item.price}</p>
+                    <p>MRP:{item.MRP}</p>
+                    <animated.div style={stylesa} className="displaycount">{displayCount(item)!==null?<animated.div>Added: {displayCount(item)}</animated.div>:null}</animated.div>
+                    <center><button 
+                    onClick={()=>{
+                        animate({delay:100,opacity:1})
+                        setTimeout(() => {
+                            animate({delay:500,opacity:0})
+                        }, 3000);
+                        props.addItem(item)}}
+                    style={{padding:"2% 18%"}} className="blackbutton"><i className="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</button></center>
+                </div> 
+                    ))
+                }
             </div>
         </div>
 
@@ -84,90 +80,66 @@ const Home = ({history}) => {
         <div className="trendingitemsdiv">
             <h2>Most Bought Item's</h2>
             <div className="row countRow ">
-                <div className="col-3">
-                    <img style={{height:150,width:100,marginBottom:10}} src="/Images/camlinA4sizesoftbondunrulednotebook72pages.jpg" alt="trimax" />
-                    <h6>Camlin A4 Size Notebook 72pgs</h6>
-                    <p>Price:25</p>
-                    <p>MRP:30</p>
-                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
-                </div>
-                
-                <div className="col-3">
-                <img style={{height:150,width:100,marginBottom:10}} src="/Images/Englishkumarbharti10jpeg.jpg" alt="trimax" />
-                    <h6>Englishkumarbharti</h6>
-                    <p>Price:140</p>
-                    <p>MRP:150</p>
-                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
-                </div>
-                
-                <div className="col-3">
-                <img style={{height:150,width:100,marginBottom:10}} src="/Images/camlinjumboa5softmediumsquarelinenotebook172pages.jpg" alt="trimax" />
-                    <h6>Camlin Jumbo A5 Meduim 172p</h6>
-                    <p>Price:45</p>
-                    <p>MRP:50</p>
-                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
-                </div>
-                
-                <div className="col-3">
-                <img style={{height:150,width:100,marginBottom:10}} src="/Images/apsarapaltinum.jpg" alt="trimax" />
-                    <h6>Apsara Platinum Pack</h6>
-                    <p>Price:45</p>
-                    <p>MRP:50</p>
-                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
-                </div>
-                
-                <div className="col-3">
-                <img style={{height:150,width:100,marginBottom:10}} src="/Images/apsaraabsolutescale30cm.jpg" alt="trimax" />
-                    <h6>Apsara Absolute Scale</h6>
-                    <p>Price:22</p>
-                    <p>MRP:25</p>
-                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
-                </div>
+            {
+                    highondiscount.mostboughtitem.map(item=>(
+                     <div className="col3">
+                <img style={{height:150,width:100,marginBottom:10}} src={`/Images/${item.img}.jpg`} alt="trimax" />
+                    <h6>{item.name}</h6>
+                    <p>Price:{item.price}</p>
+                    <p>MRP:{item.MRP}</p>
+                    <animated.div style={stylesa} className="displaycount">{displayCount(item)!==null?<animated.div>Added: {displayCount(item)}</animated.div>:null}</animated.div>
+                    <center><button 
+                    onClick={()=>{
+                        animate({delay:100,opacity:1})
+                        setTimeout(() => {
+                            animate({delay:500,opacity:0})
+                        }, 3000);
+                        props.addItem(item)}}
+                    style={{padding:"2% 18%"}} className="blackbutton"><i className="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</button></center>
+                </div> 
+                    ))
+                }
             </div>
         </div>
 
         <div className="trendingitemsdiv">
             <h2>High on Discount</h2>
             <div className="row countRow ">
-                <div className="col-3">
-                    <img style={{height:150,width:100,marginBottom:10}} src="/Images/VIKASAPPLEPHONIC(3)PICTUREBOOK.jpg" alt="trimax" />
-                    <h6>VIKAS APPLE PHONIC (3) PICTURE BOOK</h6>
-                    <p>Price:60</p>
-                    <p>MRP:55</p>
-                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
-                </div>
                 
-                <div className="col-3">
-                <img style={{height:150,width:100,marginBottom:10}} src="/Images/trimaxred.jpg" alt="trimax" />
-                    <h6>Trimax Red</h6>
-                    <p>Price:43</p>
-                    <p>MRP:50</p>
-                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
-                </div>
-                
-                <div className="col-3">
-                <img style={{height:150,width:100,marginBottom:10}} src="/Images/celloAVENGERSFOUNTAINPENS.jpg" alt="trimax" />
-                    <h6>Cello Avengers FP</h6>
-                    <p>Price:30</p>
-                    <p>MRP:40</p>
-                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
-                </div>
-                
-                <div className="col-3">
-                <img style={{height:150,width:100,marginBottom:10}} src="/Images/apsarapoperaser.jpg" alt="trimax" />
-                    <h6>Apsara Pop Eraser Pack</h6>
-                    <p>Price:30</p>
-                    <p>MRP:40</p>
-                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
-                </div>
-                
-                <div className="col-3">
+                {
+                    highondiscount.highondiscount.map(item=>(
+                     <div className="col3">
+                <img style={{height:150,width:100,marginBottom:10}} src={`/Images/${item.img}.jpg`} alt="trimax" />
+                    <h6>{item.name}</h6>
+                    <p>Price:{item.price}</p>
+                    <p>MRP:{item.MRP}</p>
+                    <animated.div style={stylesa} className="displaycount">{displayCount(item)!==null?<animated.div>Added: {displayCount(item)}</animated.div>:null}</animated.div>
+                    <center><button 
+                    onClick={()=>{
+                        animate({delay:100,opacity:1})
+                        setTimeout(() => {
+                            animate({delay:500,opacity:0})
+                        }, 3000);
+                        props.addItem(item)}}
+                    style={{padding:"2% 18%"}} className="blackbutton"><i className="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</button></center>
+                </div> 
+                    ))
+                }
+                {/* <div className="col-3">
                 <img style={{height:150,width:100,marginBottom:10}} src="/Images/youvawoodenboard.jpg" alt="trimax" />
                     <h6>Wooden Exam Board</h6>
                     <p>Price:105</p>
                     <p>MRP:125</p>
-                    <center><button style={{padding:"2% 18%"}} className="blackbutton">Add To Cart</button></center>
-                </div>
+                    <animated.div style={stylesa} className="displaycount">{displayCount(item)!==null?<animated.div>Added: {displayCount(item)}</animated.div>:null}</animated.div>
+                    <center><button 
+                    onClick={()=>{
+                        animate({delay:100,opacity:1})
+                        setTimeout(() => {
+                            animate({delay:500,opacity:0})
+                        }, 3000);
+                        props.addItem(item)}}
+                    style={{padding:"2% 18%"}} className="blackbutton"><i className="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</button></center>
+                </div> */}
             </div>
         </div>
 
@@ -259,5 +231,16 @@ const Home = ({history}) => {
         </div>
     );
 }
+const mapDispatchToProps = dispatch =>{
+    return {
+        addItem:item=>dispatch(addToCart(item))
+    }
+}
 
-export default Home;
+const mapStateToProps=({cart})=>{
+    return {
+        cart
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Home);

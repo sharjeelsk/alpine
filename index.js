@@ -14,8 +14,8 @@ const shortid=require("shortid")
 const app = express()
 
 const razorpay = new Razorpay({
-  key_id:"rzp_test_Sn8RPLYLlLXlyD",//rzp_live_xV8XqpPhDFWsHa rzp_test_Sn8RPLYLlLXlyD
-  key_secret:"gYNiAy64SIqvxaoIJudoLA1c" //"ESlYH3kbFjDF8MDGynQNKN8Y"
+  key_id:"rzp_live_xV8XqpPhDFWsHa",//rzp_live_xV8XqpPhDFWsHa rzp_test_Sn8RPLYLlLXlyD
+  key_secret:"ESlYH3kbFjDF8MDGynQNKN8Y" //"ESlYH3kbFjDF8MDGynQNKN8Y"   //gYNiAy64SIqvxaoIJudoLA1c  
 })
 
 app.use(bodyParser.json())
@@ -68,7 +68,7 @@ if(process.env.NODE_ENV==='production'){
 
 app.post("/razorpay",async (req,res)=>{
   const payment_capture=1;
-  const amount=5;
+  const amount=req.body.amount;
   currency="INR"
   razorpay.orders.create({
     amount:amount*100,currency,receipt:shortid.generate(),payment_capture
