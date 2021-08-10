@@ -19,6 +19,9 @@ const Footer = () => {
             <i class="fas fa-phone-volume"></i><span>+91 8668631743</span>
             </p>
             <p>
+             <i class="fa fa-envelope" aria-hidden="true"></i><span>alpinestationery@gmail.com</span>
+            </p>
+            <p>
            <span>Designed and Developed By<span style={{color:"darkred",fontWeight:"bold"}}>TechGeeks</span></span>
             </p>
         </div>

@@ -16,6 +16,7 @@ import OrderStatus from './components/OrderPlaced/OrderStatus'
 import TermsAndConditions from './components/TermsAndConditions/TermsAndConditions';
 import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
 import Refund from './components/PrivacyPolicy/Refund'
+import Shipment from './components/PrivacyPolicy/Shipment'
 function App() {
   return (
     <Switch>
@@ -35,6 +36,7 @@ function App() {
       <Route path="/termsandconditions" component={TermsAndConditions} />
       <Route path="/privacypolicy" component={PrivacyPolicy} />
       <Route path="/refund" component={Refund} />
+      <Route path="/shipment" component={Shipment} />
     </Switch>
   );
 }

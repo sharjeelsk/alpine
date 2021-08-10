@@ -3,6 +3,8 @@ import "./ContactUs.scss"
 import Header from '../Header/Header'
 import {useForm} from 'react-hook-form'
 import axios from 'axios'
+import Footer from '../Footer/Footer'
+
 
 const ContactUs = () => {
     const {register, handleSubmit, formState:{errors}} = useForm()
@@ -74,6 +76,7 @@ const ContactUs = () => {
            
         </div>
             </div>
+            <Footer />
         </div>
     );
 }

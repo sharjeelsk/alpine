@@ -27,6 +27,9 @@ console.log(props);
 			<li className="nav-item">
 			{props.id==="8"?<Link  className="nav-link active" to="/refund">Refund Policy</Link>:<Link  className="nav-link"  to="/refund">Refund Policy</Link>}
 			</li>
+			<li className="nav-item">
+			{props.id==="9"?<Link  className="nav-link active" to="/shipment">Shipping Policy</Link>:<Link  className="nav-link"  to="/shipment">Shipping Policy</Link>}
+			</li>
             <li className="nav-item">
 			{props.id==="3"?<Link  className="nav-link active" to="/contactus">Contact Us</Link>:<Link  className="nav-link"  to="/contactus">Contact Us</Link>}
 			</li>
