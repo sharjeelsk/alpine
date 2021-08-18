@@ -9,16 +9,59 @@ import InputModal from './InputModal'
 import ModalReturn from './ModalReturn'
 import ModalCancel from './ModalCancel'
 import Footer from '../Footer/Footer'
+import ReactPaginate from 'react-paginate'
 const User = (props) => {
     const [state,setState] = React.useState(false)
     const [data,setData] = React.useState([])
     const [loading,setLoading]=React.useState(false)
+    //paginate
+    const [paginateData,setPaginateData]=React.useState([])
+    const [pageNumber,setPageNumber]=React.useState(0)
+
+    const dataPerPage=3;
+    const pageVisited=pageNumber*dataPerPage
+    const displayData=paginateData.slice(pageVisited,pageVisited+dataPerPage)
+    .map((item,index)=>{
+        return (
+            <div className=" carddetails">
+
+                            <div style={{flexDirection:"row",display:"flex",justifyContent:"space-between"}}>
+                            <p><span style={{color:"grey"}}>Status:</span> {item.status}</p>
+                            <p><span style={{color:"grey"}}>Date:</span> {item.date}</p>
+                            </div>
+                            <div style={{flexDirection:"row",display:"flex",justifyContent:"space-between"}}>
+                            <p><span style={{color:"grey"}}>Address:</span> {item.address}</p>
+                            <p><span style={{color:"grey"}}>Phone No:</span> {item.phone}</p>
+                            </div>
+                            <p><span style={{color:"grey"}}>Items:</span> {item.allProduct.map((e)=><span>{e.name} |</span>)}</p>
+                            <ModalExampleScrollingContent item={item} />
+                            {
+                                item.status==="Delivered"?<ModalReturn navigation={props} orderId={item._id} />:null
+                            }
+                            {
+                                item.status==="Out For Delivery" && item.paymentMode==="ONLINE"?<ModalCancel navigation={props} orderId={item._id} />:null
+                            }
+                            {
+                                item.status==="Out For Delivery" && item.paymentMode==="COD"?<button className="ui red button" onClick={()=>cancelCodItem(item._id)}>Cancel</button>:null
+                            }
+                            
+                        </div>
+        )
+    })
+    const pageCount = Math.ceil(paginateData.length/dataPerPage)
+   
+    const changePage = ({selected})=>{
+        setPageNumber(selected)
+    }
+   
+
     React.useEffect(()=>{
         setLoading(true)
         axios.post(`/user/single-user`,{token:props.user})
         .then(res=>{
             setData(res.data.User)
             setLoading(false)
+            setPaginateData(res.data.User.history.slice(0,50))
         
         })
     },[])
@@ -60,34 +103,19 @@ const User = (props) => {
                     </div>:
                     <div className="detailcontainer col-9">
                         <h1>History</h1>   
-                        {
-                        //    <p>{data.history}</p>
-                        data.history.map(item=>(
-                            <div className=" carddetails">
-
-                            <div style={{flexDirection:"row",display:"flex",justifyContent:"space-between"}}>
-                            <p><span style={{color:"grey"}}>Status:</span> {item.status}</p>
-                            <p><span style={{color:"grey"}}>Date:</span> {item.date}</p>
-                            </div>
-                            <div style={{flexDirection:"row",display:"flex",justifyContent:"space-between"}}>
-                            <p><span style={{color:"grey"}}>Address:</span> {item.address}</p>
-                            <p><span style={{color:"grey"}}>Phone No:</span> {item.phone}</p>
-                            </div>
-                            <p><span style={{color:"grey"}}>Items:</span> {item.allProduct.map((e)=><span>{e.name} |</span>)}</p>
-                            <ModalExampleScrollingContent item={item} />
-                            {
-                                item.status==="Delivered"?<ModalReturn navigation={props} orderId={item._id} />:null
-                            }
-                            {
-                                item.status==="Out For Delivery" && item.paymentMode==="ONLINE"?<ModalCancel navigation={props} orderId={item._id} />:null
-                            }
-                            {
-                                item.status==="Out For Delivery" && item.paymentMode==="COD"?<button className="ui red button" onClick={()=>cancelCodItem(item._id)}>Cancel</button>:null
-                            }
-                            
-                        </div>
-                        ))
-                        }
+                        {displayData}
+                     <ReactPaginate
+                     previousLabel={`Previous`}
+                     nextLabel={"Next"}
+                     pageCount={pageCount}
+                     onPageChange={changePage}
+                     containerClassName={'paginationBttns'}
+                     previousLinkClassName={`previousBttn`}
+                     nextLinkClassName={'nextBttn'}
+                     disabledClassName={'paginationDisabled'}
+                     activeClassName={'paginationActive'}
+                     />
+                       
                       {console.log(data.history)}
                     </div>
                     }
@@ -123,33 +151,20 @@ const User = (props) => {
                     <div className="detailcontainer" style={{margin:"0 4%"}}>
                          <p onClick={()=>setState(false)}><i class="fas fa-chevron-left"></i> Go Back To Personal Details</p>
                         <h1>History</h1>   
-                        {
-                        //    <p>{data.history}</p>
-                        data.history.map(item=>(
-                            <div className=" carddetails">
-                            <div style={{flexDirection:"row",display:"flex",justifyContent:"space-between"}}>
-                            <p><span style={{color:"grey"}}>Status:</span> {item.status}</p>
-                            <p><span style={{color:"grey"}}>Date:</span> {item.date}</p>
-                            </div>
-                            <div style={{flexDirection:"row",display:"flex",justifyContent:"space-between"}}>
-                            <p><span style={{color:"grey"}}>Address:</span> {item.address}</p>
-                            <p><span style={{color:"grey"}}>Phone No:</span> {item.phone}</p>
-                            </div>
-                            <p><span style={{color:"grey"}}>Items:</span> {item.allProduct.map((e)=><span>{e.name} |</span>)}</p>
-                            <ModalExampleScrollingContent item={item} />
-                            {
-                                item.status==="Delivered"?<ModalReturn navigation={props} orderId={item._id}/>:null
-                            }
-                              {
-                                item.status==="Out For Delivery" && item.paymentMode==="ONLINE"?<ModalCancel navigation={props} orderId={item._id} />:null
-                            }
-                            {
-                                item.status==="Out For Delivery" && item.paymentMode==="COD"?<button className="ui red button" onClick={()=>cancelCodItem(item._id)}>Cancel</button>:null
-                            }
-                        </div>
-                        ))
-                        }
-                      {console.log(data.history)}
+                        {displayData}
+                     <ReactPaginate
+                     previousLabel={`Previous`}
+                     nextLabel={"Next"}
+                     pageCount={pageCount}
+                     onPageChange={changePage}
+                     containerClassName={'paginationBttns'}
+                     previousLinkClassName={`previousBttn`}
+                     nextLinkClassName={'nextBttn'}
+                     disabledClassName={'paginationDisabled'}
+                     activeClassName={'paginationActive'}
+                     />
+                      
+                     
                     </div>
                     }
                 </div>

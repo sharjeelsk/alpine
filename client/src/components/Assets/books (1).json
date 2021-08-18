@@ -917,7 +917,7 @@
 
 }
 ],
-"Class7":[
+"Class VII":[
     { "name":"Historyandcivics7",
         "price":105,
         "quantity":1,
@@ -1025,7 +1025,7 @@
     }
 ],
 
-    "Class8":[
+    "Class VIII":[
         { "name":"Marathisulabhbharti8",
             "price":70,
             "quantity":1,
@@ -1126,7 +1126,7 @@
         
         }],
         
-        "Class9":[
+        "Class IX":[
             { "name":"Hindilokbharti9",
                 "price":140,
                 "quantity":1,
@@ -1228,7 +1228,7 @@
             }
         ],
 
-            "Class10":[
+            "Class X":[
 
             { "name":"Marathiaksharbharti10",
                 "price":110,
@@ -1348,51 +1348,51 @@
 
 
 
-"Class 11":[
+"Class XI":[
 {
-    "name":"English11",
-    "price":98,
+    "name":"English",
+    "price":93,
     "quantity":1,
     "MRP":98,
     "img":"English11jpeg"
 
 },
 {
-    "name":"Marathi11",
-    "price":98,
+    "name":"Marathi",
+    "price":93,
     "quantity":1,
     "MRP":98,
     "img":"Marathi11jpeg"
     
 },
 {
-    "name":"Hindi11",
-    "price":98,
+    "name":"Hindi",
+    "price":93,
     "quantity":1,
     "MRP":98,
     "img":"Hindi11jpeg"
 }
 
 ],
-"Class 11 Science":[
+"Class XI Science":[
 {
-    "name":"Mathematicsandstaticspartone11",
-    "price":128,
+    "name":"Mathematics and Statistics Part One",
+    "price":122,
     "quantity":1,
     "MRP":128,
     "img":"Mathematicsandstaticspartone11jpeg"
 
 },
 {
-    "name":"Mathematicsandstaticsparttwo11",
-    "price":122,
+    "name":"Mathematics and Statistics Part Two",
+    "price":120,
     "quantity":1,
     "MRP":122,
     "img":"Mathematicsandstaticsparttwo11jpeg"
 
 },
 {
-    "name":"Physics11",
+    "name":"Physics",
     "price":145,
     "quantity":1,
     "MRP":145,
@@ -1400,7 +1400,7 @@
 
 },
 {
-    "name":"Chemistry11",
+    "name":"Chemistry",
     "price":154,
     "quantity":1,
     "MRP":154,
@@ -1408,24 +1408,24 @@
 
 },
 {
-    "name":"Biology11",
+    "name":"Biology",
     "price":127,
     "quantity":1,
     "MRP":127,
     "img":"Biology11"
 
 }],
-"Class 12th Science Practical Book":[
+"Class XII Science Practical Book":[
     {
         "name":"Physics Practical Notebook",
-        "price":90,
+        "price":87,
         "quantity":1,
         "MRP":91,
         "img":"PhysicsPracticalNotebookXII"
     },
     {
         "name":"Chemistry Practical Notebook",
-        "price":75,
+        "price":73,
         "quantity":1,
         "MRP":77,
         "img":"ChemistryPracticalNotebookXII"
@@ -1509,77 +1509,77 @@
         "img":"Theorypapertwoside"
     }  
 ],
-"Class 11th Arts Marathi Medium":[
+"Class XI Arts Marathi Medium":[
 
         {
-            "name":"Polaticalscience11",
-            "price":68.00,
+            "name":"Polatical Science",
+            "price":65.00,
             "quantity":1,
             "MRP":68.00,
             "img":"Polaticalscience11jpeg"
 
         },
         {
-            "name":"Socialogy11",
-            "price":76.00,
+            "name":"Socialogy ",
+            "price":72.00,
             "quantity":1,
             "MRP":76.00,
             "img":"Socialogy11jpeg"
 
         },
         {
-            "name":"Childdevelopment11",
-            "price":111.00,
+            "name":"Child Development",
+            "price":106.00,
             "quantity":1,
             "MRP":111.00,
             "img":"Childdevelopment11jpeg"
 
         },
         {
-            "name":"Psychology11",
-            "price":84.00,
+            "name":"Psychology",
+            "price":80.00,
             "quantity":1,
             "MRP":84.00,
             "img":"psychology11jpeg"
 
         },
         {
-            "name":"Economics11",
-            "price":60.00,
+            "name":"Economics",
+            "price":57.00,
             "quantity":1,
             "MRP":60.00,
             "img":"Economics11jpeg"
 
         },
         {
-            "name":"Education11",
-            "price":63.00,
+            "name":"Education",
+            "price":60.00,
             "quantity":1,
             "MRP":63.00,
             "img":"Education11jpeg"
 
         }],
         
-        "Class11th commerce english mendium":[
+        "Class XI Commerce English Medium":[
         {
-            "name":"Bookkeepingandaccountancy11",
-            "price":203.00,
+            "name":"Bookkeeping and accountancy",
+            "price":190.00,
             "quantity":1,
             "MRP":203.00,
             "img":"Bookkeepingandaccountancy1111jpeg"
 
         },
         {
-            "name":"Economics11",
-            "price":60,
+            "name":"Economics",
+            "price":57,
             "quantity":1,
             "MRP":60,
             "img":"Economics11jpeg"
 
         },
         {
-            "name":"Co-Operation11",
-            "price":88,
+            "name":"Co-Operation",
+            "price":84,
             "quantity":1,
             "MRP":88,
             "img":"Co-Operation11jpeg"
@@ -1587,82 +1587,82 @@
         },
         
         {
-            "name":"Organisationofcommerceandmanagment11",
-            "price":111,
+            "name":"Organisation of Commerce and Managment",
+            "price":105,
             "quantity":1,
             "MRP":111,
             "img":"Organisationofcommerceandmanagment11jpeg"
 
         }],
-        "Class12th ":[
+        "Class12th":[
         {
-            "name":"Englsh12",
-            "price":104,
+            "name":"Englsh",
+            "price":99,
             "quantity":1,
             "MRP":104,
             "img":"English12jpeg"
 
         },
         {
-            "name":"Marathi12",
-            "price":104,
+            "name":"Marathi",
+            "price":99,
             "quantity":1,
             "MRP":104,
             "img":"Marathi12jpeg"
 
         },
         {
-            "name":"hindi12",
-            "price":104,
+            "name":"Hindi",
+            "price":99,
             "quantity":1,
             "MRP":104,
             "img":"Hindi12jpeg"
 
         }],
-        "Class12th science ": [
+        "Class12th Science ": [
         {
-            "name":"Mathematicsandstaticsparttwo12",
-            "price":146,
+            "name":"Mathematics and statistics Part Two",
+            "price":139,
             "quantity":1,
             "MRP":146,
             "img":"Mathematicsandstaticsparttwo12jpeg"
 
         },
         {
-            "name":"Mathematicsandstaticsparttone12",
-            "price":150,
+            "name":"Mathematics and Statistics Part Two",
+            "price":143,
             "quantity":1,
             "MRP":150,
             "img":"Mathematicsandstaticspartone12jpeg"
 
         },
         {
-            "name":"Physics12",
-            "price":193,
+            "name":"Physics",
+            "price":184,
             "quantity":1,
             "MRP":193,
             "img":"Physics12jpeg"
 
         },
         {
-            "name":"Chemistry12",
-            "price":187,
+            "name":"Chemistry",
+            "price":179,
             "quantity":1,
             "MRP":187,
             "img":"Chemistry12jpeg"
 
         },
         {
-            "name":"Biology12",
-            "price":184,
+            "name":"Biology",
+            "price":175,
             "quantity":1,
             "MRP":184,
             "img":"Biology12jpeg"
 
         },
         {
-            "name":"Informationandtechnology12",
-            "price":75,
+            "name":"Information and Technology",
+            "price":71,
             "quantity":1,
             "MRP":75,
             "img":"Informationandtechnology12jpeg"

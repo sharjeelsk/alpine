@@ -14,12 +14,12 @@ class ContactUs{
             "Messages":[
                 {
                     "From": {
-                        "Email": "techgeeksfs@gmail.com",
+                        "Email": "alpinestationery@gmail.com",
                         "Name": "Contact us"
                     },
                     "To": [
                         {
-                            "Email": "techgeeksfs@gmail.com",
+                            "Email": "alpinestationery@gmail.com",
                             "Name": "Admin"
                         }
                     ],
