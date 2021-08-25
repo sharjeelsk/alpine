@@ -1138,28 +1138,28 @@
                 "price":99,
                 "quantity":1,
                 "MRP":110,
-                "img":"Marathiaksharbharti9jpeg "
+                "img":"class9marathi "
             
             },
             { "name":"Englishkumarbharti9",
                 "price":140,
                 "quantity":1,
                 "MRP":150,
-                "img":"Englishkumarbharti9jpeg "
+                "img":"englishclass9 "
             
             },
             { "name":"Historyandpolaticalscience9",
                 "price":120,
                 "quantity":1,
                 "MRP":125,
-                "img":"Historyandpolaticalscience9jpeg "
+                "img":"historyandpoliclass9 "
             
             },
             { "name":"Geography9",
                 "price":95,
                 "quantity":1,
                 "MRP":100,
-                "img":"Gography9JPEG "
+                "img":"geographyclass9 "
             
             },
             {
@@ -1230,35 +1230,35 @@
 
             "Class X":[
 
-            { "name":"Marathiaksharbharti10",
+            { "name":"Marathi aksharbharti",
                 "price":110,
                 "quantity":1,
                 "MRP":120,
                 "img":"Marathiaksharbharti10jpeg"
             
             },
-            { "name":"Hindilokbharti10",
+            { "name":"Hindi lokbharti",
                 "price":165,
                 "quantity":1,
                 "MRP":175,
                 "img":"Hindilokbharti10jpeg"
             
             },
-            { "name":"Historyandpolaticalscience10",
+            { "name":"History and polatical science",
                 "price":140,
                 "quantity":1,
                 "MRP":150,
                 "img":"Historyandpolaticsten"
             
             },
-            { "name":"Geography10",
+            { "name":"Geography",
                 "price":95,
                 "quantity":1,
                 "MRP":100,
                 "img":"Geographyten"
             
             },
-            { "name":"Englishkumarbharti10",
+            { "name":"English kumarbharti",
                 "price":210,
                 "quantity":1,
                 "MRP":225,
@@ -1266,7 +1266,7 @@
             
             },
             {
-                "name":"EnglishTEN",
+                "name":"English",
                 "price":73,
                 "quantity":1,
                 "MRP":73,
@@ -1274,7 +1274,7 @@
             
             },
             {
-                "name":"ScienceandtechnologypartoneTen",
+                "name":"Science and technology Part One",
                 "price":75,
                 "quantity":1,
                 "MRP":75,
@@ -1282,7 +1282,7 @@
             
             },
             {
-                "name":"ScienceandtechnologyParttwoten",
+                "name":"Science and technology Part Two",
                 "price":65,
                 "quantity":1,
                 "MRP":65,
@@ -1290,7 +1290,7 @@
             
             },
             {
-                "name":"Mathematicspartoneten",
+                "name":"Mathematics part one",
                 "price":80,
                 "quantity":1,
                 "MRP":80,
@@ -1298,7 +1298,7 @@
             
             },
             {
-                "name":"Mathematicsparttwoten",
+                "name":"Mathematics part two",
                 "price":74,
                 "quantity":1,
                 "MRP":74,
@@ -1306,7 +1306,7 @@
             
             },
             {
-                "name":"Historyandcivicten",
+                "name":"History and civic",
                 "price":56,
                 "quantity":1,
                 "MRP":56,
@@ -1314,7 +1314,7 @@
             
             },
             {
-                "name":"Marathiten",
+                "name":"Marathi",
                 "price":48,
                 "quantity":1,
                 "MRP":48,
@@ -1354,7 +1354,7 @@
     "price":93,
     "quantity":1,
     "MRP":98,
-    "img":"English11jpeg"
+    "img":"englishclass11"
 
 },
 {
@@ -1362,7 +1362,7 @@
     "price":93,
     "quantity":1,
     "MRP":98,
-    "img":"Marathi11jpeg"
+    "img":"marathiclass11"
     
 },
 {
@@ -1370,7 +1370,7 @@
     "price":93,
     "quantity":1,
     "MRP":98,
-    "img":"Hindi11jpeg"
+    "img":"hindiclass11"
 }
 
 ],
@@ -1380,7 +1380,7 @@
     "price":122,
     "quantity":1,
     "MRP":128,
-    "img":"Mathematicsandstaticspartone11jpeg"
+    "img":"class11mands"
 
 },
 {
@@ -1388,7 +1388,7 @@
     "price":120,
     "quantity":1,
     "MRP":122,
-    "img":"Mathematicsandstaticsparttwo11jpeg"
+    "img":"class11mands2"
 
 },
 {
@@ -1516,7 +1516,7 @@
             "price":65.00,
             "quantity":1,
             "MRP":68.00,
-            "img":"Polaticalscience11jpeg"
+            "img":"class11political"
 
         },
         {
@@ -1524,7 +1524,7 @@
             "price":72.00,
             "quantity":1,
             "MRP":76.00,
-            "img":"Socialogy11jpeg"
+            "img":"class11sociology"
 
         },
         {
@@ -1532,7 +1532,7 @@
             "price":106.00,
             "quantity":1,
             "MRP":111.00,
-            "img":"Childdevelopment11jpeg"
+            "img":"class11childdevelopment"
 
         },
         {
@@ -1540,7 +1540,7 @@
             "price":80.00,
             "quantity":1,
             "MRP":84.00,
-            "img":"psychology11jpeg"
+            "img":"class11psychology"
 
         },
         {
@@ -1548,7 +1548,7 @@
             "price":57.00,
             "quantity":1,
             "MRP":60.00,
-            "img":"Economics11jpeg"
+            "img":"class11economics"
 
         },
         {
@@ -1556,7 +1556,7 @@
             "price":60.00,
             "quantity":1,
             "MRP":63.00,
-            "img":"Education11jpeg"
+            "img":"class11education"
 
         }],
         
@@ -1566,7 +1566,7 @@
             "price":190.00,
             "quantity":1,
             "MRP":203.00,
-            "img":"Bookkeepingandaccountancy1111jpeg"
+            "img":"class11bka"
 
         },
         {
@@ -1574,7 +1574,7 @@
             "price":57,
             "quantity":1,
             "MRP":60,
-            "img":"Economics11jpeg"
+            "img":"class11eco"
 
         },
         {
@@ -1582,7 +1582,7 @@
             "price":84,
             "quantity":1,
             "MRP":88,
-            "img":"Co-Operation11jpeg"
+            "img":"class11coop"
 
         },
         
@@ -1591,7 +1591,7 @@
             "price":105,
             "quantity":1,
             "MRP":111,
-            "img":"Organisationofcommerceandmanagment11jpeg"
+            "img":"class11ocm"
 
         }],
         "Class12th":[
@@ -1600,7 +1600,7 @@
             "price":99,
             "quantity":1,
             "MRP":104,
-            "img":"English12jpeg"
+            "img":"class12english"
 
         },
         {
@@ -1608,7 +1608,7 @@
             "price":99,
             "quantity":1,
             "MRP":104,
-            "img":"Marathi12jpeg"
+            "img":"class12marathi"
 
         },
         {
@@ -1616,16 +1616,16 @@
             "price":99,
             "quantity":1,
             "MRP":104,
-            "img":"Hindi12jpeg"
+            "img":"class12hindi"
 
         }],
         "Class12th Science ": [
         {
-            "name":"Mathematics and statistics Part Two",
+            "name":"Mathematics and statistics Part One",
             "price":139,
             "quantity":1,
             "MRP":146,
-            "img":"Mathematicsandstaticsparttwo12jpeg"
+            "img":"class12mathandstats1"
 
         },
         {
@@ -1633,7 +1633,7 @@
             "price":143,
             "quantity":1,
             "MRP":150,
-            "img":"Mathematicsandstaticspartone12jpeg"
+            "img":"class12mathandstats2"
 
         },
         {
@@ -1641,7 +1641,7 @@
             "price":184,
             "quantity":1,
             "MRP":193,
-            "img":"Physics12jpeg"
+            "img":"class12physics"
 
         },
         {
@@ -1649,7 +1649,7 @@
             "price":179,
             "quantity":1,
             "MRP":187,
-            "img":"Chemistry12jpeg"
+            "img":"class12chemistry"
 
         },
         {
@@ -1657,7 +1657,7 @@
             "price":175,
             "quantity":1,
             "MRP":184,
-            "img":"Biology12jpeg"
+            "img":"class12biology"
 
         },
         {
@@ -1665,7 +1665,7 @@
             "price":71,
             "quantity":1,
             "MRP":75,
-            "img":"Informationandtechnology12jpeg"
+            "img":"class12it"
 
         }]
 
