@@ -22,6 +22,9 @@ const Footer = () => {
              <i class="fa fa-envelope" aria-hidden="true"></i><span>alpinestationery@gmail.com</span>
             </p>
             <p>
+            <i class="fas fa-map-marker-alt"></i><span>Rachnakar Colony, Near Deogiri College</span>
+            </p>
+            <p>
            <span>Designed and Developed By<span style={{color:"darkred",fontWeight:"bold"}}>TechGeeks</span></span>
             </p>
         </div>
