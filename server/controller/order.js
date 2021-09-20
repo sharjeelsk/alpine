@@ -61,12 +61,13 @@ class Order {
           let currentUser = await userModel
                 .findById(decoded._id)
                 .select("phoneNumber address")
-          console.log(currentUser)
           address = currentUser.address;
           phone = currentUser.phoneNumber;
         }
+        let currentUser = await userModel
+                .findById(decoded._id)
         const now = new Date();
-        console.log(dateP.format(now, 'YYYY/MM/DD HH:mm:ss'),)
+        // console.log(dateP.format(now, 'YYYY/MM/DD HH:mm:ss'),)
         let newOrder = new orderModel({
           date: dateP.format(now, 'YYYY/MM/DD HH:mm:ss'),
           allProduct,
@@ -81,11 +82,51 @@ class Order {
           console.log(save)
           let orderId = await userModel.updateOne({_id: decoded._id},{$push: {history:save._id}})
           if(orderId){
-            console.log(orderId)
-          }
+            console.log("sending Mail....")
+            const mailjet = require ('node-mailjet')
+            .connect(process.env.MJ_APIKEY_PUBLIC, process.env.MJ_APIKEY_PRIVATE)
+            const request = mailjet
+            .post("send", {'version': 'v3.1'})
+            .request({
+              "Messages":[
+                {
+                  "From": {
+                    "Email": "alpinestationery@gmail.com",
+                    "Name": "Alpine Stationery"
+                  },
+                  "To": [
+                    {
+                      "Email": "alpinestationery@gmail.com",
+                      "Name": "Admin"
+                    },
+                    {
+                      "Email": currentUser.email,
+                      "Name": currentUser.name
+                    }
+                  ],
+                  "TemplateID": 3175578,
+                  "TemplateLanguage": true,
+                  "Subject": `hi [[data:userName:${currentUser.name}]], Your order [[data:orderId:${save.id}]] has been placed`,
+                  "Variables": {
+                      "selectedProducts": allProduct,
+                      "userName": currentUser.name,
+                      "orderId": save.id,
+                      "total": amount
+                  }
+                }
+              ]
+            })
+            request
+            .then((result) => {
+              console.log(result.body)
+            })
+            .catch((err) => {
+              console.log(err.statusCode)
+            })
           return res.json({ success: "Order created successfully",
                             orderId: save._id
-        });
+                          });
+          }
         }
       } catch (err) {
         return res.json({ error: err });
@@ -164,8 +205,8 @@ class Order {
           "Messages":[
             {
               "From": {
-                "Email": "alpinestationery@gmail.com",
-                "Name": "Order Return"
+                "Email": "techgeeksfs@gmail.com",
+                "Name": "Hello Shaikh"
               },
               "To": [
                 {
@@ -175,7 +216,7 @@ class Order {
               ],
               "TemplateID": 3021313,
               "TemplateLanguage": true,
-              "Subject": "Hey Admin, we have a return request",
+              "Subject": "Hey Admin, we have a RETURN request",
               "Variables": {
                 "userName": `${user.name}`,
                 "phoneNumber": `${user.phoneNumber}`,
@@ -218,6 +259,7 @@ class Order {
 
         let changeOrder = await orderModel.updateOne({_id: order._id},{$set: {status: "Cancelled"}})
         console.log(changeOrder)
+        console.log("sending Mail....")
         const mailjet = require ('node-mailjet')
         .connect(process.env.MJ_APIKEY_PUBLIC, process.env.MJ_APIKEY_PRIVATE)
         const request = mailjet
@@ -226,18 +268,18 @@ class Order {
           "Messages":[
             {
               "From": {
-                "Email": "alpinestationery@gmail.com",
-                "Name": "Order Cancel"
+                "Email": "techgeeksfs@gmail.com",
+                "Name": "Hello Shaikh"
               },
               "To": [
                 {
                   "Email": "alpinestationery@gmail.com",
-                  "Name": "passenger 1"
+                  "Name": "Admin"
                 }
               ],
               "TemplateID": 3021619,
               "TemplateLanguage": true,
-              "Subject": "Hey Admin, we have a Cancel request",
+              "Subject": "Hey Admin, we have a CANCEL request",
               "Variables": {
                 "userName": `${user.name}`,
                 "phoneNumber": `${user.phoneNumber}`,
@@ -255,15 +297,66 @@ class Order {
         })
         request
         .then((result) => {
+          console.log("seccessfully send mail 1111")
           console.log(result.body);
           return res.json({ message: "success" });
         })
         .catch((err) => {
+          console.log(err)
           console.log(err.statusCode)
         })
       } else if(order.paymentMode === "COD") {
         let changeOrder = await orderModel.updateOne({_id: order._id},{$set: {status: "Cancelled"}});
-        return res.json({ message: "success" });
+
+
+        const mailjet = require ('node-mailjet')
+        .connect(process.env.MJ_APIKEY_PUBLIC, process.env.MJ_APIKEY_PRIVATE)
+        const request = mailjet
+        .post("send", {'version': 'v3.1'})
+        .request({
+          "Messages":[
+            {
+              "From": {
+                "Email": "techgeeksfs@gmail.com",
+                "Name": "Hello Shaikh"
+              },
+              "To": [
+                {
+                  "Email": "alpinestationery@gmail.com",
+                  "Name": "passenger 1"
+                }
+              ],
+              "TemplateID": 3021619,
+              "TemplateLanguage": true,
+              "Subject": "Hey Admin, we have a CANCEL request",
+              "Variables": {
+                "userName": `${user.name}`,
+                "phoneNumber": `${user.phoneNumber}`,
+                "email":`${user.email}`,
+                "userAddress": `${user.address}`,
+                "pinCode": `${user.pin}`,
+                "orderId": `${orderId}`,
+                "bankName": "COD",
+                "ifscCode": "COD",
+                "bankBranch": "COD",
+                "accountNumber": "COD",
+          }
+            }
+          ]
+        })
+        request
+        .then((result) => {
+          console.log("seccessfully send mail 22222")
+          console.log(result.body);
+          return res.json({ message: "success" });
+        })
+        .catch((err) => {
+          console.log(err)
+          console.log(err.statusCode)
+        })
+
+
+        // return res.json({ message: "success" });
       }
     }
   }
