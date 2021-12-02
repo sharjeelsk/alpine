@@ -38,13 +38,13 @@ let orderModel = require("./server/models/order")
 // Middleware
 //app.use(cookieParser());
 app.use(cors());
-if(process.env.NODE_ENV==='production'){
+// if(process.env.NODE_ENV==='production'){
   app.use(express.static('client/build'));
   app.get('*',(req,res)=>{
       res.sendFile(path.resolve(__dirname,'client','build','index.html'))
 
   })
-}
+//}
 //https://alpinedashboard.vercel.app/
 //app.use(express.static("public"));
 //app.use(express.urlencoded({ extended: false }));
